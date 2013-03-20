@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pygments | Catch me code]]></title>
   <link href="http://jonaslu.github.com/blog/categories/pygments/atom.xml" rel="self"/>
   <link href="http://jonaslu.github.com/"/>
-  <updated>2013-03-19T21:26:46+01:00</updated>
+  <updated>2013-03-20T20:51:35+01:00</updated>
   <id>http://jonaslu.github.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -18,11 +18,13 @@
     <link href="http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/"/>
     <updated>2013-03-02T21:29:00+01:00</updated>
     <id>http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments</id>
-    <content type="html"><![CDATA[<p>This post will be part of a larger guide to get a custom syntax highlighter running in octopress. Even if your language is covered by pygments it can be used if you want to tweak some aspects of the highlighting.</p>
+    <content type="html"><![CDATA[<p>Guide to get started with a new syntax or tweaking an existing one in pygments.</p>
 
 <h2>Background</h2>
 
-<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I'm gonna cover Fantom a wee bit since I really like it. But alas! There is no builtin code highlight for Fantom (yet :) in octopress. So I set out to change that, first locally on this blog and hopefully globally later on so you don't have to. On the way all the notes on how to built up to a post that'll hopefully will help others.</p>
+<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I'm gonna cover Fantom a wee bit since I really like it. But alas! <del>There is no builtin code highlight for Fantom (yet :) in octopress.</del></p>
+
+<p>Edit: Turns out that there actually is support since pygments 1.5 thanks to <a href="https://bitbucket.org/ivan_inozemtsev">Ivan Inozemtsev</a> (one of the folks behind the <a href="http://www.xored.com/products/f4/">f4 IDE</a>), its just not listed in their <a href="http://pygments.org/languages/">list of languages</a> and it resides in the compiled.py file, not the jvm.py file as you might expect. Still this post might serve as a springboard if you want to tweak the syntax of existing languages or introduce new languages.</p>
 
 <h2>Pygments, whaaa?</h2>
 
@@ -92,7 +94,11 @@ sudo pyhton setup.py develop
 
 <p>To verify that its there type <code>easy_install</code> and it'll print an error message telling you what folder the eggs are installed on your machine. On mine its in <code>/usr/local/lib/python2.7/dist-packages/</code>. Cd into that folder - there should now be at least two files (and one folder with Pygments egg installed previously) - <code>easy-install.pth</code> and <code>fantomlexer.egg-link</code>. List the content of <code>easy-install.pth</code> and verify that there is an entry pointing to your FantomLexer folder created above.</p>
 
-<p><code>lexer.py</code> is now ready to parse your code into tokens. A quick start is to copy some already existing lexer close to your language and tweak it. Next post up will cover just that - the fantom lexer and how to test drive it.</p>
+<p><code>lexer.py</code> is now ready to parse your code into tokens. A quick start is to copy some already existing lexer close to your language and tweak it. To get a highlighted file with your new syntax type:
+<code>bash
+pygmentize -f html -O full Testfile.fan &gt; temp.html
+</code>
+And view the results in a browser.</p>
 
 <h2>Python knowledge disclaimer</h2>
 

@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>If it weren't for the ... customers - Catch me code</title>
+  <meta name="author" content="Jonas Lundberg">
+
+  
+  <meta name="description" content="">
+  <meta name="keywords" content="word1, word2">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Catch me code" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Fjalla+One:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38768657-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Catch me code</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jonaslu.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">If It Weren't for the ... Customers</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-24T21:52:00+01:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve had the luxury of being on a team having a dedicated code base to only one target user. Sure, that user has some different groupings within - but on the whole its coherent enough to see it as one customer. We&#8217;re basically free to model the software after this one customer. Its been a hot bed for invention and full speed development (in a good way).</p>
+
+<p>For the sake of taxonomy - here&#8217;s what I mean by a target user: If Bob and Alice both are accountants they might be one target user. It depends on if they have the roughly the same workflow and crunch roughly the same numbers. Then they&#8217;re one target user. In all other situations they&#8217;re  two (specially if Alice is really a welder).</p>
+
+<h2>Let&#8217;s share!</h2>
+
+<p>So it came up for discussions with the business side this week that it would be benificial to bring other customers into the fold. I&#8217;m really split on this. I guess I can see the business benefits of it. We can now make an active pitch to a new segment of customers. But the thing is we&#8217;ve come from just that. We took the product from a 30+ different customers in the same code base and branched out. And we&#8217;ve cleaned and thrown out things to make it manageable thusly transforming it into the need of this one customer. Now the product looks different enough from where we started to be marketed to a new group of customers.</p>
+
+<h2>The dilemma of good software</h2>
+
+<p>There&#8217;s some kind of paradox - the best software naturally appeals and serves the most people. It would be rather pointless to put hours of work into something that only a few can use. Its supposed to help folks, preferably lots. But lots of people means lots of compromises and complexity which equals bugs. And buggy software isn&#8217;t good for your sanity or for your customers satisfaction. The only good way to reduce bugs is to reduce complexity (= code), but then it will appeal and help less people.  My take is that the sweet spot lies much farther on the one target user side. Here&#8217;s why:</p>
+
+<h2>Limit the scope of target users</h2>
+
+<p>If you have a low target user count you can tailor it to their exact needs. You&#8217;ll help fewer people but in return you can help these fewer people extremely well. And your software will be more stable and malleable into what they need. Code can be cleaned and optimized much harder because its not going to affect someone else.</p>
+
+<p>With several target users in the same code base - things may superficially look the same - but in detail turns out to most often not be. If Bob does income and Alice does asset accounting it might on the surface look like they&#8217;re doing the same things (moving numbers around) but in detail its different numbers moving in different ways. And that is solved by either compromising - both gets less then what they wanted - or you raise the complexity (and bug count) by making it essentially two pieces of software in the same code base.</p>
+
+<h2>But is this practical?</h2>
+
+<p>No. Of course not. You have to accept some compromises and some ifdefs on sections in the code. Even with one target customer its going to happen. But strive to keep it as low as possible. This is of course from a coders standpoint. From a business standpoint I guess more target users in the same code base means you serve more with less effort. You can target groups that are similar saying &#8220;look here, we&#8217;re no 1 in accounting software with all these fine customers already on board. Join us, we&#8217;ll make it fit for you&#8221;. But its a curse in disguise because you also give lip service and raise the bug count for all target users already sharing the code base by making it fit one more.</p>
+
+<p>I&#8217;d err more on the great customized and tailored service with less bugs and more shared ideas approach. I also think that shared code base will dampen creativity and exploration of pushing the software in new directions. And that in turn means missed business opportunities in helping your most important customer - the returning kind.</p>
+
+<h2>Let&#8217;s share ideas! Not code (base)</h2>
+
+<p>Ideas are cool in that they are not fixed in form. One idea carries some concept that may or may not apply. But it can be fuzzy on the details which can be filled out to fit the specific situation. And it can spark new ideas that fit better.</p>
+
+<p>Shared code base is fixed in form. More than stake holder is depending on it being the same way. If someone wants to evolve it or break from it, all target users have to agree on this - otherwise you&#8217;re stuck. I&#8217;m not saying don&#8217;t ever share code. Do share code.. as a means to share ideas. But don&#8217;t share code mechanically just by saving a few keystrokes or fixing bugs faster (because on the flip side you&#8217;re probably introducing bugs faster too). Instead at each turn consider branching out a very possible option. Abandon the safe what is for the more exciting what could be.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jonas Lundberg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-24T21:52:00+01:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cat1/'>cat1</a>, <a class='category' href='/blog/categories/cat2/'>cat2</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/" data-via="" data-counturl="http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/16/boredom-the-hidden-asset/" title="Previous Post: Boredom the hidden asset">&laquo; Boredom the hidden asset</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jonas Lundberg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'catchmecode';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/';
+        var disqus_url = 'http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -25,6 +25,12 @@
         <lastmod>2013-03-16T22:03:46+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/
+        </loc>
+        <lastmod>2013-03-24T22:01:32+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jonaslu.github.com/robots.txt</loc>
         <lastmod>2013-02-24T20:56:31+01:00</lastmod>
     </url>
@@ -34,10 +40,10 @@
     </url>
     <url>
         <loc>http://jonaslu.github.com/blog/archives/</loc>
-        <lastmod>2013-03-20T20:51:19+01:00</lastmod>
+        <lastmod>2013-03-24T22:01:32+01:00</lastmod>
     </url>
     <url>
         <loc>http://jonaslu.github.com/</loc>
-        <lastmod>2013-03-20T20:51:19+01:00</lastmod>
+        <lastmod>2013-03-24T22:01:32+01:00</lastmod>
     </url>
 </urlset>

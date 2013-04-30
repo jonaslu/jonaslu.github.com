@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ctrl click sum gdocs spreadsheet - Catch me code</title>
+  <meta name="author" content="Jonas Lundberg">
+
+  
+  <meta name="description" content="google docs spreadsheet script for ctrl click summation of non adjacent cells">
+  <meta name="keywords" content="google docs, google spreadsheet, ctrl click, sum, sum non-adjacent cells, userscripts.org, greasemonkey, tampermonkey">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Catch me code" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Fjalla+One:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38768657-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Catch me code</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jonaslu.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ctrl Click Sum Gdocs Spreadsheet</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-30T21:56:00+02:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Its here: <a href="http://userscripts.org/scripts/show/166316">http://userscripts.org/scripts/show/166316</a>.</p>
+
+<p>Press the install button to use it. There are also instructions on the site for how to get running with greasemonkey and tampermonkey <a href="http://userscripts.org/about/installing">here</a>.</p>
+
+<p>Press ctrl and hold it while you click cells that contain contents that can be parsed to a number. The sum will be shown in the lower left corner - a little like shift + sum does, but without some styling. Click the element again to deselect it and remove it from the sum.</p>
+
+<h2>Background</h2>
+
+<p>I like google docs and use it for most office related stuff. Its sufficient and really only lacking some features compared to win office or libre office. But ctrl + click to sum up non adjacent cells is one of the few things excel and the likes have that I sorely missed in the google suite. So much I took the dive and made this greasemonkey script to work around it.</p>
+
+<h2>Big reset</h2>
+
+<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up - just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
+
+<h2>Tech goals</h2>
+
+<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&#8217;t quite make it. It kept jumping down and sometimes locking up the regular function - so I  gave up, I&#8217;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
+
+<p>In addition, the sum box has other uses (and feelings m&#8217;kay?) too - it can display averages etc and I didn&#8217;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&#8217;t look as integrated as reusing the sum box - but I&#8217;m hoping it will be a more stable solution.</p>
+
+<h2>Highlighting selected cells</h2>
+
+<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&#8217;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays - I wouldn&#8217;t know the size of the cells or overlays. This is a cheaper hack.</p>
+
+<h2>Selecting the value to sum</h2>
+
+<p>Finding the selected cell would be hard - it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&#8217;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it - (the click that is). It should however not be a big problem, just aim at the middle and don&#8217;t set your cell size so low you cant hit it.</p>
+
+<p>Anything you click will be tested if it parses as a digit and if it does - its added to the sum.</p>
+
+<h2>Keep in touch</h2>
+
+<p>Tested in google chrome so far - please let me know if you test in other browsers if it works or not.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jonas Lundberg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-30T21:56:00+02:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/google-docs/'>google docs</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/userscripts-org/'>userscripts.org</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" data-via="" data-counturl="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/24/the-next-big-language/" title="Previous Post: The next big language">&laquo; The next big language</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jonas Lundberg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'catchmecode';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
+        var disqus_url = 'http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

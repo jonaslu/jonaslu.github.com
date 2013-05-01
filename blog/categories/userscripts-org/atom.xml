@@ -4,7 +4,7 @@
   <title><![CDATA[Category: userscripts.org | Catch me code]]></title>
   <link href="http://jonaslu.github.com/blog/categories/userscripts-org/atom.xml" rel="self"/>
   <link href="http://jonaslu.github.com/"/>
-  <updated>2013-04-30T22:41:55+02:00</updated>
+  <updated>2013-05-01T20:49:01+02:00</updated>
   <id>http://jonaslu.github.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -22,7 +22,11 @@
 
 <p>Press the install button to use it. There are also instructions on the site for how to get running with greasemonkey and tampermonkey <a href="http://userscripts.org/about/installing">here</a>.</p>
 
-<p>Press ctrl and hold it while you click cells that contain contents that can be parsed to a number. The sum will be shown in the lower left corner - a little like shift + sum does, but without some styling. Click the element again to deselect it and remove it from the sum.</p>
+<h2>Usage</h2>
+
+<p>Press ctrl and hold it while you click cells that contain contents that can be parsed to a number. The cells can be non-adjacent (the reason why this was made). The sum will be shown in the lower left corner. Click the selected element again to deselect it and remove it from the sum.</p>
+
+<p>In use it will look like this: <img src="images/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/ctrl_click_sum.jpg" alt="image of the awesomeness that is ctrl click sum" /></p>
 
 <h2>Background</h2>
 

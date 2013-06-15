@@ -9,7 +9,7 @@
   <meta name="author" content="Jonas Lundberg">
 
   
-  <meta name="description" content="First off: its here - https://github.com/jonaslu/rsyncrotatingbackup. Short description Its a script that does rotational backups on your folders of &hellip;">
+  <meta name="description" content="I&#8217;ve seen this go down a fair amount of times - myself included. I just know why its happening, right. Its this damn line here - there is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,96 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/15/bug-repellants/">Bug Repellants</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-15T22:48:00+02:00" pubdate data-updated="true">Jun 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve seen this go down a fair amount of times - myself included. I just know why its happening, right. Its this damn line here - there is something with this function call. Change it a bit at random, run a test, see it fail. Why in the name of S is this still failing? Change some more at random - google what I <em>know</em> is the problem - see it fail again. Sounds familiar, right?</p>
+
+<p>My biases on where the problem was and what caused it has cost me a fair of amount of time wasted. Its also the greatest hurdle to get past (since your ego is involved). About 90% of the time if I don&#8217;t solve the bug in 30 seconds - its not the cause I thought it was. It usually turns out to be something very different. And the way to get from here to there is to let go of whatever cause you had pictured in your head.</p>
+
+<h2>Get verifiable data</h2>
+
+<p>The first step is to free yourself from whatever you think of the bug. Its crucial to keep all options open and then narrow down on the causes and fixes. Take a step back (and some fresh coffee), free of your biases and look at the situation. You need some kind of data to work with. Just guessing at random will not help you (has it ever really?).</p>
+
+<p>I&#8217;m fairly reluctant to label the bug too specifically in order to remind myself that it might not be what I&#8217;m looking for. Rattling of a &#8220;oh, its a threading issue&#8221; too soon might cut you off from the real cause. Perhaps its not a threading issue at all - it just looks like it from a distance.</p>
+
+<h2>Ground zero</h2>
+
+<p>First step - where does it occur? In some cases such as an exception, its obvious where it occurs. Or is it? What if its an exception caught and rethrown silently? Go to the line and look at it. Make sure you&#8217;re looking at the right line.</p>
+
+<p>Can you get it to fail each time? Can you set up some scaffolding to get it into the fail-state? Are you sure its only here? Are there any other paths to where it seems to occur? Can you do some auxiliary small tests to verify that its really where you think it is?</p>
+
+<p>You need to make sure you&#8217;re looking at the right neighborhood. If its vague - acknowledge that its vague so you don&#8217;t get the wrong impression of knowing where to look. Avoid labeling it.</p>
+
+<h2>Breakpoints</h2>
+
+<p>For zeroing in on bugs that you don&#8217;t know where they fail - but you now can reproduce the failure each time - breakpoints is an indispensible tool.</p>
+
+<p>If your language supports debugging via breakpoints - good for you :) If not, use good &#8216;ol print statements. Put a breakpoint far enough up in the call stack so you don&#8217;t miss it (unless its a very specific error, such as a NullPointer - then you can set a breakpoint on the NullPointer exception itself and work backwards).</p>
+
+<p>What does the state look like when the bug occurs? The stack trace? Can you go up the stack trace to see who called you and what their state looked like? Can someone else in turn affect the one calling you and so on? Can you compare this state with a stable state you know does the right thing?</p>
+
+<h2>Change state</h2>
+
+<p>If your language and tool supports changing values while hanging on a breakpoint - can you change some parameters to get it working? Can you inspect the state of the variables and the stack trace of what got you there? Is there any other way to get here or affect the state you&#8217;re currently looking at? If not, use simple assignments along the way to affect the state.</p>
+
+<p>Input other data than what you normally put in. Does it still fail? Can you alter the code path so it works?</p>
+
+<h2>Last known stable state</h2>
+
+<p>Next step once you have established where it occurs is to have something to compare it with that you know works / is right. Is there one? If so, can you revert to it (you did commit did you not?). Start from there and trace forward to where the bug was introduced. If you use git - <a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git bisect</a> was done for this.</p>
+
+<p>Can you compare some logs, files, state, stacktrace of when it works the way you want it to? Can you do some auxiliary experiments to get a working stable state to compare with?</p>
+
+<h2>Git blame</h2>
+
+<p>Why is it here? What&#8217;s the surroundings of the bug? Can you get some historical facts on why it looks like it does? Has there been much action in this area lately (or things that are related to it?). Does the commit message give you some hints on why?</p>
+
+<p>Just knowing when it was introduced (around what time) may give you hints as to what else was going on at that time what might have caused it. Another useful thing is that it might be a bug that someone now relies on. So its actually more of intended (incidental) behavior. Check that if you do fix this nothing else breaks.</p>
+
+<h2>Read up</h2>
+
+<p>This comes fairly low on the list because it should be used with caution. Its very easy to get distracted and mislead by seemingly similar problems that others might have. Do check - but take everything you read with a big pinch of salt. Keep in mind that you&#8217;re reading the textual representation of their interpretation of the problem. Maybe they haven&#8217;t gone through the same thorough investigation you just had (you did get verifiable data, right? :).</p>
+
+<p>When using some someone elses library its more useful - after you&#8217;ve established that the problem is in someone elses library. Has someone else had a similar problem? If so - how did they solve it? If not - how probable is it that you&#8217;re the only one in the world experiencing this? That last part is aimed at stopping the &#8220;its a bug in the OS&#8221; type of answers. If its an OS its very well used and thusly its very probable its an already known bug - and if not it&#8217;s probably in your code. Not theirs.</p>
+
+<p>What does any documentation say? Have you made the right assumptions? Is there any pre-cond you&#8217;re not aware of? Are you using it the way its meant to be used? Can you get the source for whatever you&#8217;re looking at (and start from step #1 again above, this time in their code base?)</p>
+
+<h2>Questions?</h2>
+
+<p>This post came off more as a huge pack of questions than I originally had planned - but then again, this is usually how (successful) debugging sessions go. A huge amount of questions thrown around to establish where, why and finally how to fix it. Its by no means exhaustive as every bug and every situation is a bit different. These are just the main tools I usually go for when facing an unknown problem.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -919,44 +1009,6 @@ Its more pragmatic and constructive. Quality is everyones concern.</p>
 <p>One thing that&#8217;s been hitting me a lot when doing some code is how often I started out doing something - only to find out that there&#8217;s already method for that. Compact as the API may be this again seems like the authors knowing what will be useful to put into the API. This makes it a gem to code with, much less manual stuff than a quick glance may reveal.</p>
 
 <p><a href="http://fantom.org">Now go! Try it.</a> I&#8217;ll be writing more on it here in coming posts.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/08/setup/">Setup</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-08T20:55:00+01:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Before getting on with writing posts props needs to go to the people and software that made this possible. The background texture was found <a href="http://designmoo.com/16245/technical-drawing-paper-texture/">here</a> by <a href="http://www.peweedesign.com/">pewee design</a>. The header font from <a href="http://www.dafont.com/candy-inc.font">here</a> by <a href="https://www.facebook.com/billyargelfonts">Billy Argel</a>.</p>
-
-<p>This blog runs on the awesome framework <a href="http://octopress.org">octopress</a> and of lots of coffee. The theme is an adaption by me on the defualt theme shipped with octopress.</p>
 </div>
   
   

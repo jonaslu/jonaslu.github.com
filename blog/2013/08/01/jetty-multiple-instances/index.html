@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jetty multiple instances - Catch me code</title>
+  <meta name="author" content="Jonas Lundberg">
+
+  
+  <meta name="description" content="Running multiple instances of jetty from the same installation">
+  <meta name="keywords" content="jetty, multiple instances, jetty many webapps, many webapps, jetty, jetty webapps folder structure, configuration, ini-files, xml, test jetty ini files">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Catch me code" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Fjalla+One:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38768657-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Catch me code</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jonaslu.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Jetty Multiple Instances</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T21:09:00+02:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Having fought Jetty the last couple of days I&#8217;d thought I&#8217;d document this. Its not such a far fetched use case - running multiple webservers from the same installation.</p>
+
+<h2>Background</h2>
+
+<p>First off, if you&#8217;re thinking about using Jetty - do it! Jetty is pretty awesome and with the event of jetty 9 moving its documentation to <a href="https://github.com/jetty-project/jetty-documentation">github</a> it has really taken off. It used to be a bit arcane with little documentation, but I&#8217;m really impressed with Jetty 9 so far. Its open source and its pretty simple to get up and running.</p>
+
+<p>However Jetty seems more geared towards the &#8220;simple&#8221; use case of embedding it or running it for deploying one or maybe a few webapps from the <code>webapps/</code> directory using one instance. While that&#8217;s part of the simple to get up and running deal it wasn&#8217;t too obvious how to get several instances from the same install (i e the dev, stage and production instances).</p>
+
+<h2>Y u want servers?</h2>
+
+<p>So, why all this? The reasons were these: the production server runs only on one install with one webapp. Staying as close to the production setup spares some gray hairs. Also Jetty can only set one debug port per instance and since its the same code base but different versions of it, it would be difficult to catch your request to a specific version - you&#8217;d have to somehow filter on the incoming request path in your breakpoint if its even possible. Plus only one webapp can be mapped to the root context <code>/</code>.</p>
+
+<p>At the same time wanting to avoid maintenance and hard to find bugs due to version differences when upgrading it should all be served from the same install.</p>
+
+<h2>Webapp folder structure</h2>
+
+<p>Here&#8217;s the setup I went for: All applications are kept under the same folder (webapps/ in the Jetty installation). This stemmed mostly from experience that Jetty seems very tied to its installation folder. Running things from elsewhere turned up paths not found errors. This might be possible to do with system properties, but I didn&#8217;t manage to get them into all places they needed to go. Staying with the Jetty installation folder as a base makes it more portable as you can use the install dir as a starting path for everything. So a fresh install should (in theory) just be to move the webapps folders into the new installations webapps folder.</p>
+
+<p>The folder structure looks like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>  | - etc
+</span><span class='line'>  ...
+</span><span class='line'>  | - webapps
+</span><span class='line'>    | - dev
+</span><span class='line'>      | - dev.xml
+</span><span class='line'>      | - dev.war
+</span><span class='line'>      | - start.d
+</span><span class='line'>  | - dev.ini
+</span><span class='line'>  | - dev_jetty_config.xml
+</span><span class='line'>    | - stage
+</span><span class='line'>      | - stage.xml
+</span><span class='line'>      | - stage.war
+</span><span class='line'>      | - start.d
+</span><span class='line'>        | - stage.ini
+</span><span class='line'>        | - stage_jetty_config.xml
+</span><span class='line'>    ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We&#8217;ll get to the start.d folders in the hot deploy section.</p>
+
+<h2>.ini vs .xml</h2>
+
+<p>A custom <code>.ini</code> per app - according to the docs this is just command line parameters to the jvm and can be passed as such. But I like command line parameters more in a file so you can put it in version control and deploy it with the webapp. If its buried in command line switches you&#8217;d have to go and edit the windows service by hand each time something changed - and as the rule goes: If it involves manual steps - doh, I forgot!</p>
+
+<p>Also you need an <code>jetty.xml</code> file per app. The Jetty docs says that you can edit the <code>etc/</code> files (e g <code>etc/jetty.xml</code>) in the install to contain several server configs but this sounds again like maintenance problems to me. By putting all config for one instance in one xml you can also keep it in your scm and deploy it with the app itself so it can move with the code.</p>
+
+<p>In this setup the <code>dev.ini</code> contains only jvm parameters such as remote debug ports - I kept the rest in xml (no real reason, mostly because its easier to have all config in one file - and that file is the xml file since not all config can go into the <code>.ini</code> file)</p>
+
+<h2>Xml file structure</h2>
+
+<p>The meat of a server instance configuration goes into its xml file.</p>
+
+<p>Each instance needs its own unique <code>&lt;Configure id="dev" class="org.eclipse.jetty.server.Server"&gt;</code> tag - its in the docs, but not so <a href="http://www.eclipse.org/jetty/documentation/current/serving-webapp-from-particular-port.html#creating-server-instances">easy to find</a>. It does not mention however if this applies when running in separate jvm:s or if it only applies in the same jvm. Better safe then sorry and have a separate tag for each separate jvm instance.</p>
+
+<p>Start with the <code>jetty.xml</code> as a base - then cut and paste goodies from the other <code>etc/*.xml</code> files as you go into your own single <code>.xml</code> file. I ended up editing out some parts that were not interesting in hindsight, but I thought it was a better approach to get it all in there and then remove things that were not interesting afterwards.</p>
+
+<h2>Hot deploy</h2>
+
+<p>This was a treat. We do continuous integration with the latest version built and deployed directly, so having Jetty scan a directory and hot-deploy anything uploaded there was a perfect fit. It saves some scripts shutting down the service, waiting for it to finish, ftp the .war file and starting up the service again.</p>
+
+<p>Since the hot deploy scanner can only be set on a single dir this was done via context-descriptor files and separate dirs for each instance (deploying all webapps to the same folder would not work since all instances would pick up all files).</p>
+
+<p>Jetty ignores any folder named <code>*.d</code>, so the start.d folders inside the webapps are used for the config files (e g <code>dev.ini</code> and <code>dev_jetty_conf.xml</code>). This way all config can be ftp:ed up to the webapp and start.d folder keeping them in sync.</p>
+
+<p>The hot deploy mechanism scans for <code>.xml</code> and <code>.war</code> files (in that order). But because the context path (where the webapp is accessed under) is set to the folder it resides in (i e <code>http://localhost:8080/dev</code>) by default you also need a context path file named the same as the <code>.war</code> file (e g <code>dev.xml</code> for the dev webapp). The web-context file contains only what war and under what path it is served from.</p>
+
+<h2>Test it</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$&gt;</span> java -jar start.jar --ini<span class="o">==</span>dev/start.d/dev_jetty_config.ini dev/start.d/dev.xml
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the Jetty installation folder and see what happens. Jetty will complain if some xml is malformatted or tags out of place, took some googling to correct the errors but nothing paramount.</p>
+
+<h2>Troubleshooting config errors</h2>
+
+<p>The config you have in <code>.xml</code> files are merely read by a reflection framework for instantiating the corresponding java code, so you could actually type in the corresponding code you have in your xml and debug the error straight from your IDE if some config error trips you up. Didn&#8217;t do this, but it helps explain the error messages from Jetty more.</p>
+
+<p>As a last resort - get the source for Jetty - if you get error-messages in the terminal or stderr log it can be checked against the source to get a hint of what&#8217;s failing. It helped me, you know, <a href="/blog/2013/06/15/bug-repellants/">don&#8217;t try at random - get verifiable facts</a>.</p>
+
+<h2>Multiple instances</h2>
+
+<p>You&#8217;re almost there! Create another with the same folder structure as dev (stage in the folder structure above) and change every reference in folders and files to stage instead. You&#8217;re now serving dev and stage from the same install with diffrent instances.</p>
+
+<h2>Finally - example files</h2>
+
+<p>And since you&#8217;ve made it all the way down - here&#8217;s the <a href="https://github.com/jonaslu/jettyconfigs">example setup files in a repo</a>. Oh, don&#8217;t worry - the password and the keystore are the default that Jetty ships with.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jonas Lundberg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T21:09:00+02:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jetty/'>jetty</a>, <a class='category' href='/blog/categories/webservers/'>webservers</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/" data-via="" data-counturl="http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/15/fast-programmers/" title="Previous Post: Fast programmers">&laquo; Fast programmers</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jonas Lundberg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'catchmecode';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/';
+        var disqus_url = 'http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

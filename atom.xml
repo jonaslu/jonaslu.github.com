@@ -4,7 +4,7 @@
   <title><![CDATA[Catch me code]]></title>
   <link href="http://jonaslu.github.com/atom.xml" rel="self"/>
   <link href="http://jonaslu.github.com/"/>
-  <updated>2013-08-01T22:16:21+02:00</updated>
+  <updated>2013-08-26T22:13:32+02:00</updated>
   <id>http://jonaslu.github.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Get yourself a fast project]]></title>
+    <link href="http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project/"/>
+    <updated>2013-08-26T20:56:00+02:00</updated>
+    <id>http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project</id>
+    <content type="html"><![CDATA[<p>Before delving into this, learning is good ok? We&#8217;re all here to learn something (queue monthy python: Large group - &#8220;Yes, we&#8217;re all here to learn!&#8221; &#8230; One guy in the back - &#8220;I&#8217;m not&#8221;) but it&#8217;s easy to get derailed with details when there&#8217;s just so much exciting stuff out there.</p>
+
+<h2>New tech = initial bump</h2>
+
+<p>I&#8217;m assuming this happens to most folks and it gets worse the more to the left you are on the <a href="http://en.wikipedia.org/wiki/Technology_life_cycle#Technology_perception_dynamics">adoption curve</a> of a new technique. You are psyched up and ready to get cracking - only to be immensely slowed down by just setting up a dev environment or getting &#8220;hello world&#8221; to compile / interpret / just run dammit. The early adopters are ok with this - or even thrive of going through the rough phases where everything barely holds together (I&#8217;m guessing because you have more influence then. You are actually making a difference).</p>
+
+<p>But but but&#8230; being the early adopter of the newest and shiniest things have an opportunity cost - you&#8217;re going to spend much more time on getting the new thing to work and less time on things not related to the language / framework itself. And that&#8217;s ok if that is your thing - using the newest stuff. Maybe you&#8217;ll even make yourself a name should you write the first web-framework or templating engine in your new language. But it should be a conscious choice staying in the left on the adoption curve. I&#8217;ve often gone this road without thinking of the opportunity cost of doing so. My goal was often to make something cool, but just because I could it would often be using the latest upcoming languages. And that meant that the cool things I set out to make withered when the initial bump set in.</p>
+
+<h2>The initial bump</h2>
+
+<p>With the initial bump I mean that not only that you&#8217;re not experienced in the new language, things take longer time because less time have been put into get things to work. Documentation is not there yet, libraries break with new versions, you get errors just trying to setting up the dev enviroment, error messages are obscure and no one else seems to have all the problems you&#8217;re having.</p>
+
+<p>The initial bump extends beyond just getting a working dev environment up and running. It also means less powerful IDE / editors, less tools (e g debugging, package management, build systems) and less frameworks and libraries with respectively less production time under their wings to choose from. In short, you&#8217;ll do more work because less time has been put into the thing you&#8217;re trying to run. And that costs - in time and focus.</p>
+
+<p>The perhaps unglamorous alternative to this is using stuff you know well. Chances are that this is to the right on the adoption curve. But it&#8217;ll buy you something - time and focus.</p>
+
+<h2>Old tech = new domain?</h2>
+
+<p>By using the tools, frameworks and language you know best you&#8217;ll steer clear of the initial bump. And you&#8217;ve freed up time to explore another side of programming - getting to know a new domain and solving its problems not being slowed down by your tools.</p>
+
+<p>It&#8217;s like learning to drive vs driving, at first you&#8217;re so occupied with the mechanics of driving that you can&#8217;t be bothered with the traffic ahead. Its first when you know the mechanics that you can focus on the actual driving from A to B.</p>
+
+<h2>Possibly leverage with a new language</h2>
+
+<p>If you&#8217;ve made a prototype using tools you know you&#8217;re in a much better spot of rewriting it in some other language / framework. You are now choosing tools based on your domain knowledge, this is a huge advantage - you&#8217;re running the tools and not vice versa.</p>
+
+<h2>Leverage old tech and iterate faster</h2>
+
+<p>Again, a <a href="http://catchmecode.com/blog/2013/07/15/fast-programmers/">speech about going fast</a>. But really, I think that pragmatism and knowing when it&#8217;s good enough is highly learnable. But you got to set out doing so with a clear mind. Using the languages, tools and stuff you know best will let you focus 100% on going fast in a new domain. Churn out really dirty but working code just to experience and get the feel of what it&#8217;s like. It&#8217;s ok, set out milestones when you refactor and tidy up.</p>
+
+<p>At least for me, when trying out a new idea its important to go fast from idea to prototype. Instead of getting stuck in the setup and loosing steam (and possibly even giving up on the idea before its even been test driven) - leverage everything you possibly can to get it to a working state. By using the tech you know you probably also know what frameworks and libs to use (and chances are that there&#8217;s plenty more of them out there since again you&#8217;re using a language with more adopters) you compound on your existing knowledge. You can make more critical judgments on claims of what works (for you) and what does not.</p>
+
+<p>This also ties in with a lot of blogposts I&#8217;ve been reading on startups. Many of those who succeed <a href="http://www.paulgraham.com/13sentences.html">launch fast and get it right afterwards</a> - screw the details, we&#8217;ll figure those out later when we&#8217;re actually making some money. By using tools and products you know you&#8217;ll steer clear of the inital bump, and if you&#8217;re wise you stay to the right on the adoption curve, where there are powertools, battle proven VMs and industrial strength IDE&#8217;s. It&#8217;s ok - if you succeed you now have a luxury problem of switching languages and frameworks. With all that knowledge of what did and didn&#8217;t work.</p>
+
+<h2>Do share</h2>
+
+<p>Now I&#8217;m aware that by using older tech you are piggybacking on those that did take time to get things working and writing frameworks etc. And by doing so you might not have something as tangible as a fresh framework to share (or if you do its of less value beeing the nth framework of that kind and not the first or second).</p>
+
+<p>But, you can share the domain problems you ran into and how you solved them. Hopefully that&#8217;ll feedback to those on the forefront of some new tech getting perspective on what they build might be used to solve - problems rarely change that much regardless of tech. So you know, at least send some love to those brave enough to not take this advice and to go head on with the left of the adoption curve.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Jetty multiple instances]]></title>

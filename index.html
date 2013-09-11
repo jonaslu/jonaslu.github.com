@@ -9,7 +9,7 @@
   <meta name="author" content="Jonas Lundberg">
 
   
-  <meta name="description" content="Before delving into this, learning is good ok? We&#8217;re all here to learn something (queue monthy python: Large group - &#8220;Yes, we&#8217;re &hellip;">
+  <meta name="description" content="I&#8217;m usually a bit skeptical when something is touted as a one size fits all solution. As some future post surely will reveal, I now extensively &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,6 +21,7 @@
   <link rel="canonical" href="http://jonaslu.github.com/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
@@ -76,6 +77,186 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/11/is-learning-vim-worth-it/">Is Learning Vim Worth It</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-11T20:45:00+02:00" pubdate data-updated="true">Sep 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m usually a bit skeptical when something is touted as a one size fits all solution. As some future post surely will reveal, I now extensively use <a href="http://git-scm.com/">git</a>. But it wasn&#8217;t all peaches in the start - some back and forth looking at hg and bazaar before git became home. Now everything related to code has a .git in it. Just to be safe y&#8217;know.</p>
+
+<p>So where is this going? Vim - that&#8217;s where. I&#8217;ve known about vim for a number of years. First encounter must have been stuck in ssh on a remote linux box with no sudo / su powers. All it had was ed or vim. I (like most other) eventually figured out how to write <em>something</em> in it and then get the hell out (thinking, phew that was close. Hope it doesn&#8217;t happen again).</p>
+
+<p>But (as in the <a href="http://www.collegehumor.com/picture/6906024/sharkalanche-movie-makes-obvious-sense">horror movies</a>) it <em>did</em> happen again. However this time voluntarily. See, everyone (well most who mentioned vim anyways) kept saying &#8220;its super productive&#8221;, &#8220;pfft, you can do that in less keystrokes in vim&#8221; and &#8220;I&#8217;d write this, but it was already done in vim&#8221;. It kept popping up in blogs, hacker news and podcasts.</p>
+
+<h2>Y U run vim?</h2>
+
+<p>The no-brainer answer is that it&#8217;s available everywhere (at least in the shape of vi).</p>
+
+<p>The brainer answer was part interest and part wanting to know what the hype was about. Would it make me a faster, fiercer and more beautiful programmer? Was it really <em>the</em> powertool and one stop solution?</p>
+
+<h2>Y U not run vim?</h2>
+
+<p>And to balance this - the counter question would of course be: is it worth it? Everything else really ties in with this question. It has a long standing reputation for having a high learning curve. Its also begs the question - to mouse or not to mouse. I&#8217;ve always used the mouse when programming and not been ashamed of it. The mouse is a good tool for placing the cursor where you want it or visually selecting text.</p>
+
+<h2>Highly scientific speed test</h2>
+
+<p>To get verifiable data - here&#8217;s an attempt to make some science on it. I chose 5 of my most common code editing moves (the stuff I spend most of my workdays doing) and timed them using a) my old methods of one hand on the mouse, one hand on the keyboard and b) using vim with only keystrokes. Mind you I&#8217;m still a novice vim user so while I&#8217;m sure there are faster and more compact ways to do this - I took it as a baseline for speed. There might be some room for improvements but even if its a factor of 2X it will still show in the neighborhood what speed gains we&#8217;re looking at. To be fair to vim I&#8217;ve learned the combos by heart so they&#8217;re done at my regular typing speed. Test file was 200 lines long with 10 methods.</p>
+
+<p>Here goes, in no order - what the object is and a description of how it was done in each editor respectively:</p>
+
+<ol>
+<li>Move a method 9 lines long (name known, line number unknown) from middle of the file to after first method in file (name and line number unknown).</li>
+<li>Change a method signature (name known, line number unknown) from private to public.</li>
+<li>Add a method argument at the end of argument list (name unknown, line number known) on line 175</li>
+<li>Swap the order of two method arguments (name unknown, line number known) - cursor already positioned on correct line</li>
+<li>Delete last method in file (name and line number unknown) - start at top of file</li>
+</ol>
+
+
+<p>Plain eclipse:</p>
+
+<ol>
+<li>Ctrl + o for searching for method names in file. Enter when correct method is hit. Select method with mouse, ctrl + x for cutting it, scroll up to insert position ctrl + v for paste</li>
+<li>Ctrl + o for searching the method name, use mouse to select private modifier and type public</li>
+<li>Ctrl + l for line 175, click on end of method, type in new argument and parameter name</li>
+<li>Select first argument type and name with mouse, ctrl + x for cut, put cursor after last argument, type comma, paste cut text, delete trailing comma from first version</li>
+<li>Ctrl + end for last in file, select last method with mouse, hit delete once</li>
+</ol>
+
+
+<p>Vim:</p>
+
+<ol>
+<li>/ and search for the method name, n a couple of times for hitting the usage of the method but not the method itself, v for visual select, }} twice to select the method, d to delete it, ctrl + u to page up to insert point, p to paste it.</li>
+<li>/ to search for method name, n a couple of times for hitting the usage of the method but not the method itself, bb twice to back up from the method name to the modifier, cw to delete private modifier and type in public.</li>
+<li>175G for going to line 175, % for jumping to the end of the method argument, i for insert, type in new argument and parameter name</li>
+<li>wwww for entering the method call parenthesis, v for visual, ww for selecting type and name, c for changing words, del to delete comma, <esc> to enter normal mode, % for end of parenthesis, i for insert, type comma, <esc> for normal mode, P for paste before cursor.</li>
+<li>G to hit end of file, kk for two lines up, v &#123;&#123; to select entire method, d to delete method</li>
+</ol>
+
+
+<p>Results:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th> Case  </th>
+<th> Eclipse   </th>
+<th> Vim       </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> 1.    </td>
+<td> <strong>10 sec</strong>    </td>
+<td> 16 sec    </td>
+</tr>
+<tr>
+<td></td>
+<td> 2.    </td>
+<td> 9 sec     </td>
+<td> <strong>7 sec</strong>     </td>
+</tr>
+<tr>
+<td></td>
+<td> 3.    </td>
+<td> 10 sec    </td>
+<td> <strong>7 sec</strong>     </td>
+</tr>
+<tr>
+<td></td>
+<td> 4.    </td>
+<td> <strong>7 sec</strong> </td>
+<td> 10 sec    </td>
+</tr>
+<tr>
+<td></td>
+<td> 5.    </td>
+<td> 8 sec     </td>
+<td> 8 sec     </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2>Other claims</h2>
+
+<p>If its not the speed, maybe its the automating of repetitive tasks that is the big win. The dot &#8216;.&#8217; command runs the last edit you made. Macros record key sequences and can be played back. The big hurdle here is you have to think about the sequence when composing these reusable units. If you do it in the wrong sequence the dot command might might do what you wanted it to. I&#8217;ve rarely used these features when trying out vim. Even though looking for cases to use them, in reality they came very seldom.</p>
+
+<p>I&#8217;m going to leave vim plugins out of the discussion, they&#8217;re great if you buy into that its worth learning vim. There are plenty of editors with lots of plugins that do the same thing but without the learning curve.</p>
+
+<h2>Things I did not see coming</h2>
+
+<p>Having used it now for over a month one thing has struck me that I didn&#8217;t expect. Its actually quite fun to use. There is a certain gamefication element to it, that you search for ways to do stuff faster.</p>
+
+<p>Another thing that also struck me as more useful: remember that vim is everywhere? Its on android too, and having a keyboard hooked up to a tabled writing code or blogposts makes full use of vim. Androids finger pressing makes navigating text much more painful so there&#8217;s a clearer benefit of knowing vim.</p>
+
+<h2>So, vim or not vim?</h2>
+
+<p>Well. Looking at the speed test, eclipse won in 2 cases, vim in 2 and a time on one (how politically correct, eh :) But really, speed is roughly the same for me. I&#8217;ve used <a href="http://vrapper.sourceforge.net/home/">vrapper</a> in eclipse (my workday IDE) as a vim extra on top of eclipse. Without it as a plugin it would have been a no-brainer to go with Eclipse. It&#8217;s built in code assist, refactor support et al makes it much more productive than vim could standalone.</p>
+
+<p>But in combination&#8230; I&#8217;ve been back and forth a lot. The first week there was a noticeable slowdown. Almost like learning to drive again - at first you&#8217;re so focused on the mechanics of driving that you can&#8217;t be bothered with the traffic ahead. It has gradually eased till the point where I&#8217;m about as productive with vrapper as without.</p>
+
+<p>Another thing that might have had an impact is that I&#8217;m a terrible typer (about each 10th keypress is a backspace when I type). Its true that you can do awesome stuff in vim with few keystrokes. I&#8217;ve accidentally managed to delete and format lots of text simply by typing like I always do. Regular editors with insert only mode are less forgiving. They type out your character on screen and that&#8217;s it. Not so with vim, it will delete your text or some other creative things. So its a hard penalty for typing wrong.</p>
+
+<p>Still, each time I&#8217;m done and start to go back to the normal flow, I start missing small stuff. And the fun of learning to use it faster. I&#8217;ve got this feeling that its going to become like git in a while, so I&#8217;ll stick with it for some more time before taking the final decision.</p>
+
+<p>However, when being in a terminal and or on android its much more worth it. Even though mouses do work in a terminal (assuming you&#8217;re running X) this is where it feels at home.</p>
+
+<p>Also editing dynamically typed code or plain text I can much more see the benefit of using it. Because of this I&#8217;m going to stick with vim at least in the terminal (I always defaulted to nano but got stuck on not knowing how to make more advanced edits). The payoff is that each new trick learnt carries over on all the other platforms it runs on.</p>
+
+<h2>Should you then?</h2>
+
+<p>In my opinion its down to:</p>
+
+<ul>
+<li>Do you like or are you ok with using a mouse?</li>
+<li>Are you using an IDE (with language support) with lots of support for changes (i e refactoring)?</li>
+<li>Are you editing text / code on other platforms (android, terminals) that doesn&#8217;t have good mouse support?</li>
+</ul>
+
+
+<p>The real payoff was using it in a terminal or on android with bad mouse support. If you are in that situation a lot or expecting to be then I&#8217;d go for it. If you are comfortable in your IDE working with the mouse then there&#8217;s not that much benefit of knowing it.</p>
+
+<h2>If yes - track yourself</h2>
+
+<p>If you do decide to go for it: Do a screencast of yourself using your old editor. Play it back and see how you are doing. Record yourself doing the same thing in vim and compare. Also, for the benefit of not giving up too soon, try to optimize it a bit and speed up the screencast if necessary to regular typing speed. See it as an example of where you could be if you&#8217;d spend more time in vim.</p>
+
+<p>If there is a vim wizard near you - seek them out and ask if you could see them in action. Are they as fast as you&#8217;d like to become? Is what they do something you should be doing?</p>
+
+<p>If you don&#8217;t know a vim wizard - (and even if you do) watch sceencasts of wizards using vim. Try to pick up on what they do and see if its something you&#8217;d like to achieve. Does it look natural or akward to you? Switch back to your old ways once in a while. Compare and make sure you&#8217;re getting your moneys worth.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -915,84 +1096,6 @@
 <p>Ideas are cool in that they are not fixed in form. One idea carries some concept that may or may not apply. But it can be fuzzy on the details which can be filled out to fit the specific situation. And it can spark new ideas that fit better.</p>
 
 <p>Shared code base is fixed in form. More than stake holder is depending on it being the same way. If someone wants to evolve it or break from it, all target users have to agree on this - otherwise you&#8217;re stuck. I&#8217;m not saying don&#8217;t ever share code. Do share code.. as a means to share ideas. But don&#8217;t share code mechanically just by saving a few keystrokes or fixing bugs faster (because on the flip side you&#8217;re probably introducing bugs faster too). Instead at each turn consider branching out a very possible option. Abandon the safe what is for the more exciting what could be.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/16/boredom-the-hidden-asset/">Boredom the Hidden Asset</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-16T21:50:00+01:00" pubdate data-updated="true">Mar 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been fighting boredom and procrastination for as long as I can remember.</p>
-
-<h2>Boredom on personal projects</h2>
-
-<p>Ah, new stuff. Fresh, untouched, exciting - and safely without practical use. Boredom and procrastination usually sets in when the first road block is hit. Like actually writing lines of code in that new language. Or using the long researched best web framework. And it results in more research and more looking at new things. Seldom staying long enough with something to make it useful.</p>
-
-<h2>Moving is not a solution</h2>
-
-<p>Same went for my workplace - I&#8217;d be all over it the first few months or even up to a year or two. Then when progression started to slow down - I knew the sites and the layout of the code its shininess faded and - hello boredom again!</p>
-
-<p>Previously working as a consultant this didn&#8217;t turn into a problem since I changed workplaces often enough to keep things new and fresh. But this wasn&#8217;t really a solution on the problem, it was simply running away from it.</p>
-
-<h2>Neither are processes</h2>
-
-<p>So, true to engineer fashion I looked for remedies in the shape of processes and tools. I tried task lists, pomodoro, time boxing to name a few. This usually started out well but when the new effect wore off - about the same or more procrastination. And in the back of my mind I couldn&#8217;t help but think that all of those processes seemed too rigid. It was forcing it.</p>
-
-<h2>Blog post to the rescue</h2>
-
-<p><a href="http://99u.com/articles/7188/why-boredom-is-good-for-your-creativity">This hit me like a two ton heavy thing</a> (yes there&#8217;s probably some irony in finding the solution out there in a blog, the siren song of procrastination). To sum it up: It&#8217;s ok to be bored. In fact - if you&#8217;re bored and it&#8217;s the right kind of bore you are on to something big.</p>
-
-<h2>Preparing to climb</h2>
-
-<p>So I decided to work it. To leverage boredom instead of trying to suppress it.</p>
-
-<p>The setup was this: close all the usual suspects. No mail notification icons, no rss feeds, no open  applications except for the minimal amount really needed to get the work done. Don&#8217;t minimize the windows. Close them. Deinstall what you can. You need to implement it the hard way and really maximize the potential for boredom.</p>
-
-<p>Now sit there and let the boredom set in. Look at the code, stare at it. Don&#8217;t leave your workplace for anything less than critical. Do not open any mail clients or the likes. Gorge on boredom&#8230; and waaaaiiit for it.</p>
-
-<h2>Downhill sunny side</h2>
-
-<p>Past this point was a bit like that monkey meeting Jane Goodall. She just stood there and didn&#8217;t run away. What now?</p>
-
-<p>Turns out boredom is a hill you&#8217;re meant to climb. The steeper the climb up, the sweeter the ride down. You eventually start to tinker in small pieces. And then in larger pieces, and before you know it you&#8217;re totally emerged in what you wanted to avoid.  Beyond that hill of boredom is the pot of voluntary productiveness.</p>
-
-<p>On this side you&#8217;ll be glad you deinstalled all those notifiers and closed all those windows with sweet sugary distraction. You&#8217;re in the productivity zone cruising - but it&#8217;s a fragile zone. Any  distraction will break your concentration and you need to go through the build up phase again.</p>
-
-<h2>Boredom as an innovator</h2>
-
-<p>Here&#8217;s a bonus I didn&#8217;t see coming from this. When hitting boredom full on and closing down the distractions you get annoyed by manual and slow things. You know, the build window where you&#8217;d check your twitter account only to notice the build finished 15 minutes ago. Those hurt much more now because you&#8217;re now in productive mode after being bored you don&#8217;t want to go back - so you automate and innovate to minimize the mundane and time consuming parts.</p>
-
-<h2>Switched tables</h2>
-
-<p>Wow. How&#8217;s that for a flip side? Turns out boredom is not a liability - it&#8217;s an asset. And a valuable one at that. Its your personal indicator of how much you&#8217;re going to enjoy the task once the resistance subdues.</p>
 </div>
   
   

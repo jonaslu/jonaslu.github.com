@@ -1,85 +1,85 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/02/05/hello-world/</loc>
-        <lastmod>2013-02-24T20:56:31+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/02/05/hello-world/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/02/08/setup/</loc>
-        <lastmod>2013-02-24T20:56:31+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/02/08/setup/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/02/18/fantom-the-language/</loc>
-        <lastmod>2013-02-24T20:56:31+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/02/18/fantom-the-language/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/02/24/stages-of-a-code-review/</loc>
-        <lastmod>2013-02-24T22:06:08+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/</loc>
-        <lastmod>2013-03-20T20:51:19+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/03/16/boredom-the-hidden-asset/</loc>
-        <lastmod>2013-03-16T22:03:46+01:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/
+            http://catchmecode.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/
         </loc>
-        <lastmod>2013-03-24T22:31:52+01:00</lastmod>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/04/24/the-next-big-language/</loc>
-        <lastmod>2013-04-24T22:16:53+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/04/24/the-next-big-language/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/</loc>
-        <lastmod>2013-05-01T20:49:01+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/05/10/phonemeetings/</loc>
-        <lastmod>2013-05-10T22:18:13+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/05/10/phonemeetings/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync/</loc>
-        <lastmod>2013-06-03T21:49:50+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/06/15/bug-repellants/</loc>
-        <lastmod>2013-06-15T23:06:43+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/06/15/bug-repellants/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/07/15/fast-programmers/</loc>
-        <lastmod>2013-07-15T22:41:04+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/07/15/fast-programmers/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/</loc>
-        <lastmod>2013-08-01T22:15:14+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/08/01/jetty-multiple-instances/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project/</loc>
-        <lastmod>2013-08-26T22:09:14+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/08/26/get-yourself-a-fast-project/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/2013/09/11/is-learning-vim-worth-it/</loc>
-        <lastmod>2013-09-11T21:58:06+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/2013/09/11/is-learning-vim-worth-it/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/blog/archives/</loc>
-        <lastmod>2013-09-11T21:58:06+02:00</lastmod>
+        <loc>http://catchmecode.com/blog/archives/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/</loc>
-        <lastmod>2013-09-11T21:58:06+02:00</lastmod>
+        <loc>http://catchmecode.com/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/robots.txt</loc>
-        <lastmod>2013-02-24T20:56:31+01:00</lastmod>
+        <loc>http://catchmecode.com/robots.txt</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
     <url>
-        <loc>http://jonaslu.github.com/about/</loc>
-        <lastmod>2013-03-16T22:06:11+01:00</lastmod>
+        <loc>http://catchmecode.com/about/</loc>
+        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
     </url>
 </urlset>

@@ -2,27 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: code review | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/code-review/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/code-review/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Stages of a code review]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/24/stages-of-a-code-review/"/>
+    <link href="http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review/"/>
     <updated>2013-02-24T21:00:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/24/stages-of-a-code-review</id>
-    <content type="html"><![CDATA[<p>My team at work have been doing code reviews for about 2 years now. Its gotten to the point where I'm actually a bit
-surprised and disappointed if I don't get "I'd prefer you'd not submit this" with some questions or comments.</p>
+    <id>http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review</id>
+    <content type="html"><![CDATA[<p>My team at work have been doing code reviews for about 2 years now. Its gotten to the point where I&rsquo;m actually a bit
+surprised and disappointed if I don&rsquo;t get &ldquo;I&rsquo;d prefer you&rsquo;d not submit this&rdquo; with some questions or comments.</p>
 
 <p>Code reviews are four wishes in one really: quality assurance (this is a no brainier), replicating knowledge throughout the team,
-a great learning tool and educational tool and finally - this is probably the most important one - it's a great
+a great learning tool and educational tool and finally &ndash; this is probably the most important one &ndash; it&rsquo;s a great
 synchronizer of product vision and architecture (i e where are we going with this and how does it look when we get there?).</p>
 
 <p>In the acadmic world all teams go through <a href="http://en.wikipedia.org/wiki/Group_development">4 phases</a> when forming:</p>
@@ -35,43 +35,43 @@ synchronizer of product vision and architecture (i e where are we going with thi
 </ul>
 
 
-<p>Introducing code reviews on my team went through roughly the same 4 phases. I'll walk you through its incantations - (and yes, the phases have been amped up a bit for dramatic effect).</p>
+<p>Introducing code reviews on my team went through roughly the same 4 phases. I&rsquo;ll walk you through its incantations &ndash; (and yes, the phases have been amped up a bit for dramatic effect).</p>
 
 <h2>The formal phase</h2>
 
-<p>Everyone is nice and lets too much ugly stuff pass (others code of course) but underneath the surface the tension is growing. Flames starts to erupt more and more and we transition into...</p>
+<p>Everyone is nice and lets too much ugly stuff pass (others code of course) but underneath the surface the tension is growing. Flames starts to erupt more and more and we transition into&hellip;</p>
 
 <h2>The ugly phase</h2>
 
 <p>The guns come out blazing. Knit picking and overly zealous code reviews. Rages through restrained comments.
-The focus is usually myopic - variable prefixes, should all parameters be final, checked vs unchecked exceptions etc with an all or nothing approach. Some will try to quiet this phase by calling for "review documents" and "standards". Books are scoured, internets are searched for an acceptable formal definition and ingredients of a code review. Do resist that urge - I'll get to why in the end of this post.</p>
+The focus is usually myopic &ndash; variable prefixes, should all parameters be final, checked vs unchecked exceptions etc with an all or nothing approach. Some will try to quiet this phase by calling for &ldquo;review documents&rdquo; and &ldquo;standards&rdquo;. Books are scoured, internets are searched for an acceptable formal definition and ingredients of a code review. Do resist that urge &ndash; I&rsquo;ll get to why in the end of this post.</p>
 
-<p>A word of comfort for the poor souls in this phase - this is good. Stay with it. Your team is feeling concerned for the code, but the concern is a bit misguided at superficial things. Use this
-to focus on the real concern - architecture and the great product you're supposed to be building. Use the discussions as a
+<p>A word of comfort for the poor souls in this phase &ndash; this is good. Stay with it. Your team is feeling concerned for the code, but the concern is a bit misguided at superficial things. Use this
+to focus on the real concern &ndash; architecture and the great product you&rsquo;re supposed to be building. Use the discussions as a
 setup for getting to the how and the why on a larger scale.</p>
 
-<p>Let the gloves come off and let them stay off until the discussion gets constructive. It'll pay off.</p>
+<p>Let the gloves come off and let them stay off until the discussion gets constructive. It&rsquo;ll pay off.</p>
 
 <h2>The solving phase</h2>
 
-<p>We're not out of the woods yet, but we're starting to move in the right direction. Egos are starting to subside and the other side is listened to. Its not yet a fully constructive dialogue but at least other arguments besides your own are heard. Use this to move forward.</p>
+<p>We&rsquo;re not out of the woods yet, but we&rsquo;re starting to move in the right direction. Egos are starting to subside and the other side is listened to. Its not yet a fully constructive dialogue but at least other arguments besides your own are heard. Use this to move forward.</p>
 
 <p>Try to get to the root cause of the discussions. Chances are you have technical debt and the code is not where you want it to be. Your vision in the team is not in sync. This will show up in code reviews. Call it
-teamnical debt (clever huh?). Code and approaches are not being discussed enough so everyone has their own view of what you're building and how to build it.</p>
+teamnical debt (clever huh?). Code and approaches are not being discussed enough so everyone has their own view of what you&rsquo;re building and how to build it.</p>
 
 <h2>The constructive phase</h2>
 
-<p>How did we get here from the last phase? By getting to the root cause of the discussions I'm hoping everyone starts noticing that we all want the same end result - the best product ever made by man. Its just diffrent approaches to this. Its no longer about beeing right, its about generating the best approach and... well, just getting things done really.</p>
+<p>How did we get here from the last phase? By getting to the root cause of the discussions I&rsquo;m hoping everyone starts noticing that we all want the same end result &ndash; the best product ever made by man. Its just diffrent approaches to this. Its no longer about beeing right, its about generating the best approach and&hellip; well, just getting things done really.</p>
 
-<p>You'll be very happy that you didn't settle on some "formal review standard". Its easy to get caught up in trying
-to control the growing flames but this will also take away from the end result - no document can ever substitute judgement of each particular case. The end result is the ability to discuss architecture and code structure.</p>
+<p>You&rsquo;ll be very happy that you didn&rsquo;t settle on some &ldquo;formal review standard&rdquo;. Its easy to get caught up in trying
+to control the growing flames but this will also take away from the end result &ndash; no document can ever substitute judgement of each particular case. The end result is the ability to discuss architecture and code structure.</p>
 
 <p>This also the most relaxed place. The micro-concern of syntax and formalia are replaced with the macro-concern of building a great product.
 Its more pragmatic and constructive. Quality is everyones concern.</p>
 
 <h2>Y u no fail review?</h2>
 
-<p>So how do you know where your team is on that scale? In my book if reviews are failed more often than they are approved but everyone is still smiling you've nailed it. Its that nice place where you appreciate someone elses comments and look forward to getting them to improve your code - make it more readable, fix some bugs when they're still cheap to fix or align your vision of the perfect product.</p>
+<p>So how do you know where your team is on that scale? In my book if reviews are failed more often than they are approved but everyone is still smiling you&rsquo;ve nailed it. Its that nice place where you appreciate someone elses comments and look forward to getting them to improve your code &ndash; make it more readable, fix some bugs when they&rsquo;re still cheap to fix or align your vision of the perfect product.</p>
 ]]></content>
   </entry>
   

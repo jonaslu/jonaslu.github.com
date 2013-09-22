@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/">
+  <link rel="canonical" href="http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -61,7 +61,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:jonaslu.github.com" />
+    <input type="hidden" name="q" value="site:catchmecode.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -119,27 +119,27 @@
 
 <h2>Big reset</h2>
 
-<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up - just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
+<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up &ndash; just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
 
 <h2>Tech goals</h2>
 
-<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&#8217;t quite make it. It kept jumping down and sometimes locking up the regular function - so I  gave up, I&#8217;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
+<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&rsquo;t quite make it. It kept jumping down and sometimes locking up the regular function &ndash; so I  gave up, I&rsquo;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
 
-<p>In addition, the sum box has other uses (and feelings m&#8217;kay?) too - it can display averages etc and I didn&#8217;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&#8217;t look as integrated as reusing the sum box - but I&#8217;m hoping it will be a more stable solution.</p>
+<p>In addition, the sum box has other uses (and feelings m&#8217;kay?) too &ndash; it can display averages etc and I didn&rsquo;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&rsquo;t look as integrated as reusing the sum box &ndash; but I&rsquo;m hoping it will be a more stable solution.</p>
 
 <h2>Highlighting selected cells</h2>
 
-<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&#8217;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays - I wouldn&#8217;t know the size of the cells or overlays. This is a cheaper hack.</p>
+<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&rsquo;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays &ndash; I wouldn&rsquo;t know the size of the cells or overlays. This is a cheaper hack.</p>
 
 <h2>Selecting the value to sum</h2>
 
-<p>Finding the selected cell would be hard - it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&#8217;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it - (the click that is). It should however not be a big problem, just aim at the middle and don&#8217;t set your cell size so low you cant hit it.</p>
+<p>Finding the selected cell would be hard &ndash; it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&rsquo;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it &ndash; (the click that is). It should however not be a big problem, just aim at the middle and don&rsquo;t set your cell size so low you cant hit it.</p>
 
-<p>Anything you click will be tested if it parses as a digit and if it does - its added to the sum.</p>
+<p>Anything you click will be tested if it parses as a digit and if it does &ndash; its added to the sum.</p>
 
 <h2>Keep in touch</h2>
 
-<p>Tested in google chrome so far - please let me know if you test in other browsers if it works or not.</p>
+<p>Tested in google chrome so far &ndash; please let me know if you test in other browsers if it works or not.</p>
 </div>
 
 
@@ -167,7 +167,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/google-docs/'>google docs</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/userscripts-org/'>userscripts.org</a>
+    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/google-docs/'>google docs</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/userscripts-dot-org/'>userscripts.org</a>
   
 </span>
 
@@ -176,9 +176,13 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" data-via="" data-counturl="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" data-via="" data-counturl="http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/" >Tweet</a>
   
   
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   
 </div>
 
@@ -224,8 +228,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
-        var disqus_url = 'http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
+        var disqus_identifier = 'http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
+        var disqus_url = 'http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -237,7 +241,24 @@
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 

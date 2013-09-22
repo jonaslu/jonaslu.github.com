@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: google docs | Catch me code]]></title>
-  <link href="http://catchmecode.com/blog/categories/google-docs/atom.xml" rel="self"/>
+  <title><![CDATA[Category: userscripts.org | Catch me code]]></title>
+  <link href="http://catchmecode.com/blog/categories/userscripts-dot-org/atom.xml" rel="self"/>
   <link href="http://catchmecode.com/"/>
   <updated>2013-09-22T21:54:26+02:00</updated>
   <id>http://catchmecode.com/</id>

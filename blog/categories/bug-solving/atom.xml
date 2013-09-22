@@ -2,77 +2,77 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: bug solving | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/bug-solving/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/bug-solving/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Bug repellants]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/06/15/bug-repellants/"/>
+    <link href="http://catchmecode.com/blog/2013/06/15/bug-repellants/"/>
     <updated>2013-06-15T22:48:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/06/15/bug-repellants</id>
-    <content type="html"><![CDATA[<p>I've seen this go down a fair amount of times - myself included. I just know why its happening, right. Its this damn line here - there is something with this function call. Change it a bit at random, run a test, see it fail. Why in the name of S is this still failing? Change some more at random - google what I <em>know</em> is the problem - see it fail again. Sounds familiar, right?</p>
+    <id>http://catchmecode.com/blog/2013/06/15/bug-repellants</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve seen this go down a fair amount of times &ndash; myself included. I just know why its happening, right. Its this damn line here &ndash; there is something with this function call. Change it a bit at random, run a test, see it fail. Why in the name of S is this still failing? Change some more at random &ndash; google what I <em>know</em> is the problem &ndash; see it fail again. Sounds familiar, right?</p>
 
-<p>My biases on where the problem was and what caused it has cost me a fair of amount of time wasted. Its also the greatest hurdle to get past (since your ego is involved). About 90% of the time if I don't solve the bug in 30 seconds - its not the cause I thought it was. It usually turns out to be something very different. And the way to get from here to there is to let go of whatever cause you had pictured in your head.</p>
+<p>My biases on where the problem was and what caused it has cost me a fair of amount of time wasted. Its also the greatest hurdle to get past (since your ego is involved). About 90% of the time if I don&rsquo;t solve the bug in 30 seconds &ndash; its not the cause I thought it was. It usually turns out to be something very different. And the way to get from here to there is to let go of whatever cause you had pictured in your head.</p>
 
 <h2>Get verifiable data</h2>
 
 <p>The first step is to free yourself from whatever you think of the bug. Its crucial to keep all options open and then narrow down on the causes and fixes. Take a step back (and some fresh coffee), free of your biases and look at the situation. You need some kind of data to work with. Just guessing at random will not help you (has it ever really?).</p>
 
-<p>I'm fairly reluctant to label the bug too specifically in order to remind myself that it might not be what I'm looking for. Rattling of a "oh, its a threading issue" too soon might cut you off from the real cause. Perhaps its not a threading issue at all - it just looks like it from a distance.</p>
+<p>I&rsquo;m fairly reluctant to label the bug too specifically in order to remind myself that it might not be what I&rsquo;m looking for. Rattling of a &ldquo;oh, its a threading issue&rdquo; too soon might cut you off from the real cause. Perhaps its not a threading issue at all &ndash; it just looks like it from a distance.</p>
 
 <h2>Ground zero</h2>
 
-<p>First step - where does it occur? In some cases such as an exception, its obvious where it occurs. Or is it? What if its an exception caught and rethrown silently? Go to the line and look at it. Make sure you're looking at the right line.</p>
+<p>First step &ndash; where does it occur? In some cases such as an exception, its obvious where it occurs. Or is it? What if its an exception caught and rethrown silently? Go to the line and look at it. Make sure you&rsquo;re looking at the right line.</p>
 
 <p>Can you get it to fail each time? Can you set up some scaffolding to get it into the fail-state? Are you sure its only here? Are there any other paths to where it seems to occur? Can you do some auxiliary small tests to verify that its really where you think it is?</p>
 
-<p>You need to make sure you're looking at the right neighborhood. If its vague - acknowledge that its vague so you don't get the wrong impression of knowing where to look. Avoid labeling it.</p>
+<p>You need to make sure you&rsquo;re looking at the right neighborhood. If its vague &ndash; acknowledge that its vague so you don&rsquo;t get the wrong impression of knowing where to look. Avoid labeling it.</p>
 
 <h2>Breakpoints</h2>
 
-<p>For zeroing in on bugs that you don't know where they fail - but you now can reproduce the failure each time - breakpoints is an indispensible tool.</p>
+<p>For zeroing in on bugs that you don&rsquo;t know where they fail &ndash; but you now can reproduce the failure each time &ndash; breakpoints is an indispensible tool.</p>
 
-<p>If your language supports debugging via breakpoints - good for you :) If not, use good 'ol print statements. Put a breakpoint far enough up in the call stack so you don't miss it (unless its a very specific error, such as a NullPointer - then you can set a breakpoint on the NullPointer exception itself and work backwards).</p>
+<p>If your language supports debugging via breakpoints &ndash; good for you :) If not, use good &lsquo;ol print statements. Put a breakpoint far enough up in the call stack so you don&rsquo;t miss it (unless its a very specific error, such as a NullPointer &ndash; then you can set a breakpoint on the NullPointer exception itself and work backwards).</p>
 
 <p>What does the state look like when the bug occurs? The stack trace? Can you go up the stack trace to see who called you and what their state looked like? Can someone else in turn affect the one calling you and so on? Can you compare this state with a stable state you know does the right thing?</p>
 
 <h2>Change state</h2>
 
-<p>If your language and tool supports changing values while hanging on a breakpoint - can you change some parameters to get it working? Can you inspect the state of the variables and the stack trace of what got you there? Is there any other way to get here or affect the state you're currently looking at? If not, use simple assignments along the way to affect the state.</p>
+<p>If your language and tool supports changing values while hanging on a breakpoint &ndash; can you change some parameters to get it working? Can you inspect the state of the variables and the stack trace of what got you there? Is there any other way to get here or affect the state you&rsquo;re currently looking at? If not, use simple assignments along the way to affect the state.</p>
 
 <p>Input other data than what you normally put in. Does it still fail? Can you alter the code path so it works?</p>
 
 <h2>Last known stable state</h2>
 
-<p>Next step once you have established where it occurs is to have something to compare it with that you know works / is right. Is there one? If so, can you revert to it (you did commit did you not?). Start from there and trace forward to where the bug was introduced. If you use git - <a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git bisect</a> was done for this.</p>
+<p>Next step once you have established where it occurs is to have something to compare it with that you know works / is right. Is there one? If so, can you revert to it (you did commit did you not?). Start from there and trace forward to where the bug was introduced. If you use git &ndash; <a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git bisect</a> was done for this.</p>
 
 <p>Can you compare some logs, files, state, stacktrace of when it works the way you want it to? Can you do some auxiliary experiments to get a working stable state to compare with?</p>
 
 <h2>Git blame</h2>
 
-<p>Why is it here? What's the surroundings of the bug? Can you get some historical facts on why it looks like it does? Has there been much action in this area lately (or things that are related to it?). Does the commit message give you some hints on why?</p>
+<p>Why is it here? What&rsquo;s the surroundings of the bug? Can you get some historical facts on why it looks like it does? Has there been much action in this area lately (or things that are related to it?). Does the commit message give you some hints on why?</p>
 
 <p>Just knowing when it was introduced (around what time) may give you hints as to what else was going on at that time what might have caused it. Another useful thing is that it might be a bug that someone now relies on. So its actually more of intended (incidental) behavior. Check that if you do fix this nothing else breaks.</p>
 
 <h2>Read up</h2>
 
-<p>This comes fairly low on the list because it should be used with caution. Its very easy to get distracted and mislead by seemingly similar problems that others might have. Do check - but take everything you read with a big pinch of salt. Keep in mind that you're reading the textual representation of their interpretation of the problem. Maybe they haven't gone through the same thorough investigation you just had (you did get verifiable data, right? :).</p>
+<p>This comes fairly low on the list because it should be used with caution. Its very easy to get distracted and mislead by seemingly similar problems that others might have. Do check &ndash; but take everything you read with a big pinch of salt. Keep in mind that you&rsquo;re reading the textual representation of their interpretation of the problem. Maybe they haven&rsquo;t gone through the same thorough investigation you just had (you did get verifiable data, right? :).</p>
 
-<p>When using some someone elses library its more useful - after you've established that the problem is in someone elses library. Has someone else had a similar problem? If so - how did they solve it? If not - how probable is it that you're the only one in the world experiencing this? That last part is aimed at stopping the "its a bug in the OS" type of answers. If its an OS its very well used and thusly its very probable its an already known bug - and if not it's probably in your code. Not theirs.</p>
+<p>When using some someone elses library its more useful &ndash; after you&rsquo;ve established that the problem is in someone elses library. Has someone else had a similar problem? If so &ndash; how did they solve it? If not &ndash; how probable is it that you&rsquo;re the only one in the world experiencing this? That last part is aimed at stopping the &ldquo;its a bug in the OS&rdquo; type of answers. If its an OS its very well used and thusly its very probable its an already known bug &ndash; and if not it&rsquo;s probably in your code. Not theirs.</p>
 
-<p>What does any documentation say? Have you made the right assumptions? Is there any pre-cond you're not aware of? Are you using it the way its meant to be used? Can you get the source for whatever you're looking at (and start from step #1 again above, this time in their code base?)</p>
+<p>What does any documentation say? Have you made the right assumptions? Is there any pre-cond you&rsquo;re not aware of? Are you using it the way its meant to be used? Can you get the source for whatever you&rsquo;re looking at (and start from step #1 again above, this time in their code base?)</p>
 
 <h2>Questions?</h2>
 
-<p>This post came off more as a huge pack of questions than I originally had planned - but then again, this is usually how (successful) debugging sessions go. A huge amount of questions thrown around to establish where, why and finally how to fix it. Its by no means exhaustive as every bug and every situation is a bit different. These are just the main tools I usually go for when facing an unknown problem.</p>
+<p>This post came off more as a huge pack of questions than I originally had planned &ndash; but then again, this is usually how (successful) debugging sessions go. A huge amount of questions thrown around to establish where, why and finally how to fix it. Its by no means exhaustive as every bug and every situation is a bit different. These are just the main tools I usually go for when facing an unknown problem.</p>
 ]]></content>
   </entry>
   

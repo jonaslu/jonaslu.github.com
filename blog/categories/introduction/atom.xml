@@ -2,27 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: introduction | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/introduction/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/introduction/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Fantom the language]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/18/fantom-the-language/"/>
+    <link href="http://catchmecode.com/blog/2013/02/18/fantom-the-language/"/>
     <updated>2013-02-18T21:22:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/18/fantom-the-language</id>
-    <content type="html"><![CDATA[<p>I've been working on the JVM for about 4 years now. Its been a pleasant ride so far but lately I've started to outgrow Java. The JVM platform is brilliant in itself. The speed is almost on par with native code, its easy to install and get an app running - there's plenty of tooling and performance monitors for it. Its stable and mature, has a large user base and it runs on many platforms (really the top reason for staying with it).</p>
+    <id>http://catchmecode.com/blog/2013/02/18/fantom-the-language</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been working on the JVM for about 4 years now. Its been a pleasant ride so far but lately I&rsquo;ve started to outgrow Java. The JVM platform is brilliant in itself. The speed is almost on par with native code, its easy to install and get an app running &ndash; there&rsquo;s plenty of tooling and performance monitors for it. Its stable and mature, has a large user base and it runs on many platforms (really the top reason for staying with it).</p>
 
-<p>But Java the language feels a bit dated. Or rather, once you start looking at more current languages with a functional edge and other goodies - it's hard to go back and doing that stuff manually. Granted, Java 8 seems to be getting some of these features like closures and lambda expressions. But there still will be plenty of things to miss given its rather verbose syntax and constructs.</p>
+<p>But Java the language feels a bit dated. Or rather, once you start looking at more current languages with a functional edge and other goodies &ndash; it&rsquo;s hard to go back and doing that stuff manually. Granted, Java 8 seems to be getting some of these features like closures and lambda expressions. But there still will be plenty of things to miss given its rather verbose syntax and constructs.</p>
 
-<p>There is a current upsurge of languages building on the JVM - with Scala and Clojure getting the most love. I've tried Scala but eventually had to abandon and move on - the hunt was on for a new language.</p>
+<p>There is a current upsurge of languages building on the JVM &ndash; with Scala and Clojure getting the most love. I&rsquo;ve tried Scala but eventually had to abandon and move on &ndash; the hunt was on for a new language.</p>
 
 <h2>Enter Fantom</h2>
 
@@ -36,48 +36,48 @@
 
 <p>Multiline strings and string interpolation. Probably my #2 reason. The whole templating deal in Java is largely a solution to this problem. There is going to creep in  HTML in the code, and it might as well align and read nicely.</p>
 
-<p>Built in make- system complete with versioning of dependent libs. I've spent too much time on several languages at the setting up a project phase. Breaking backwards compatibility is tends generate a chicken race where everyone waits for someone else to upgrade to the latest and greatest. In such languages using external libs quickly becomes a trial and error of what versions you can run against what language version (and usually the make tool also is versioned against those libs and the language). In fantom you clearly state in your pod (think of it as a versioned lib) what libraries and what versions of those libraries you depend on. The make tool is built in so its compatible with the release you're running. You'll even get a compile error if you try to use a class in a pod which you have not declared as a dependency.</p>
+<p>Built in make- system complete with versioning of dependent libs. I&rsquo;ve spent too much time on several languages at the setting up a project phase. Breaking backwards compatibility is tends generate a chicken race where everyone waits for someone else to upgrade to the latest and greatest. In such languages using external libs quickly becomes a trial and error of what versions you can run against what language version (and usually the make tool also is versioned against those libs and the language). In fantom you clearly state in your pod (think of it as a versioned lib) what libraries and what versions of those libraries you depend on. The make tool is built in so its compatible with the release you&rsquo;re running. You&rsquo;ll even get a compile error if you try to use a class in a pod which you have not declared as a dependency.</p>
 
-<p>Type system built for reflection. I tend to stay away from reflection in Java because it introduces too much magic in the code. Refactoring code always feels a bit uneasy because you don't know if someone reflectively invokes that method or class you just removed. It'll show up in production at the worst time of course. In fantom you'll get a compile time error if your reflective type is missing.</p>
+<p>Type system built for reflection. I tend to stay away from reflection in Java because it introduces too much magic in the code. Refactoring code always feels a bit uneasy because you don&rsquo;t know if someone reflectively invokes that method or class you just removed. It&rsquo;ll show up in production at the worst time of course. In fantom you&rsquo;ll get a compile time error if your reflective type is missing.</p>
 
-<p>There's plenty of dogfooding. One concern many seem to have is that its relatively unknown and unused. Skyfoundry was based on their own language so its being used in production by its own authors. The authors are betting their own company on this language - so its actually backed by a corporation already. There are some replies in <a href="http://fantom.org/sidewalk/topic/1978">this thread</a> to that concern.</p>
+<p>There&rsquo;s plenty of dogfooding. One concern many seem to have is that its relatively unknown and unused. Skyfoundry was based on their own language so its being used in production by its own authors. The authors are betting their own company on this language &ndash; so its actually backed by a corporation already. There are some replies in <a href="http://fantom.org/sidewalk/topic/1978">this thread</a> to that concern.</p>
 
 <h2>The cons</h2>
 
-<p>IDEs support. This is not a bash on the editors out there (f4, netbeans plugin and some text editors) - its just that being on the JVM you're gonna get compared to eclipse or netbeans. And compared to these they are still lacking - again lots of hard work has been put into these editors so its not a fault of their respective authors. Its just a little hard getting used to after such stellar IDEs in Java.</p>
+<p>IDEs support. This is not a bash on the editors out there (f4, netbeans plugin and some text editors) &ndash; its just that being on the JVM you&rsquo;re gonna get compared to eclipse or netbeans. And compared to these they are still lacking &ndash; again lots of hard work has been put into these editors so its not a fault of their respective authors. Its just a little hard getting used to after such stellar IDEs in Java.</p>
 
-<p>Its a bit quiet. The community is great and helpful but its still moving rather slow for such a mature (and great) language. I'm hoping more converts show up and make the community a bit more vibrant.</p>
+<p>Its a bit quiet. The community is great and helpful but its still moving rather slow for such a mature (and great) language. I&rsquo;m hoping more converts show up and make the community a bit more vibrant.</p>
 
 <p>Not that many libraries. Goes hand in hand with the quiet community. There is a CPAN / gem / maven central style repo tool build into the language. But the default address in <a href="http://fantom.org/doc/fanr/index.html">fanr</a> still goes nowhere. <a href="http://wiki.colar.net/">Thibaut Colar</a> has been kind enough to host a repo in the meantime (found <a href="http://repo.status302.com/">here</a> including instructions on how to use it). Also not all frameworks are in that repo. They are scattered across bitbucket and github with no real way of finding them, save for searching the forum, bitbucket and github. Again, more converts means more libs so its a matter of bootstrapping both the community and the libs.</p>
 
-<p>Examples and snippets of how you do things. The documentation is quite very detailed - but as soon as you hit the code there is all those small cases that are not covered. In the begining you will probably write java code with fantom syntax. There are a lot of gems and small shortcuts that make more idiomatic, buts its much a trial and error way there. The distribution does ship with the entire source and its a great source for idiomatic code - but its a heavy digest if you're not into compiler construction.</p>
+<p>Examples and snippets of how you do things. The documentation is quite very detailed &ndash; but as soon as you hit the code there is all those small cases that are not covered. In the begining you will probably write java code with fantom syntax. There are a lot of gems and small shortcuts that make more idiomatic, buts its much a trial and error way there. The distribution does ship with the entire source and its a great source for idiomatic code &ndash; but its a heavy digest if you&rsquo;re not into compiler construction.</p>
 
 <h2>The whys</h2>
 
-<p>I'm a sucker for good engineering trade-offs. I really like how fantom focuses on getting work out the door. Its shuns the extremes and often takes the "middle road". I love this kind of stuff - it just spells good engineering to me.</p>
+<p>I&rsquo;m a sucker for good engineering trade-offs. I really like how fantom focuses on getting work out the door. Its shuns the extremes and often takes the &ldquo;middle road&rdquo;. I love this kind of stuff &ndash; it just spells good engineering to me.</p>
 
-<p>One thing that's been hitting me a lot when doing some code is how often I started out doing something - only to find out that there's already method for that. Compact as the API may be this again seems like the authors knowing what will be useful to put into the API. This makes it a gem to code with, much less manual stuff than a quick glance may reveal.</p>
+<p>One thing that&rsquo;s been hitting me a lot when doing some code is how often I started out doing something &ndash; only to find out that there&rsquo;s already method for that. Compact as the API may be this again seems like the authors knowing what will be useful to put into the API. This makes it a gem to code with, much less manual stuff than a quick glance may reveal.</p>
 
-<p><a href="http://fantom.org">Now go! Try it.</a> I'll be writing more on it here in coming posts.</p>
+<p><a href="http://fantom.org">Now go! Try it.</a> I&rsquo;ll be writing more on it here in coming posts.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/05/hello-world/"/>
+    <link href="http://catchmecode.com/blog/2013/02/05/hello-world/"/>
     <updated>2013-02-05T21:17:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/05/hello-world</id>
+    <id>http://catchmecode.com/blog/2013/02/05/hello-world</id>
     <content type="html"><![CDATA[<p>Phew, just had to get that off my chest. It has been brewing for a couple of years now.</p>
 
 <h2>And who are you then?</h2>
 
-<p>Hacking stuff started at an early age - writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
+<p>Hacking stuff started at an early age &ndash; writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
 
 <h2>Why write this blog?</h2>
 
-<p>As with any topic, first stage - learning the craft, second stage - actively employing it and third stage - starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
+<p>As with any topic, first stage &ndash; learning the craft, second stage &ndash; actively employing it and third stage &ndash; starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
 
-<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I've been continually amazed at what people can come up with - its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
+<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I&rsquo;ve been continually amazed at what people can come up with &ndash; its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
 
 <p>So the bar is set aptly high, all needed now is just producing content.</p>
 ]]></content>

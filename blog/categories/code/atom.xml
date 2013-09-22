@@ -2,54 +2,54 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: code | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/code/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Rotating backups with rsync]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
+    <link href="http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
     <updated>2013-06-01T21:36:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync</id>
-    <content type="html"><![CDATA[<p>First off: its here - <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
+    <id>http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync</id>
+    <content type="html"><![CDATA[<p>First off: its here &ndash; <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
 
 <h2>Short description</h2>
 
-<p>Its a script that does rotational backups on your folders of choice. No compression involved - the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
+<p>Its a script that does rotational backups on your folders of choice. No compression involved &ndash; the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
 
 <h2>Background</h2>
 
-<p>You know the drill - do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn't really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well - it was educational at least to roll your own :).</p>
+<p>You know the drill &ndash; do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn&rsquo;t really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well &ndash; it was educational at least to roll your own :).</p>
 
 <h2>Requirement spec</h2>
 
-<p>Files should be accessible via ssh or the like from outside - so no compression. And because its on my local network I'm also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it - for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
+<p>Files should be accessible via ssh or the like from outside &ndash; so no compression. And because its on my local network I&rsquo;m also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it &ndash; for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
 
-<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore - hard links achieves the same thing - to keep the data amount down over a cycle of backups.</p>
+<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore &ndash; hard links achieves the same thing &ndash; to keep the data amount down over a cycle of backups.</p>
 
-<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) - work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 - files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn't that interesting to keep around anyway).</p>
+<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) &ndash; work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 &ndash; files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn&rsquo;t that interesting to keep around anyway).</p>
 
 <p>Keep folder structure. I know where it was on the local machine from where it was backed up from so I can quickly find it on the remote machine.</p>
 
-<p>Data amount fairly high but turnover low - backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
+<p>Data amount fairly high but turnover low &ndash; backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
 
-<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> - but I've added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
+<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> &ndash; but I&rsquo;ve added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
 
 <h2>Script config</h2>
 
-<p>There are a couple of variables you should change - they're marked with a huge # Config part - edit these header at the top of the script.
+<p>There are a couple of variables you should change &ndash; they&rsquo;re marked with a huge # Config part &ndash; edit these header at the top of the script.
 ```perl</p>
 
 <h1>SSH user@host</h1>
 
-<p>my $login = 'user@server';
+<p>my $login = &lsquo;user@server&rsquo;;
 ```
 SSH user and remote backup host (as you would specify it in an ssh command line).</p>
 
@@ -59,21 +59,21 @@ SSH user and remote backup host (as you would specify it in an ssh command line)
 
 <p>my $backupsPerCycle = 7;
 ```
-Number of backups in a cycle. Will create 7 folders / snapshots - a weeks worth of backups if you run it once every day.</p>
+Number of backups in a cycle. Will create 7 folders / snapshots &ndash; a weeks worth of backups if you run it once every day.</p>
 
 <p>```perl</p>
 
-<h1>Full base path on the backup host where the backups are kept - defaults to</h1>
+<h1>Full base path on the backup host where the backups are kept &ndash; defaults to</h1>
 
-<p>my $backupRootDir = "/home/user/backup/".$hostname."/backup_";
+<p>my $backupRootDir = &ldquo;/home/user/backup/&rdquo;.$hostname.&ldquo;/backup_&rdquo;;
 ```
-I've configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
+I&rsquo;ve configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
 
 <p>```perl</p>
 
-<h1>Where the list of folders to back up are kept - defaults to ~/.backup_targets</h1>
+<h1>Where the list of folders to back up are kept &ndash; defaults to ~/.backup_targets</h1>
 
-<p>my $backupFolderList = "$ENV{HOME}/.backup_targets";
+<p>my $backupFolderList = &ldquo;$ENV{HOME}/.backup_targets&rdquo;;
 <code>
 The folders to back up are configured via a file called `.backup_targets` in your home folder. The file contains folders you want backed up, separated by newline. Whitespace is ignored in the file. Example:
 </code>
@@ -88,7 +88,7 @@ Will back up all files recursively in the home Desktop and Pictures folder. The 
 
 <h2>Optional config</h2>
 
-<p>You might have to change these, they'll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don't succeed - feed them the location of the binary:
+<p>You might have to change these, they&rsquo;ll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don&rsquo;t succeed &ndash; feed them the location of the binary:
 <code>perl
 my $rsyncCmd = `which rsync`;
 my $ssh = `which ssh`;
@@ -102,7 +102,7 @@ my $ssh = `which ssh`;
 
 <p>Running it in the terminal will print the standard rsync messages for each directory. If scheduled via anacron you can capture the logs and check them when the job has finished (see below for scheduling via anacron).</p>
 
-<p>The first time: Depending on the amount of data - this should take some time. All files will be transferred. The second to the nth time: Depending on how much you've changed - this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.
+<p>The first time: Depending on the amount of data &ndash; this should take some time. All files will be transferred. The second to the nth time: Depending on how much you&rsquo;ve changed &ndash; this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.
 <code>bash
 sent 372 bytes  received 18 bytes  260.00 bytes/sec
 total size is 114590825  speedup is 293822.63
@@ -110,7 +110,7 @@ total size is 114590825  speedup is 293822.63
 
 <h2>Running it with anacron</h2>
 
-<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can't install jobs with your own user (anacron only runs as root) - so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).
+<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can&rsquo;t install jobs with your own user (anacron only runs as root) &ndash; so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).
 <code>
 1   15  client.backup   su user -c "/usr/bin/perl /home/user/bin/rsync_rotating_backups.pl" &gt; /var/log/rsync_backup.log 2&gt;&amp;1
 </code>
@@ -127,7 +127,7 @@ anacron -fnd
 
 <h2>Need more?</h2>
 
-<p>I didn't do this, but if you need to keep data longer but don't want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won't be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
+<p>I didn&rsquo;t do this, but if you need to keep data longer but don&rsquo;t want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won&rsquo;t be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
 
 <p>Happy backing upping!</p>
 ]]></content>
@@ -135,9 +135,9 @@ anacron -fnd
   
   <entry>
     <title type="html"><![CDATA[ctrl click sum gdocs spreadsheet]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/"/>
+    <link href="http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/"/>
     <updated>2013-04-30T21:56:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet</id>
+    <id>http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet</id>
     <content type="html"><![CDATA[<p>Its here: <a href="http://userscripts.org/scripts/show/166316">http://userscripts.org/scripts/show/166316</a>.</p>
 
 <p>Press the install button to use it. There are also instructions on the site for how to get running with greasemonkey and tampermonkey <a href="http://userscripts.org/about/installing">here</a>.</p>
@@ -154,27 +154,27 @@ anacron -fnd
 
 <h2>Big reset</h2>
 
-<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up - just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
+<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up &ndash; just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
 
 <h2>Tech goals</h2>
 
-<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn't quite make it. It kept jumping down and sometimes locking up the regular function - so I  gave up, I'm guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
+<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&rsquo;t quite make it. It kept jumping down and sometimes locking up the regular function &ndash; so I  gave up, I&rsquo;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
 
-<p>In addition, the sum box has other uses (and feelings m'kay?) too - it can display averages etc and I didn't want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn't look as integrated as reusing the sum box - but I'm hoping it will be a more stable solution.</p>
+<p>In addition, the sum box has other uses (and feelings m'kay?) too &ndash; it can display averages etc and I didn&rsquo;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&rsquo;t look as integrated as reusing the sum box &ndash; but I&rsquo;m hoping it will be a more stable solution.</p>
 
 <h2>Highlighting selected cells</h2>
 
-<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I'm doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays - I wouldn't know the size of the cells or overlays. This is a cheaper hack.</p>
+<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&rsquo;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays &ndash; I wouldn&rsquo;t know the size of the cells or overlays. This is a cheaper hack.</p>
 
 <h2>Selecting the value to sum</h2>
 
-<p>Finding the selected cell would be hard - it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don't click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it - (the click that is). It should however not be a big problem, just aim at the middle and don't set your cell size so low you cant hit it.</p>
+<p>Finding the selected cell would be hard &ndash; it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&rsquo;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it &ndash; (the click that is). It should however not be a big problem, just aim at the middle and don&rsquo;t set your cell size so low you cant hit it.</p>
 
-<p>Anything you click will be tested if it parses as a digit and if it does - its added to the sum.</p>
+<p>Anything you click will be tested if it parses as a digit and if it does &ndash; its added to the sum.</p>
 
 <h2>Keep in touch</h2>
 
-<p>Tested in google chrome so far - please let me know if you test in other browsers if it works or not.</p>
+<p>Tested in google chrome so far &ndash; please let me know if you test in other browsers if it works or not.</p>
 ]]></content>
   </entry>
   

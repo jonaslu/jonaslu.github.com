@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/">
+  <link rel="canonical" href="http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -61,7 +61,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:jonaslu.github.com" />
+    <input type="hidden" name="q" value="site:catchmecode.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -107,15 +107,15 @@
 
 <h2>Background</h2>
 
-<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I&#8217;m gonna cover Fantom a wee bit since I really like it. But alas! <del>There is no builtin code highlight for Fantom (yet :) in octopress.</del></p>
+<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I&rsquo;m gonna cover Fantom a wee bit since I really like it. But alas! <del>There is no builtin code highlight for Fantom (yet :) in octopress.</del></p>
 
 <p>Edit: Turns out that there actually is support since pygments 1.5 thanks to <a href="https://bitbucket.org/ivan_inozemtsev">Ivan Inozemtsev</a> (one of the folks behind the <a href="http://www.xored.com/products/f4/">f4 IDE</a>), its just not listed in their <a href="http://pygments.org/languages/">list of languages</a> and it resides in the compiled.py file, not the jvm.py file as you might expect. Still this post might serve as a springboard if you want to tweak the syntax of existing languages or introduce new languages.</p>
 
 <h2>Pygments, whaaa?</h2>
 
-<p>Although octopress runs on ruby it&#8217;s using the python library <a href="http://pygments.org/">pygments</a> as its code syntax highlighter. As does <a href="https://github.com/mojombo/jekyll">jekyll</a> the github markdown generator which octopress was born out of. A python in the ruby jungle? Probably because pygments aldready has a huge support for different languages - so its already got momentum.</p>
+<p>Although octopress runs on ruby it&rsquo;s using the python library <a href="http://pygments.org/">pygments</a> as its code syntax highlighter. As does <a href="https://github.com/mojombo/jekyll">jekyll</a> the github markdown generator which octopress was born out of. A python in the ruby jungle? Probably because pygments aldready has a huge support for different languages &ndash; so its already got momentum.</p>
 
-<p>Pygments turns source code to markup (or other formats - lots supported) by parsing the contents into tokens and applying different CSS styles to different tokens. The code becomes more readable and looks more like it would in an IDE. Pygments does this via <a href="http://pygments.org/docs/lexerdevelopment/">lexers</a> - essentially a large regex matched against code that emits different categorizations of the tokens.</p>
+<p>Pygments turns source code to markup (or other formats &ndash; lots supported) by parsing the contents into tokens and applying different CSS styles to different tokens. The code becomes more readable and looks more like it would in an IDE. Pygments does this via <a href="http://pygments.org/docs/lexerdevelopment/">lexers</a> &ndash; essentially a large regex matched against code that emits different categorizations of the tokens.</p>
 
 <h2>Installing pygments</h2>
 
@@ -133,9 +133,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Pygments enables custom plugins via something called <a href="http://pygments.org/docs/plugins/#entrypoints">entrypoints</a> in setuptools. In this post I can swiftly move on to how you enable an entrypoint - but when reading this the first time I was stumped. What? Setuptools.. uhm ok. Entrypoints, right&#8230; pygments docs kind of went dead there assuming some python knowledge on the readers part. It took me quite a while of googling to understand what setuptools was and how you use entrypoints.</p>
+<p>Pygments enables custom plugins via something called <a href="http://pygments.org/docs/plugins/#entrypoints">entrypoints</a> in setuptools. In this post I can swiftly move on to how you enable an entrypoint &ndash; but when reading this the first time I was stumped. What? Setuptools.. uhm ok. Entrypoints, right&hellip; pygments docs kind of went dead there assuming some python knowledge on the readers part. It took me quite a while of googling to understand what setuptools was and how you use entrypoints.</p>
 
-<p>What it sums up to is that setuptools is a build and distribution kit for python which can create a distributable called an egg (I get it, a python lays binary distributable units.. very clever). Entry points are hooks that allow an egg to hook into an existing framework - essentially extending it with functionality later on.</p>
+<p>What it sums up to is that setuptools is a build and distribution kit for python which can create a distributable called an egg (I get it, a python lays binary distributable units.. very clever). Entry points are hooks that allow an egg to hook into an existing framework &ndash; essentially extending it with functionality later on.</p>
 
 <h2>Module structure</h2>
 
@@ -185,11 +185,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>There is that pygments.lexer entry point! It points to the module fantomlexer (directory for the <code>lexer.py</code> file) dot lexer (the source file with the lexer class inside) colon FantomLexer - the acutal lexer class inside the <code>lexer.py</code> file.</p>
+<p>There is that pygments.lexer entry point! It points to the module fantomlexer (directory for the <code>lexer.py</code> file) dot lexer (the source file with the lexer class inside) colon FantomLexer &ndash; the acutal lexer class inside the <code>lexer.py</code> file.</p>
 
 <h2>Installing the entry point module</h2>
 
-<p>Python modules can be either installed as an egg - or simply linked in as a file link. I recommend using the file link style since you can then iterate by simply editing the <code>lexer.py</code> file instead of having remember to run install every time.</p>
+<p>Python modules can be either installed as an egg &ndash; or simply linked in as a file link. I recommend using the file link style since you can then iterate by simply editing the <code>lexer.py</code> file instead of having remember to run install every time.</p>
 
 <p>Open up a terminal in the FantomLexer directory and type:</p>
 
@@ -198,7 +198,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>To verify that its there type <code>easy_install</code> and it&#8217;ll print an error message telling you what folder the eggs are installed on your machine. On mine its in <code>/usr/local/lib/python2.7/dist-packages/</code>. Cd into that folder - there should now be at least two files (and one folder with Pygments egg installed previously) - <code>easy-install.pth</code> and <code>fantomlexer.egg-link</code>. List the content of <code>easy-install.pth</code> and verify that there is an entry pointing to your FantomLexer folder created above.</p>
+<p>To verify that its there type <code>easy_install</code> and it&rsquo;ll print an error message telling you what folder the eggs are installed on your machine. On mine its in <code>/usr/local/lib/python2.7/dist-packages/</code>. Cd into that folder &ndash; there should now be at least two files (and one folder with Pygments egg installed previously) &ndash; <code>easy-install.pth</code> and <code>fantomlexer.egg-link</code>. List the content of <code>easy-install.pth</code> and verify that there is an entry pointing to your FantomLexer folder created above.</p>
 
 <p><code>lexer.py</code> is now ready to parse your code into tokens. A quick start is to copy some already existing lexer close to your language and tweak it. To get a highlighted file with your new syntax type:</p>
 
@@ -215,9 +215,9 @@
 
 <h2>Ubuntu sided disclaimer</h2>
 
-<p>Also, I&#8217;m running ubuntu so this guide will be using ubuntu paths and default setups. I&#8217;m hoping it shouldn&#8217;t be too hard to convert to other distros (or even OS&#8217;es). I&#8217;m assuming python is installed on your box.</p>
+<p>Also, I&rsquo;m running ubuntu so this guide will be using ubuntu paths and default setups. I&rsquo;m hoping it shouldn&rsquo;t be too hard to convert to other distros (or even OS&#8217;es). I&rsquo;m assuming python is installed on your box.</p>
 
-<p>All of the commands above uses sudo as ubuntu apt-get needs sudo - and from there it just cascades, but there is an alternative using <a href="http://www.virtualenv.org/en/1.9.X/#what-it-does">virtualenv</a> (similar to rvm) that you can run with your own user instead of root.</p>
+<p>All of the commands above uses sudo as ubuntu apt-get needs sudo &ndash; and from there it just cascades, but there is an alternative using <a href="http://www.virtualenv.org/en/1.9.X/#what-it-does">virtualenv</a> (similar to rvm) that you can run with your own user instead of root.</p>
 </div>
 
 
@@ -254,9 +254,13 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/" data-via="" data-counturl="http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/" data-via="" data-counturl="http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/" >Tweet</a>
   
   
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   
 </div>
 
@@ -302,8 +306,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/';
-        var disqus_url = 'http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/';
+        var disqus_identifier = 'http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/';
+        var disqus_url = 'http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -315,7 +319,24 @@
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 

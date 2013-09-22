@@ -2,33 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hello world | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/hello-world/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/hello-world/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/05/hello-world/"/>
+    <link href="http://catchmecode.com/blog/2013/02/05/hello-world/"/>
     <updated>2013-02-05T21:17:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/05/hello-world</id>
+    <id>http://catchmecode.com/blog/2013/02/05/hello-world</id>
     <content type="html"><![CDATA[<p>Phew, just had to get that off my chest. It has been brewing for a couple of years now.</p>
 
 <h2>And who are you then?</h2>
 
-<p>Hacking stuff started at an early age - writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
+<p>Hacking stuff started at an early age &ndash; writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
 
 <h2>Why write this blog?</h2>
 
-<p>As with any topic, first stage - learning the craft, second stage - actively employing it and third stage - starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
+<p>As with any topic, first stage &ndash; learning the craft, second stage &ndash; actively employing it and third stage &ndash; starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
 
-<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I've been continually amazed at what people can come up with - its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
+<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I&rsquo;ve been continually amazed at what people can come up with &ndash; its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
 
 <p>So the bar is set aptly high, all needed now is just producing content.</p>
 ]]></content>

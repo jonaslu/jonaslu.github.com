@@ -2,101 +2,101 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: tools | Catch me code]]></title>
-  <link href="http://jonaslu.github.com/blog/categories/tools/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Get yourself a fast project]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project/"/>
+    <link href="http://catchmecode.com/blog/2013/08/26/get-yourself-a-fast-project/"/>
     <updated>2013-08-26T20:56:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project</id>
-    <content type="html"><![CDATA[<p>Before delving into this, learning is good ok? We're all here to learn something (queue monthy python: Large group - "Yes, we're all here to learn!" ... One guy in the back - "I'm not") but it's easy to get derailed with details when there's just so much exciting stuff out there.</p>
+    <id>http://catchmecode.com/blog/2013/08/26/get-yourself-a-fast-project</id>
+    <content type="html"><![CDATA[<p>Before delving into this, learning is good ok? We&rsquo;re all here to learn something (queue monthy python: Large group &ndash; &ldquo;Yes, we&rsquo;re all here to learn!&rdquo; &hellip; One guy in the back &ndash; &ldquo;I&rsquo;m not&rdquo;) but it&rsquo;s easy to get derailed with details when there&rsquo;s just so much exciting stuff out there.</p>
 
 <h2>New tech = initial bump</h2>
 
-<p>I'm assuming this happens to most folks and it gets worse the more to the left you are on the <a href="http://en.wikipedia.org/wiki/Technology_life_cycle#Technology_perception_dynamics">adoption curve</a> of a new technique. You are psyched up and ready to get cracking - only to be immensely slowed down by just setting up a dev environment or getting "hello world" to compile / interpret / just run dammit. The early adopters are ok with this - or even thrive of going through the rough phases where everything barely holds together (I'm guessing because you have more influence then. You are actually making a difference).</p>
+<p>I&rsquo;m assuming this happens to most folks and it gets worse the more to the left you are on the <a href="http://en.wikipedia.org/wiki/Technology_life_cycle#Technology_perception_dynamics">adoption curve</a> of a new technique. You are psyched up and ready to get cracking &ndash; only to be immensely slowed down by just setting up a dev environment or getting &ldquo;hello world&rdquo; to compile / interpret / just run dammit. The early adopters are ok with this &ndash; or even thrive of going through the rough phases where everything barely holds together (I&rsquo;m guessing because you have more influence then. You are actually making a difference).</p>
 
-<p>But but but... being the early adopter of the newest and shiniest things have an opportunity cost - you're going to spend much more time on getting the new thing to work and less time on things not related to the language / framework itself. And that's ok if that is your thing - using the newest stuff. Maybe you'll even make yourself a name should you write the first web-framework or templating engine in your new language. But it should be a conscious choice staying in the left on the adoption curve. I've often gone this road without thinking of the opportunity cost of doing so. My goal was often to make something cool, but just because I could it would often be using the latest upcoming languages. And that meant that the cool things I set out to make withered when the initial bump set in.</p>
+<p>But but but&hellip; being the early adopter of the newest and shiniest things have an opportunity cost &ndash; you&rsquo;re going to spend much more time on getting the new thing to work and less time on things not related to the language / framework itself. And that&rsquo;s ok if that is your thing &ndash; using the newest stuff. Maybe you&rsquo;ll even make yourself a name should you write the first web-framework or templating engine in your new language. But it should be a conscious choice staying in the left on the adoption curve. I&rsquo;ve often gone this road without thinking of the opportunity cost of doing so. My goal was often to make something cool, but just because I could it would often be using the latest upcoming languages. And that meant that the cool things I set out to make withered when the initial bump set in.</p>
 
 <h2>The initial bump</h2>
 
-<p>With the initial bump I mean that not only that you're not experienced in the new language, things take longer time because less time have been put into get things to work. Documentation is not there yet, libraries break with new versions, you get errors just trying to setting up the dev enviroment, error messages are obscure and no one else seems to have all the problems you're having.</p>
+<p>With the initial bump I mean that not only that you&rsquo;re not experienced in the new language, things take longer time because less time have been put into get things to work. Documentation is not there yet, libraries break with new versions, you get errors just trying to setting up the dev enviroment, error messages are obscure and no one else seems to have all the problems you&rsquo;re having.</p>
 
-<p>The initial bump extends beyond just getting a working dev environment up and running. It also means less powerful IDE / editors, less tools (e g debugging, package management, build systems) and less frameworks and libraries with respectively less production time under their wings to choose from. In short, you'll do more work because less time has been put into the thing you're trying to run. And that costs - in time and focus.</p>
+<p>The initial bump extends beyond just getting a working dev environment up and running. It also means less powerful IDE / editors, less tools (e g debugging, package management, build systems) and less frameworks and libraries with respectively less production time under their wings to choose from. In short, you&rsquo;ll do more work because less time has been put into the thing you&rsquo;re trying to run. And that costs &ndash; in time and focus.</p>
 
-<p>The perhaps unglamorous alternative to this is using stuff you know well. Chances are that this is to the right on the adoption curve. But it'll buy you something - time and focus.</p>
+<p>The perhaps unglamorous alternative to this is using stuff you know well. Chances are that this is to the right on the adoption curve. But it&rsquo;ll buy you something &ndash; time and focus.</p>
 
 <h2>Old tech = new domain?</h2>
 
-<p>By using the tools, frameworks and language you know best you'll steer clear of the initial bump. And you've freed up time to explore another side of programming - getting to know a new domain and solving its problems not being slowed down by your tools.</p>
+<p>By using the tools, frameworks and language you know best you&rsquo;ll steer clear of the initial bump. And you&rsquo;ve freed up time to explore another side of programming &ndash; getting to know a new domain and solving its problems not being slowed down by your tools.</p>
 
-<p>It's like learning to drive vs driving, at first you're so occupied with the mechanics of driving that you can't be bothered with the traffic ahead. Its first when you know the mechanics that you can focus on the actual driving from A to B.</p>
+<p>It&rsquo;s like learning to drive vs driving, at first you&rsquo;re so occupied with the mechanics of driving that you can&rsquo;t be bothered with the traffic ahead. Its first when you know the mechanics that you can focus on the actual driving from A to B.</p>
 
 <h2>Possibly leverage with a new language</h2>
 
-<p>If you've made a prototype using tools you know you're in a much better spot of rewriting it in some other language / framework. You are now choosing tools based on your domain knowledge, this is a huge advantage - you're running the tools and not vice versa.</p>
+<p>If you&rsquo;ve made a prototype using tools you know you&rsquo;re in a much better spot of rewriting it in some other language / framework. You are now choosing tools based on your domain knowledge, this is a huge advantage &ndash; you&rsquo;re running the tools and not vice versa.</p>
 
 <h2>Leverage old tech and iterate faster</h2>
 
-<p>Again, a <a href="http://catchmecode.com/blog/2013/07/15/fast-programmers/">speech about going fast</a>. But really, I think that pragmatism and knowing when it's good enough is highly learnable. But you got to set out doing so with a clear mind. Using the languages, tools and stuff you know best will let you focus 100% on going fast in a new domain. Churn out really dirty but working code just to experience and get the feel of what it's like. It's ok, set out milestones when you refactor and tidy up.</p>
+<p>Again, a <a href="http://catchmecode.com/blog/2013/07/15/fast-programmers/">speech about going fast</a>. But really, I think that pragmatism and knowing when it&rsquo;s good enough is highly learnable. But you got to set out doing so with a clear mind. Using the languages, tools and stuff you know best will let you focus 100% on going fast in a new domain. Churn out really dirty but working code just to experience and get the feel of what it&rsquo;s like. It&rsquo;s ok, set out milestones when you refactor and tidy up.</p>
 
-<p>At least for me, when trying out a new idea its important to go fast from idea to prototype. Instead of getting stuck in the setup and loosing steam (and possibly even giving up on the idea before its even been test driven) - leverage everything you possibly can to get it to a working state. By using the tech you know you probably also know what frameworks and libs to use (and chances are that there's plenty more of them out there since again you're using a language with more adopters) you compound on your existing knowledge. You can make more critical judgments on claims of what works (for you) and what does not.</p>
+<p>At least for me, when trying out a new idea its important to go fast from idea to prototype. Instead of getting stuck in the setup and loosing steam (and possibly even giving up on the idea before its even been test driven) &ndash; leverage everything you possibly can to get it to a working state. By using the tech you know you probably also know what frameworks and libs to use (and chances are that there&rsquo;s plenty more of them out there since again you&rsquo;re using a language with more adopters) you compound on your existing knowledge. You can make more critical judgments on claims of what works (for you) and what does not.</p>
 
-<p>This also ties in with a lot of blogposts I've been reading on startups. Many of those who succeed <a href="http://www.paulgraham.com/13sentences.html">launch fast and get it right afterwards</a> - screw the details, we'll figure those out later when we're actually making some money. By using tools and products you know you'll steer clear of the inital bump, and if you're wise you stay to the right on the adoption curve, where there are powertools, battle proven VMs and industrial strength IDE's. It's ok - if you succeed you now have a luxury problem of switching languages and frameworks. With all that knowledge of what did and didn't work.</p>
+<p>This also ties in with a lot of blogposts I&rsquo;ve been reading on startups. Many of those who succeed <a href="http://www.paulgraham.com/13sentences.html">launch fast and get it right afterwards</a> &ndash; screw the details, we&rsquo;ll figure those out later when we&rsquo;re actually making some money. By using tools and products you know you&rsquo;ll steer clear of the inital bump, and if you&rsquo;re wise you stay to the right on the adoption curve, where there are powertools, battle proven VMs and industrial strength IDE&rsquo;s. It&rsquo;s ok &ndash; if you succeed you now have a luxury problem of switching languages and frameworks. With all that knowledge of what did and didn&rsquo;t work.</p>
 
 <h2>Do share</h2>
 
-<p>Now I'm aware that by using older tech you are piggybacking on those that did take time to get things working and writing frameworks etc. And by doing so you might not have something as tangible as a fresh framework to share (or if you do its of less value beeing the nth framework of that kind and not the first or second).</p>
+<p>Now I&rsquo;m aware that by using older tech you are piggybacking on those that did take time to get things working and writing frameworks etc. And by doing so you might not have something as tangible as a fresh framework to share (or if you do its of less value beeing the nth framework of that kind and not the first or second).</p>
 
-<p>But, you can share the domain problems you ran into and how you solved them. Hopefully that'll feedback to those on the forefront of some new tech getting perspective on what they build might be used to solve - problems rarely change that much regardless of tech. So you know, at least send some love to those brave enough to not take this advice and to go head on with the left of the adoption curve.</p>
+<p>But, you can share the domain problems you ran into and how you solved them. Hopefully that&rsquo;ll feedback to those on the forefront of some new tech getting perspective on what they build might be used to solve &ndash; problems rarely change that much regardless of tech. So you know, at least send some love to those brave enough to not take this advice and to go head on with the left of the adoption curve.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Rotating backups with rsync]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
+    <link href="http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
     <updated>2013-06-01T21:36:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync</id>
-    <content type="html"><![CDATA[<p>First off: its here - <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
+    <id>http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync</id>
+    <content type="html"><![CDATA[<p>First off: its here &ndash; <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
 
 <h2>Short description</h2>
 
-<p>Its a script that does rotational backups on your folders of choice. No compression involved - the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
+<p>Its a script that does rotational backups on your folders of choice. No compression involved &ndash; the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
 
 <h2>Background</h2>
 
-<p>You know the drill - do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn't really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well - it was educational at least to roll your own :).</p>
+<p>You know the drill &ndash; do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn&rsquo;t really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well &ndash; it was educational at least to roll your own :).</p>
 
 <h2>Requirement spec</h2>
 
-<p>Files should be accessible via ssh or the like from outside - so no compression. And because its on my local network I'm also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it - for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
+<p>Files should be accessible via ssh or the like from outside &ndash; so no compression. And because its on my local network I&rsquo;m also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it &ndash; for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
 
-<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore - hard links achieves the same thing - to keep the data amount down over a cycle of backups.</p>
+<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore &ndash; hard links achieves the same thing &ndash; to keep the data amount down over a cycle of backups.</p>
 
-<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) - work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 - files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn't that interesting to keep around anyway).</p>
+<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) &ndash; work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 &ndash; files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn&rsquo;t that interesting to keep around anyway).</p>
 
 <p>Keep folder structure. I know where it was on the local machine from where it was backed up from so I can quickly find it on the remote machine.</p>
 
-<p>Data amount fairly high but turnover low - backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
+<p>Data amount fairly high but turnover low &ndash; backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
 
-<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> - but I've added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
+<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> &ndash; but I&rsquo;ve added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
 
 <h2>Script config</h2>
 
-<p>There are a couple of variables you should change - they're marked with a huge # Config part - edit these header at the top of the script.
+<p>There are a couple of variables you should change &ndash; they&rsquo;re marked with a huge # Config part &ndash; edit these header at the top of the script.
 ```perl</p>
 
 <h1>SSH user@host</h1>
 
-<p>my $login = 'user@server';
+<p>my $login = &lsquo;user@server&rsquo;;
 ```
 SSH user and remote backup host (as you would specify it in an ssh command line).</p>
 
@@ -106,21 +106,21 @@ SSH user and remote backup host (as you would specify it in an ssh command line)
 
 <p>my $backupsPerCycle = 7;
 ```
-Number of backups in a cycle. Will create 7 folders / snapshots - a weeks worth of backups if you run it once every day.</p>
+Number of backups in a cycle. Will create 7 folders / snapshots &ndash; a weeks worth of backups if you run it once every day.</p>
 
 <p>```perl</p>
 
-<h1>Full base path on the backup host where the backups are kept - defaults to</h1>
+<h1>Full base path on the backup host where the backups are kept &ndash; defaults to</h1>
 
-<p>my $backupRootDir = "/home/user/backup/".$hostname."/backup_";
+<p>my $backupRootDir = &ldquo;/home/user/backup/&rdquo;.$hostname.&ldquo;/backup_&rdquo;;
 ```
-I've configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
+I&rsquo;ve configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
 
 <p>```perl</p>
 
-<h1>Where the list of folders to back up are kept - defaults to ~/.backup_targets</h1>
+<h1>Where the list of folders to back up are kept &ndash; defaults to ~/.backup_targets</h1>
 
-<p>my $backupFolderList = "$ENV{HOME}/.backup_targets";
+<p>my $backupFolderList = &ldquo;$ENV{HOME}/.backup_targets&rdquo;;
 <code>
 The folders to back up are configured via a file called `.backup_targets` in your home folder. The file contains folders you want backed up, separated by newline. Whitespace is ignored in the file. Example:
 </code>
@@ -135,7 +135,7 @@ Will back up all files recursively in the home Desktop and Pictures folder. The 
 
 <h2>Optional config</h2>
 
-<p>You might have to change these, they'll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don't succeed - feed them the location of the binary:
+<p>You might have to change these, they&rsquo;ll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don&rsquo;t succeed &ndash; feed them the location of the binary:
 <code>perl
 my $rsyncCmd = `which rsync`;
 my $ssh = `which ssh`;
@@ -149,7 +149,7 @@ my $ssh = `which ssh`;
 
 <p>Running it in the terminal will print the standard rsync messages for each directory. If scheduled via anacron you can capture the logs and check them when the job has finished (see below for scheduling via anacron).</p>
 
-<p>The first time: Depending on the amount of data - this should take some time. All files will be transferred. The second to the nth time: Depending on how much you've changed - this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.
+<p>The first time: Depending on the amount of data &ndash; this should take some time. All files will be transferred. The second to the nth time: Depending on how much you&rsquo;ve changed &ndash; this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.
 <code>bash
 sent 372 bytes  received 18 bytes  260.00 bytes/sec
 total size is 114590825  speedup is 293822.63
@@ -157,7 +157,7 @@ total size is 114590825  speedup is 293822.63
 
 <h2>Running it with anacron</h2>
 
-<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can't install jobs with your own user (anacron only runs as root) - so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).
+<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can&rsquo;t install jobs with your own user (anacron only runs as root) &ndash; so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).
 <code>
 1   15  client.backup   su user -c "/usr/bin/perl /home/user/bin/rsync_rotating_backups.pl" &gt; /var/log/rsync_backup.log 2&gt;&amp;1
 </code>
@@ -174,7 +174,7 @@ anacron -fnd
 
 <h2>Need more?</h2>
 
-<p>I didn't do this, but if you need to keep data longer but don't want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won't be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
+<p>I didn&rsquo;t do this, but if you need to keep data longer but don&rsquo;t want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won&rsquo;t be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
 
 <p>Happy backing upping!</p>
 ]]></content>

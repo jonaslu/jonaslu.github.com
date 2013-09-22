@@ -2,50 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Catch me code]]></title>
-  <link href="http://jonaslu.github.com/atom.xml" rel="self"/>
-  <link href="http://jonaslu.github.com/"/>
-  <updated>2013-09-11T21:58:18+02:00</updated>
-  <id>http://jonaslu.github.com/</id>
+  <link href="http://catchmecode.com/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-09-22T21:54:26+02:00</updated>
+  <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
-    
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Is learning vim worth it]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/09/11/is-learning-vim-worth-it/"/>
+    <link href="http://catchmecode.com/blog/2013/09/11/is-learning-vim-worth-it/"/>
     <updated>2013-09-11T20:45:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/09/11/is-learning-vim-worth-it</id>
-    <content type="html"><![CDATA[<p>I&#8217;m usually a bit skeptical when something is touted as a one size fits all solution. As some future post surely will reveal, I now extensively use <a href="http://git-scm.com/">git</a>. But it wasn&#8217;t all peaches in the start - some back and forth looking at hg and bazaar before git became home. Now everything related to code has a .git in it. Just to be safe y&#8217;know.</p>
+    <id>http://catchmecode.com/blog/2013/09/11/is-learning-vim-worth-it</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m usually a bit skeptical when something is touted as a one size fits all solution. As some future post surely will reveal, I now extensively use <a href="http://git-scm.com/">git</a>. But it wasn&rsquo;t all peaches in the start &ndash; some back and forth looking at hg and bazaar before git became home. Now everything related to code has a .git in it. Just to be safe y&#8217;know.</p>
 
-<p>So where is this going? Vim - that&#8217;s where. I&#8217;ve known about vim for a number of years. First encounter must have been stuck in ssh on a remote linux box with no sudo / su powers. All it had was ed or vim. I (like most other) eventually figured out how to write <em>something</em> in it and then get the hell out (thinking, phew that was close. Hope it doesn&#8217;t happen again).</p>
+<p>So where is this going? Vim &ndash; that&rsquo;s where. I&rsquo;ve known about vim for a number of years. First encounter must have been stuck in ssh on a remote linux box with no sudo / su powers. All it had was ed or vim. I (like most other) eventually figured out how to write <em>something</em> in it and then get the hell out (thinking, phew that was close. Hope it doesn&rsquo;t happen again).</p>
 
-<p>But (as in the <a href="http://www.collegehumor.com/picture/6906024/sharkalanche-movie-makes-obvious-sense">horror movies</a>) it <em>did</em> happen again. However this time voluntarily. See, everyone (well most who mentioned vim anyways) kept saying &#8220;its super productive&#8221;, &#8220;pfft, you can do that in less keystrokes in vim&#8221; and &#8220;I&#8217;d write this, but it was already done in vim&#8221;. It kept popping up in blogs, hacker news and podcasts.</p>
+<p>But (as in the <a href="http://www.collegehumor.com/picture/6906024/sharkalanche-movie-makes-obvious-sense">horror movies</a>) it <em>did</em> happen again. However this time voluntarily. See, everyone (well most who mentioned vim anyways) kept saying &ldquo;its super productive&rdquo;, &ldquo;pfft, you can do that in less keystrokes in vim&rdquo; and &ldquo;I&rsquo;d write this, but it was already done in vim&rdquo;. It kept popping up in blogs, hacker news and podcasts.</p>
 
 <h2>Y U run vim?</h2>
 
-<p>The no-brainer answer is that it&#8217;s available everywhere (at least in the shape of vi).</p>
+<p>The no-brainer answer is that it&rsquo;s available everywhere (at least in the shape of vi).</p>
 
 <p>The brainer answer was part interest and part wanting to know what the hype was about. Would it make me a faster, fiercer and more beautiful programmer? Was it really <em>the</em> powertool and one stop solution?</p>
 
 <h2>Y U not run vim?</h2>
 
-<p>And to balance this - the counter question would of course be: is it worth it? Everything else really ties in with this question. It has a long standing reputation for having a high learning curve. Its also begs the question - to mouse or not to mouse. I&#8217;ve always used the mouse when programming and not been ashamed of it. The mouse is a good tool for placing the cursor where you want it or visually selecting text.</p>
+<p>And to balance this &ndash; the counter question would of course be: is it worth it? Everything else really ties in with this question. It has a long standing reputation for having a high learning curve. Its also begs the question &ndash; to mouse or not to mouse. I&rsquo;ve always used the mouse when programming and not been ashamed of it. The mouse is a good tool for placing the cursor where you want it or visually selecting text.</p>
 
 <h2>Highly scientific speed test</h2>
 
-<p>To get verifiable data - here&#8217;s an attempt to make some science on it. I chose 5 of my most common code editing moves (the stuff I spend most of my workdays doing) and timed them using a) my old methods of one hand on the mouse, one hand on the keyboard and b) using vim with only keystrokes. Mind you I&#8217;m still a novice vim user so while I&#8217;m sure there are faster and more compact ways to do this - I took it as a baseline for speed. There might be some room for improvements but even if its a factor of 2X it will still show in the neighborhood what speed gains we&#8217;re looking at. To be fair to vim I&#8217;ve learned the combos by heart so they&#8217;re done at my regular typing speed. Test file was 200 lines long with 10 methods.</p>
+<p>To get verifiable data &ndash; here&rsquo;s an attempt to make some science on it. I chose 5 of my most common code editing moves (the stuff I spend most of my workdays doing) and timed them using a) my old methods of one hand on the mouse, one hand on the keyboard and b) using vim with only keystrokes. Mind you I&rsquo;m still a novice vim user so while I&rsquo;m sure there are faster and more compact ways to do this &ndash; I took it as a baseline for speed. There might be some room for improvements but even if its a factor of 2X it will still show in the neighborhood what speed gains we&rsquo;re looking at. To be fair to vim I&rsquo;ve learned the combos by heart so they&rsquo;re done at my regular typing speed. Test file was 200 lines long with 10 methods.</p>
 
-<p>Here goes, in no order - what the object is and a description of how it was done in each editor respectively:</p>
+<p>Here goes, in no order &ndash; what the object is and a description of how it was done in each editor respectively:</p>
 
 <ol>
 <li>Move a method 9 lines long (name known, line number unknown) from middle of the file to after first method in file (name and line number unknown).</li>
 <li>Change a method signature (name known, line number unknown) from private to public.</li>
 <li>Add a method argument at the end of argument list (name unknown, line number known) on line 175</li>
-<li>Swap the order of two method arguments (name unknown, line number known) - cursor already positioned on correct line</li>
-<li>Delete last method in file (name and line number unknown) - start at top of file</li>
+<li>Swap the order of two method arguments (name unknown, line number known) &ndash; cursor already positioned on correct line</li>
+<li>Delete last method in file (name and line number unknown) &ndash; start at top of file</li>
 </ol>
 
 
@@ -119,29 +119,29 @@
 
 <h2>Other claims</h2>
 
-<p>If its not the speed, maybe its the automating of repetitive tasks that is the big win. The dot &#8216;.&#8217; command runs the last edit you made. Macros record key sequences and can be played back. The big hurdle here is you have to think about the sequence when composing these reusable units. If you do it in the wrong sequence the dot command might might do what you wanted it to. I&#8217;ve rarely used these features when trying out vim. Even though looking for cases to use them, in reality they came very seldom.</p>
+<p>If its not the speed, maybe its the automating of repetitive tasks that is the big win. The dot &lsquo;.&rsquo; command runs the last edit you made. Macros record key sequences and can be played back. The big hurdle here is you have to think about the sequence when composing these reusable units. If you do it in the wrong sequence the dot command might might do what you wanted it to. I&rsquo;ve rarely used these features when trying out vim. Even though looking for cases to use them, in reality they came very seldom.</p>
 
-<p>I&#8217;m going to leave vim plugins out of the discussion, they&#8217;re great if you buy into that its worth learning vim. There are plenty of editors with lots of plugins that do the same thing but without the learning curve.</p>
+<p>I&rsquo;m going to leave vim plugins out of the discussion, they&rsquo;re great if you buy into that its worth learning vim. There are plenty of editors with lots of plugins that do the same thing but without the learning curve.</p>
 
 <h2>Things I did not see coming</h2>
 
-<p>Having used it now for over a month one thing has struck me that I didn&#8217;t expect. Its actually quite fun to use. There is a certain gamefication element to it, that you search for ways to do stuff faster.</p>
+<p>Having used it now for over a month one thing has struck me that I didn&rsquo;t expect. Its actually quite fun to use. There is a certain gamefication element to it, that you search for ways to do stuff faster.</p>
 
-<p>Another thing that also struck me as more useful: remember that vim is everywhere? Its on android too, and having a keyboard hooked up to a tabled writing code or blogposts makes full use of vim. Androids finger pressing makes navigating text much more painful so there&#8217;s a clearer benefit of knowing vim.</p>
+<p>Another thing that also struck me as more useful: remember that vim is everywhere? Its on android too, and having a keyboard hooked up to a tabled writing code or blogposts makes full use of vim. Androids finger pressing makes navigating text much more painful so there&rsquo;s a clearer benefit of knowing vim.</p>
 
 <h2>So, vim or not vim?</h2>
 
-<p>Well. Looking at the speed test, eclipse won in 2 cases, vim in 2 and a time on one (how politically correct, eh :) But really, speed is roughly the same for me. I&#8217;ve used <a href="http://vrapper.sourceforge.net/home/">vrapper</a> in eclipse (my workday IDE) as a vim extra on top of eclipse. Without it as a plugin it would have been a no-brainer to go with Eclipse. It&#8217;s built in code assist, refactor support et al makes it much more productive than vim could standalone.</p>
+<p>Well. Looking at the speed test, eclipse won in 2 cases, vim in 2 and a time on one (how politically correct, eh :) But really, speed is roughly the same for me. I&rsquo;ve used <a href="http://vrapper.sourceforge.net/home/">vrapper</a> in eclipse (my workday IDE) as a vim extra on top of eclipse. Without it as a plugin it would have been a no-brainer to go with Eclipse. It&rsquo;s built in code assist, refactor support et al makes it much more productive than vim could standalone.</p>
 
-<p>But in combination&#8230; I&#8217;ve been back and forth a lot. The first week there was a noticeable slowdown. Almost like learning to drive again - at first you&#8217;re so focused on the mechanics of driving that you can&#8217;t be bothered with the traffic ahead. It has gradually eased till the point where I&#8217;m about as productive with vrapper as without.</p>
+<p>But in combination&hellip; I&rsquo;ve been back and forth a lot. The first week there was a noticeable slowdown. Almost like learning to drive again &ndash; at first you&rsquo;re so focused on the mechanics of driving that you can&rsquo;t be bothered with the traffic ahead. It has gradually eased till the point where I&rsquo;m about as productive with vrapper as without.</p>
 
-<p>Another thing that might have had an impact is that I&#8217;m a terrible typer (about each 10th keypress is a backspace when I type). Its true that you can do awesome stuff in vim with few keystrokes. I&#8217;ve accidentally managed to delete and format lots of text simply by typing like I always do. Regular editors with insert only mode are less forgiving. They type out your character on screen and that&#8217;s it. Not so with vim, it will delete your text or some other creative things. So its a hard penalty for typing wrong.</p>
+<p>Another thing that might have had an impact is that I&rsquo;m a terrible typer (about each 10th keypress is a backspace when I type). Its true that you can do awesome stuff in vim with few keystrokes. I&rsquo;ve accidentally managed to delete and format lots of text simply by typing like I always do. Regular editors with insert only mode are less forgiving. They type out your character on screen and that&rsquo;s it. Not so with vim, it will delete your text or some other creative things. So its a hard penalty for typing wrong.</p>
 
-<p>Still, each time I&#8217;m done and start to go back to the normal flow, I start missing small stuff. And the fun of learning to use it faster. I&#8217;ve got this feeling that its going to become like git in a while, so I&#8217;ll stick with it for some more time before taking the final decision.</p>
+<p>Still, each time I&rsquo;m done and start to go back to the normal flow, I start missing small stuff. And the fun of learning to use it faster. I&rsquo;ve got this feeling that its going to become like git in a while, so I&rsquo;ll stick with it for some more time before taking the final decision.</p>
 
-<p>However, when being in a terminal and or on android its much more worth it. Even though mouses do work in a terminal (assuming you&#8217;re running X) this is where it feels at home.</p>
+<p>However, when being in a terminal and or on android its much more worth it. Even though mouses do work in a terminal (assuming you&rsquo;re running X) this is where it feels at home.</p>
 
-<p>Also editing dynamically typed code or plain text I can much more see the benefit of using it. Because of this I&#8217;m going to stick with vim at least in the terminal (I always defaulted to nano but got stuck on not knowing how to make more advanced edits). The payoff is that each new trick learnt carries over on all the other platforms it runs on.</p>
+<p>Also editing dynamically typed code or plain text I can much more see the benefit of using it. Because of this I&rsquo;m going to stick with vim at least in the terminal (I always defaulted to nano but got stuck on not knowing how to make more advanced edits). The payoff is that each new trick learnt carries over on all the other platforms it runs on.</p>
 
 <h2>Should you then?</h2>
 
@@ -150,91 +150,91 @@
 <ul>
 <li>Do you like or are you ok with using a mouse?</li>
 <li>Are you using an IDE (with language support) with lots of support for changes (i e refactoring)?</li>
-<li>Are you editing text / code on other platforms (android, terminals) that doesn&#8217;t have good mouse support?</li>
+<li>Are you editing text / code on other platforms (android, terminals) that doesn&rsquo;t have good mouse support?</li>
 </ul>
 
 
-<p>The real payoff was using it in a terminal or on android with bad mouse support. If you are in that situation a lot or expecting to be then I&#8217;d go for it. If you are comfortable in your IDE working with the mouse then there&#8217;s not that much benefit of knowing it.</p>
+<p>The real payoff was using it in a terminal or on android with bad mouse support. If you are in that situation a lot or expecting to be then I&rsquo;d go for it. If you are comfortable in your IDE working with the mouse then there&rsquo;s not that much benefit of knowing it.</p>
 
-<h2>If yes - track yourself</h2>
+<h2>If yes &ndash; track yourself</h2>
 
-<p>If you do decide to go for it: Do a screencast of yourself using your old editor. Play it back and see how you are doing. Record yourself doing the same thing in vim and compare. Also, for the benefit of not giving up too soon, try to optimize it a bit and speed up the screencast if necessary to regular typing speed. See it as an example of where you could be if you&#8217;d spend more time in vim.</p>
+<p>If you do decide to go for it: Do a screencast of yourself using your old editor. Play it back and see how you are doing. Record yourself doing the same thing in vim and compare. Also, for the benefit of not giving up too soon, try to optimize it a bit and speed up the screencast if necessary to regular typing speed. See it as an example of where you could be if you&rsquo;d spend more time in vim.</p>
 
-<p>If there is a vim wizard near you - seek them out and ask if you could see them in action. Are they as fast as you&#8217;d like to become? Is what they do something you should be doing?</p>
+<p>If there is a vim wizard near you &ndash; seek them out and ask if you could see them in action. Are they as fast as you&rsquo;d like to become? Is what they do something you should be doing?</p>
 
-<p>If you don&#8217;t know a vim wizard - (and even if you do) watch sceencasts of wizards using vim. Try to pick up on what they do and see if its something you&#8217;d like to achieve. Does it look natural or akward to you? Switch back to your old ways once in a while. Compare and make sure you&#8217;re getting your moneys worth.</p>
+<p>If you don&rsquo;t know a vim wizard &ndash; (and even if you do) watch sceencasts of wizards using vim. Try to pick up on what they do and see if its something you&rsquo;d like to achieve. Does it look natural or akward to you? Switch back to your old ways once in a while. Compare and make sure you&rsquo;re getting your moneys worth.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Get yourself a fast project]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project/"/>
+    <link href="http://catchmecode.com/blog/2013/08/26/get-yourself-a-fast-project/"/>
     <updated>2013-08-26T20:56:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/08/26/get-yourself-a-fast-project</id>
-    <content type="html"><![CDATA[<p>Before delving into this, learning is good ok? We&#8217;re all here to learn something (queue monthy python: Large group - &#8220;Yes, we&#8217;re all here to learn!&#8221; &#8230; One guy in the back - &#8220;I&#8217;m not&#8221;) but it&#8217;s easy to get derailed with details when there&#8217;s just so much exciting stuff out there.</p>
+    <id>http://catchmecode.com/blog/2013/08/26/get-yourself-a-fast-project</id>
+    <content type="html"><![CDATA[<p>Before delving into this, learning is good ok? We&rsquo;re all here to learn something (queue monthy python: Large group &ndash; &ldquo;Yes, we&rsquo;re all here to learn!&rdquo; &hellip; One guy in the back &ndash; &ldquo;I&rsquo;m not&rdquo;) but it&rsquo;s easy to get derailed with details when there&rsquo;s just so much exciting stuff out there.</p>
 
 <h2>New tech = initial bump</h2>
 
-<p>I&#8217;m assuming this happens to most folks and it gets worse the more to the left you are on the <a href="http://en.wikipedia.org/wiki/Technology_life_cycle#Technology_perception_dynamics">adoption curve</a> of a new technique. You are psyched up and ready to get cracking - only to be immensely slowed down by just setting up a dev environment or getting &#8220;hello world&#8221; to compile / interpret / just run dammit. The early adopters are ok with this - or even thrive of going through the rough phases where everything barely holds together (I&#8217;m guessing because you have more influence then. You are actually making a difference).</p>
+<p>I&rsquo;m assuming this happens to most folks and it gets worse the more to the left you are on the <a href="http://en.wikipedia.org/wiki/Technology_life_cycle#Technology_perception_dynamics">adoption curve</a> of a new technique. You are psyched up and ready to get cracking &ndash; only to be immensely slowed down by just setting up a dev environment or getting &ldquo;hello world&rdquo; to compile / interpret / just run dammit. The early adopters are ok with this &ndash; or even thrive of going through the rough phases where everything barely holds together (I&rsquo;m guessing because you have more influence then. You are actually making a difference).</p>
 
-<p>But but but&#8230; being the early adopter of the newest and shiniest things have an opportunity cost - you&#8217;re going to spend much more time on getting the new thing to work and less time on things not related to the language / framework itself. And that&#8217;s ok if that is your thing - using the newest stuff. Maybe you&#8217;ll even make yourself a name should you write the first web-framework or templating engine in your new language. But it should be a conscious choice staying in the left on the adoption curve. I&#8217;ve often gone this road without thinking of the opportunity cost of doing so. My goal was often to make something cool, but just because I could it would often be using the latest upcoming languages. And that meant that the cool things I set out to make withered when the initial bump set in.</p>
+<p>But but but&hellip; being the early adopter of the newest and shiniest things have an opportunity cost &ndash; you&rsquo;re going to spend much more time on getting the new thing to work and less time on things not related to the language / framework itself. And that&rsquo;s ok if that is your thing &ndash; using the newest stuff. Maybe you&rsquo;ll even make yourself a name should you write the first web-framework or templating engine in your new language. But it should be a conscious choice staying in the left on the adoption curve. I&rsquo;ve often gone this road without thinking of the opportunity cost of doing so. My goal was often to make something cool, but just because I could it would often be using the latest upcoming languages. And that meant that the cool things I set out to make withered when the initial bump set in.</p>
 
 <h2>The initial bump</h2>
 
-<p>With the initial bump I mean that not only that you&#8217;re not experienced in the new language, things take longer time because less time have been put into get things to work. Documentation is not there yet, libraries break with new versions, you get errors just trying to setting up the dev enviroment, error messages are obscure and no one else seems to have all the problems you&#8217;re having.</p>
+<p>With the initial bump I mean that not only that you&rsquo;re not experienced in the new language, things take longer time because less time have been put into get things to work. Documentation is not there yet, libraries break with new versions, you get errors just trying to setting up the dev enviroment, error messages are obscure and no one else seems to have all the problems you&rsquo;re having.</p>
 
-<p>The initial bump extends beyond just getting a working dev environment up and running. It also means less powerful IDE / editors, less tools (e g debugging, package management, build systems) and less frameworks and libraries with respectively less production time under their wings to choose from. In short, you&#8217;ll do more work because less time has been put into the thing you&#8217;re trying to run. And that costs - in time and focus.</p>
+<p>The initial bump extends beyond just getting a working dev environment up and running. It also means less powerful IDE / editors, less tools (e g debugging, package management, build systems) and less frameworks and libraries with respectively less production time under their wings to choose from. In short, you&rsquo;ll do more work because less time has been put into the thing you&rsquo;re trying to run. And that costs &ndash; in time and focus.</p>
 
-<p>The perhaps unglamorous alternative to this is using stuff you know well. Chances are that this is to the right on the adoption curve. But it&#8217;ll buy you something - time and focus.</p>
+<p>The perhaps unglamorous alternative to this is using stuff you know well. Chances are that this is to the right on the adoption curve. But it&rsquo;ll buy you something &ndash; time and focus.</p>
 
 <h2>Old tech = new domain?</h2>
 
-<p>By using the tools, frameworks and language you know best you&#8217;ll steer clear of the initial bump. And you&#8217;ve freed up time to explore another side of programming - getting to know a new domain and solving its problems not being slowed down by your tools.</p>
+<p>By using the tools, frameworks and language you know best you&rsquo;ll steer clear of the initial bump. And you&rsquo;ve freed up time to explore another side of programming &ndash; getting to know a new domain and solving its problems not being slowed down by your tools.</p>
 
-<p>It&#8217;s like learning to drive vs driving, at first you&#8217;re so occupied with the mechanics of driving that you can&#8217;t be bothered with the traffic ahead. Its first when you know the mechanics that you can focus on the actual driving from A to B.</p>
+<p>It&rsquo;s like learning to drive vs driving, at first you&rsquo;re so occupied with the mechanics of driving that you can&rsquo;t be bothered with the traffic ahead. Its first when you know the mechanics that you can focus on the actual driving from A to B.</p>
 
 <h2>Possibly leverage with a new language</h2>
 
-<p>If you&#8217;ve made a prototype using tools you know you&#8217;re in a much better spot of rewriting it in some other language / framework. You are now choosing tools based on your domain knowledge, this is a huge advantage - you&#8217;re running the tools and not vice versa.</p>
+<p>If you&rsquo;ve made a prototype using tools you know you&rsquo;re in a much better spot of rewriting it in some other language / framework. You are now choosing tools based on your domain knowledge, this is a huge advantage &ndash; you&rsquo;re running the tools and not vice versa.</p>
 
 <h2>Leverage old tech and iterate faster</h2>
 
-<p>Again, a <a href="http://catchmecode.com/blog/2013/07/15/fast-programmers/">speech about going fast</a>. But really, I think that pragmatism and knowing when it&#8217;s good enough is highly learnable. But you got to set out doing so with a clear mind. Using the languages, tools and stuff you know best will let you focus 100% on going fast in a new domain. Churn out really dirty but working code just to experience and get the feel of what it&#8217;s like. It&#8217;s ok, set out milestones when you refactor and tidy up.</p>
+<p>Again, a <a href="http://catchmecode.com/blog/2013/07/15/fast-programmers/">speech about going fast</a>. But really, I think that pragmatism and knowing when it&rsquo;s good enough is highly learnable. But you got to set out doing so with a clear mind. Using the languages, tools and stuff you know best will let you focus 100% on going fast in a new domain. Churn out really dirty but working code just to experience and get the feel of what it&rsquo;s like. It&rsquo;s ok, set out milestones when you refactor and tidy up.</p>
 
-<p>At least for me, when trying out a new idea its important to go fast from idea to prototype. Instead of getting stuck in the setup and loosing steam (and possibly even giving up on the idea before its even been test driven) - leverage everything you possibly can to get it to a working state. By using the tech you know you probably also know what frameworks and libs to use (and chances are that there&#8217;s plenty more of them out there since again you&#8217;re using a language with more adopters) you compound on your existing knowledge. You can make more critical judgments on claims of what works (for you) and what does not.</p>
+<p>At least for me, when trying out a new idea its important to go fast from idea to prototype. Instead of getting stuck in the setup and loosing steam (and possibly even giving up on the idea before its even been test driven) &ndash; leverage everything you possibly can to get it to a working state. By using the tech you know you probably also know what frameworks and libs to use (and chances are that there&rsquo;s plenty more of them out there since again you&rsquo;re using a language with more adopters) you compound on your existing knowledge. You can make more critical judgments on claims of what works (for you) and what does not.</p>
 
-<p>This also ties in with a lot of blogposts I&#8217;ve been reading on startups. Many of those who succeed <a href="http://www.paulgraham.com/13sentences.html">launch fast and get it right afterwards</a> - screw the details, we&#8217;ll figure those out later when we&#8217;re actually making some money. By using tools and products you know you&#8217;ll steer clear of the inital bump, and if you&#8217;re wise you stay to the right on the adoption curve, where there are powertools, battle proven VMs and industrial strength IDE&#8217;s. It&#8217;s ok - if you succeed you now have a luxury problem of switching languages and frameworks. With all that knowledge of what did and didn&#8217;t work.</p>
+<p>This also ties in with a lot of blogposts I&rsquo;ve been reading on startups. Many of those who succeed <a href="http://www.paulgraham.com/13sentences.html">launch fast and get it right afterwards</a> &ndash; screw the details, we&rsquo;ll figure those out later when we&rsquo;re actually making some money. By using tools and products you know you&rsquo;ll steer clear of the inital bump, and if you&rsquo;re wise you stay to the right on the adoption curve, where there are powertools, battle proven VMs and industrial strength IDE&rsquo;s. It&rsquo;s ok &ndash; if you succeed you now have a luxury problem of switching languages and frameworks. With all that knowledge of what did and didn&rsquo;t work.</p>
 
 <h2>Do share</h2>
 
-<p>Now I&#8217;m aware that by using older tech you are piggybacking on those that did take time to get things working and writing frameworks etc. And by doing so you might not have something as tangible as a fresh framework to share (or if you do its of less value beeing the nth framework of that kind and not the first or second).</p>
+<p>Now I&rsquo;m aware that by using older tech you are piggybacking on those that did take time to get things working and writing frameworks etc. And by doing so you might not have something as tangible as a fresh framework to share (or if you do its of less value beeing the nth framework of that kind and not the first or second).</p>
 
-<p>But, you can share the domain problems you ran into and how you solved them. Hopefully that&#8217;ll feedback to those on the forefront of some new tech getting perspective on what they build might be used to solve - problems rarely change that much regardless of tech. So you know, at least send some love to those brave enough to not take this advice and to go head on with the left of the adoption curve.</p>
+<p>But, you can share the domain problems you ran into and how you solved them. Hopefully that&rsquo;ll feedback to those on the forefront of some new tech getting perspective on what they build might be used to solve &ndash; problems rarely change that much regardless of tech. So you know, at least send some love to those brave enough to not take this advice and to go head on with the left of the adoption curve.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Jetty multiple instances]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances/"/>
+    <link href="http://catchmecode.com/blog/2013/08/01/jetty-multiple-instances/"/>
     <updated>2013-08-01T21:09:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/08/01/jetty-multiple-instances</id>
-    <content type="html"><![CDATA[<p>Having fought Jetty the last couple of days I&#8217;d thought I&#8217;d document this. Its not such a far fetched use case - running multiple webservers from the same installation.</p>
+    <id>http://catchmecode.com/blog/2013/08/01/jetty-multiple-instances</id>
+    <content type="html"><![CDATA[<p>Having fought Jetty the last couple of days I&rsquo;d thought I&rsquo;d document this. Its not such a far fetched use case &ndash; running multiple webservers from the same installation.</p>
 
 <h2>Background</h2>
 
-<p>First off, if you&#8217;re thinking about using Jetty - do it! Jetty is pretty awesome and with the event of jetty 9 moving its documentation to <a href="https://github.com/jetty-project/jetty-documentation">github</a> it has really taken off. It used to be a bit arcane with little documentation, but I&#8217;m really impressed with Jetty 9 so far. Its open source and its pretty simple to get up and running.</p>
+<p>First off, if you&rsquo;re thinking about using Jetty &ndash; do it! Jetty is pretty awesome and with the event of jetty 9 moving its documentation to <a href="https://github.com/jetty-project/jetty-documentation">github</a> it has really taken off. It used to be a bit arcane with little documentation, but I&rsquo;m really impressed with Jetty 9 so far. Its open source and its pretty simple to get up and running.</p>
 
-<p>However Jetty seems more geared towards the &#8220;simple&#8221; use case of embedding it or running it for deploying one or maybe a few webapps from the <code>webapps/</code> directory using one instance. While that&#8217;s part of the simple to get up and running deal it wasn&#8217;t too obvious how to get several instances from the same install (i e the dev, stage and production instances).</p>
+<p>However Jetty seems more geared towards the &ldquo;simple&rdquo; use case of embedding it or running it for deploying one or maybe a few webapps from the <code>webapps/</code> directory using one instance. While that&rsquo;s part of the simple to get up and running deal it wasn&rsquo;t too obvious how to get several instances from the same install (i e the dev, stage and production instances).</p>
 
 <h2>Y u want servers?</h2>
 
-<p>So, why all this? The reasons were these: the production server runs only on one install with one webapp. Staying as close to the production setup spares some gray hairs. Also Jetty can only set one debug port per instance and since its the same code base but different versions of it, it would be difficult to catch your request to a specific version - you&#8217;d have to somehow filter on the incoming request path in your breakpoint if its even possible. Plus only one webapp can be mapped to the root context <code>/</code>.</p>
+<p>So, why all this? The reasons were these: the production server runs only on one install with one webapp. Staying as close to the production setup spares some gray hairs. Also Jetty can only set one debug port per instance and since its the same code base but different versions of it, it would be difficult to catch your request to a specific version &ndash; you&rsquo;d have to somehow filter on the incoming request path in your breakpoint if its even possible. Plus only one webapp can be mapped to the root context <code>/</code>.</p>
 
 <p>At the same time wanting to avoid maintenance and hard to find bugs due to version differences when upgrading it should all be served from the same install.</p>
 
 <h2>Webapp folder structure</h2>
 
-<p>Here&#8217;s the setup I went for: All applications are kept under the same folder (webapps/ in the Jetty installation). This stemmed mostly from experience that Jetty seems very tied to its installation folder. Running things from elsewhere turned up paths not found errors. This might be possible to do with system properties, but I didn&#8217;t manage to get them into all places they needed to go. Staying with the Jetty installation folder as a base makes it more portable as you can use the install dir as a starting path for everything. So a fresh install should (in theory) just be to move the webapps folders into the new installations webapps folder.</p>
+<p>Here&rsquo;s the setup I went for: All applications are kept under the same folder (webapps/ in the Jetty installation). This stemmed mostly from experience that Jetty seems very tied to its installation folder. Running things from elsewhere turned up paths not found errors. This might be possible to do with system properties, but I didn&rsquo;t manage to get them into all places they needed to go. Staying with the Jetty installation folder as a base makes it more portable as you can use the install dir as a starting path for everything. So a fresh install should (in theory) just be to move the webapps folders into the new installations webapps folder.</p>
 
 <p>The folder structure looks like this:</p>
 
@@ -272,23 +272,23 @@
 </span><span class='line'>    ...</span></code></pre></td></tr></table></div></figure>
 
 
-<p>We&#8217;ll get to the start.d folders in the hot deploy section.</p>
+<p>We&rsquo;ll get to the start.d folders in the hot deploy section.</p>
 
 <h2>.ini vs .xml</h2>
 
-<p>A custom <code>.ini</code> per app - according to the docs this is just command line parameters to the jvm and can be passed as such. But I like command line parameters more in a file so you can put it in version control and deploy it with the webapp. If its buried in command line switches you&#8217;d have to go and edit the windows service by hand each time something changed - and as the rule goes: If it involves manual steps - doh, I forgot!</p>
+<p>A custom <code>.ini</code> per app &ndash; according to the docs this is just command line parameters to the jvm and can be passed as such. But I like command line parameters more in a file so you can put it in version control and deploy it with the webapp. If its buried in command line switches you&rsquo;d have to go and edit the windows service by hand each time something changed &ndash; and as the rule goes: If it involves manual steps &ndash; doh, I forgot!</p>
 
 <p>Also you need an <code>jetty.xml</code> file per app. The Jetty docs says that you can edit the <code>etc/</code> files (e g <code>etc/jetty.xml</code>) in the install to contain several server configs but this sounds again like maintenance problems to me. By putting all config for one instance in one xml you can also keep it in your scm and deploy it with the app itself so it can move with the code.</p>
 
-<p>In this setup the <code>dev.ini</code> contains only jvm parameters such as remote debug ports - I kept the rest in xml (no real reason, mostly because its easier to have all config in one file - and that file is the xml file since not all config can go into the <code>.ini</code> file)</p>
+<p>In this setup the <code>dev.ini</code> contains only jvm parameters such as remote debug ports &ndash; I kept the rest in xml (no real reason, mostly because its easier to have all config in one file &ndash; and that file is the xml file since not all config can go into the <code>.ini</code> file)</p>
 
 <h2>Xml file structure</h2>
 
 <p>The meat of a server instance configuration goes into its xml file.</p>
 
-<p>Each instance needs its own unique <code>&lt;Configure id="dev" class="org.eclipse.jetty.server.Server"&gt;</code> tag - its in the docs, but not so <a href="http://www.eclipse.org/jetty/documentation/current/serving-webapp-from-particular-port.html#creating-server-instances">easy to find</a>. It does not mention however if this applies when running in separate jvm:s or if it only applies in the same jvm. Better safe then sorry and have a separate tag for each separate jvm instance.</p>
+<p>Each instance needs its own unique <code>&lt;Configure id="dev" class="org.eclipse.jetty.server.Server"&gt;</code> tag &ndash; its in the docs, but not so <a href="http://www.eclipse.org/jetty/documentation/current/serving-webapp-from-particular-port.html#creating-server-instances">easy to find</a>. It does not mention however if this applies when running in separate jvm:s or if it only applies in the same jvm. Better safe then sorry and have a separate tag for each separate jvm instance.</p>
 
-<p>Start with the <code>jetty.xml</code> as a base - then cut and paste goodies from the other <code>etc/*.xml</code> files as you go into your own single <code>.xml</code> file. I ended up editing out some parts that were not interesting in hindsight, but I thought it was a better approach to get it all in there and then remove things that were not interesting afterwards.</p>
+<p>Start with the <code>jetty.xml</code> as a base &ndash; then cut and paste goodies from the other <code>etc/*.xml</code> files as you go into your own single <code>.xml</code> file. I ended up editing out some parts that were not interesting in hindsight, but I thought it was a better approach to get it all in there and then remove things that were not interesting afterwards.</p>
 
 <h2>Hot deploy</h2>
 
@@ -296,7 +296,7 @@
 
 <p>Since the hot deploy scanner can only be set on a single dir this was done via context-descriptor files and separate dirs for each instance (deploying all webapps to the same folder would not work since all instances would pick up all files).</p>
 
-<p>Jetty ignores any folder named <code>*.d</code>, so the start.d folders inside the webapps are used for the config files (e g <code>dev.ini</code> and <code>dev_jetty_conf.xml</code>). This way all config can be ftp:ed up to the webapp and start.d folder keeping them in sync.</p>
+<p>Jetty ignores any folder named <code>*.d</code>, so the start.d folders inside the webapps are used for the config files (e g <code>dev.ini</code> and <code>dev_jetty_conf.xml</code>). This way all config can be <a href="ftp:ed">ftp:ed</a> up to the webapp and start.d folder keeping them in sync.</p>
 
 <p>The hot deploy mechanism scans for <code>.xml</code> and <code>.war</code> files (in that order). But because the context path (where the webapp is accessed under) is set to the folder it resides in (i e <code>http://localhost:8080/dev</code>) by default you also need a context path file named the same as the <code>.war</code> file (e g <code>dev.xml</code> for the dev webapp). The web-context file contains only what war and under what path it is served from.</p>
 
@@ -311,26 +311,26 @@
 
 <h2>Troubleshooting config errors</h2>
 
-<p>The config you have in <code>.xml</code> files are merely read by a reflection framework for instantiating the corresponding java code, so you could actually type in the corresponding code you have in your xml and debug the error straight from your IDE if some config error trips you up. Didn&#8217;t do this, but it helps explain the error messages from Jetty more.</p>
+<p>The config you have in <code>.xml</code> files are merely read by a reflection framework for instantiating the corresponding java code, so you could actually type in the corresponding code you have in your xml and debug the error straight from your IDE if some config error trips you up. Didn&rsquo;t do this, but it helps explain the error messages from Jetty more.</p>
 
-<p>As a last resort - get the source for Jetty - if you get error-messages in the terminal or stderr log it can be checked against the source to get a hint of what&#8217;s failing. It helped me, you know, <a href="http://jonaslu.github.com/blog/2013/06/15/bug-repellants/">don&#8217;t try at random - get verifiable facts</a>.</p>
+<p>As a last resort &ndash; get the source for Jetty &ndash; if you get error-messages in the terminal or stderr log it can be checked against the source to get a hint of what&rsquo;s failing. It helped me, you know, <a href="http://catchmecode.com/blog/2013/06/15/bug-repellants/">don&rsquo;t try at random &ndash; get verifiable facts</a>.</p>
 
 <h2>Multiple instances</h2>
 
-<p>You&#8217;re almost there! Create another with the same folder structure as dev (stage in the folder structure above) and change every reference in folders and files to stage instead. You&#8217;re now serving dev and stage from the same install with diffrent instances.</p>
+<p>You&rsquo;re almost there! Create another with the same folder structure as dev (stage in the folder structure above) and change every reference in folders and files to stage instead. You&rsquo;re now serving dev and stage from the same install with diffrent instances.</p>
 
-<h2>Finally - example files</h2>
+<h2>Finally &ndash; example files</h2>
 
-<p>And since you&#8217;ve made it all the way down - here&#8217;s the <a href="https://github.com/jonaslu/jettyconfigs">example setup files in a repo</a>. Oh, don&#8217;t worry - the password and the keystore are the default that Jetty ships with.</p>
+<p>And since you&rsquo;ve made it all the way down &ndash; here&rsquo;s the <a href="https://github.com/jonaslu/jettyconfigs">example setup files in a repo</a>. Oh, don&rsquo;t worry &ndash; the password and the keystore are the default that Jetty ships with.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Fast programmers]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/07/15/fast-programmers/"/>
+    <link href="http://catchmecode.com/blog/2013/07/15/fast-programmers/"/>
     <updated>2013-07-15T22:25:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/07/15/fast-programmers</id>
-    <content type="html"><![CDATA[<p>The legend has it that the best programmers are a <a href="http://www.construx.com/10x_Software_Development/Productivity_Variations_Among_Software_Developers_and_Teams__The_Origin_of_10x/">magnitude better than the average one</a>. Having worked with some that I&#8217;m suspecting (or at least hoping so the rest of us mortals have some chance left :) would be in the top echelon I&#8217;ve tried to draw wisdom from these people on what makes a really fast programmer.</p>
+    <id>http://catchmecode.com/blog/2013/07/15/fast-programmers</id>
+    <content type="html"><![CDATA[<p>The legend has it that the best programmers are a <a href="http://www.construx.com/10x_Software_Development/Productivity_Variations_Among_Software_Developers_and_Teams__The_Origin_of_10x/">magnitude better than the average one</a>. Having worked with some that I&rsquo;m suspecting (or at least hoping so the rest of us mortals have some chance left :) would be in the top echelon I&rsquo;ve tried to draw wisdom from these people on what makes a really fast programmer.</p>
 
 <p>Lets start with some rampant stereotyping into two categories!</p>
 
@@ -338,7 +338,7 @@
 
 <p>These are only seemingly fast. They tend to push work (although I think its unintentional) onto others thereby making them look fast. The speed comes from skipping on tests and edge cases. Some might even appear to be superhuman since they would be in the top bracket even if they would take the time to make their code high quality.</p>
 
-<p>The thing is that the work they&#8217;re supposed to do winds up at other peoples desks in forms of bugs and hard-to-impossible to read code. So the amount of work you save on one guy is just moved (and multiplied by the amount of people) to another place. Unfortunately its very hard to track and prove. Bugs might not appear for months and unmaintainable code takes considerable time to surface and rear its ugly head.</p>
+<p>The thing is that the work they&rsquo;re supposed to do winds up at other peoples desks in forms of bugs and hard-to-impossible to read code. So the amount of work you save on one guy is just moved (and multiplied by the amount of people) to another place. Unfortunately its very hard to track and prove. Bugs might not appear for months and unmaintainable code takes considerable time to surface and rear its ugly head.</p>
 
 <p>These are not what I consider fast. These are only fast by omission.</p>
 
@@ -346,139 +346,139 @@
 
 <p>This is the recruiters pot of gold. The really fast but also precise and annoyingly almost always right. How do they do what they do?</p>
 
-<p>This is purely from what I&#8217;ve seen myself watching these guys in action. I&#8217;ve tried to interview some that I would consider being in this category - but I&#8217;m guessing its a bit like asking Picasso how to paint: &#8220;Uh, dude .. just grab a brush and go&#8221; (In my head this is exactly how Picasso would reply :) - the replies didn&#8217;t reveal much. So with those replies I&#8217;ve gathered that its not something that&#8217;s intentionally being turned on or done on purpose. Its seems almost as a reflex.</p>
+<p>This is purely from what I&rsquo;ve seen myself watching these guys in action. I&rsquo;ve tried to interview some that I would consider being in this category &ndash; but I&rsquo;m guessing its a bit like asking Picasso how to paint: &ldquo;Uh, dude .. just grab a brush and go&rdquo; (In my head this is exactly how Picasso would reply :) &ndash; the replies didn&rsquo;t reveal much. So with those replies I&rsquo;ve gathered that its not something that&rsquo;s intentionally being turned on or done on purpose. Its seems almost as a reflex.</p>
 
 <h2>Insane focus</h2>
 
 <p>This is the first and probably most important point. An absolutely unwavering focus. Everything but the problem at hand is secondary.</p>
 
-<p>If you spend 5 minutes on youtube or twitter you know you&#8217;ve lost 5 + about 15 minutes (in context reset mode). Multiply this by the productivity of really good programmer and you&#8217;ve lost considerable distance already. By just zoning off for 5 minutes.</p>
+<p>If you spend 5 minutes on youtube or twitter you know you&rsquo;ve lost 5 + about 15 minutes (in context reset mode). Multiply this by the productivity of really good programmer and you&rsquo;ve lost considerable distance already. By just zoning off for 5 minutes.</p>
 
-<p>Not everyone can keep this focus as I&#8217;ve seen these guys do. I&#8217;m guessing its part built-in and part having the right tasks. But I do think that focus can be trained far more than what most have built-in.</p>
+<p>Not everyone can keep this focus as I&rsquo;ve seen these guys do. I&rsquo;m guessing its part built-in and part having the right tasks. But I do think that focus can be trained far more than what most have built-in.</p>
 
-<p>This does not mean take no breaks. Do take breaks if you&#8217;re getting unfocused. We all have diffrent limits for how long we can keep at it. But here&#8217;s the kicker - take a break only after you&#8217;ve had a good productive run. Not before or during - because then there will be no productive run.</p>
+<p>This does not mean take no breaks. Do take breaks if you&rsquo;re getting unfocused. We all have diffrent limits for how long we can keep at it. But here&rsquo;s the kicker &ndash; take a break only after you&rsquo;ve had a good productive run. Not before or during &ndash; because then there will be no productive run.</p>
 
 <h2>Iterate faster</h2>
 
-<p>Armed with the unwavering focus is a just as unwavering will to move forward. I mean move forward as in get your hands dirty. A <a href="http://www.codinghorror.com/blog/2004/09/development-is-inherently-wicked.html">wicked problem</a> is a problem that cannot be solved until it has been solved. And I agree with the link - most software development problems are inherently wicked. You just have to try stuff until you find a way that works (note: not the right way - the fastest working way will do just fine).</p>
+<p>Armed with the unwavering focus is a just as unwavering will to move forward. I mean move forward as in get your hands dirty. A <a href="http://www.codinghorror.com/blog/2004/09/development-is-inherently-wicked.html">wicked problem</a> is a problem that cannot be solved until it has been solved. And I agree with the link &ndash; most software development problems are inherently wicked. You just have to try stuff until you find a way that works (note: not the right way &ndash; the fastest working way will do just fine).</p>
 
-<p>This means not overengineering solutions or <a href="http://catchmecode.com/blog/2013/06/15/bug-repellants/">setting breakpoints on a bug right away wihtout speculating first</a>. Get data and experience just enough solve the problem here and now. Tomorrow everything will change anyway - just go, start trying out solutions. The faster you can try it out - the faster you can discard it and move on to the next. And it has to be done in practice at the keyboard.</p>
+<p>This means not overengineering solutions or <a href="http://catchmecode.com/blog/2013/06/15/bug-repellants/">setting breakpoints on a bug right away wihtout speculating first</a>. Get data and experience just enough solve the problem here and now. Tomorrow everything will change anyway &ndash; just go, start trying out solutions. The faster you can try it out &ndash; the faster you can discard it and move on to the next. And it has to be done in practice at the keyboard.</p>
 
 <h2>Produce more</h2>
 
-<p>This ties in with all of the above - <a href="http://sivers.org/qlq">the more you produce the better and faster you get at it</a>. The fast programmers produces more code because they&#8217;ve already produced more code. The gap widens.</p>
+<p>This ties in with all of the above &ndash; <a href="http://sivers.org/qlq">the more you produce the better and faster you get at it</a>. The fast programmers produces more code because they&rsquo;ve already produced more code. The gap widens.</p>
 
 <h2>What to do with this?</h2>
 
-<p>Cultivate focus. Mediation is said to <a href="http://www.time.com/time/health/article/0,8599,2008914,00.html">help</a>. Try that. But first and foremost - try to get interested in what you do right now and ignore the rest of the world. Really sink into it. <a href="http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/">Use boredom</a> to lead the way.</p>
+<p>Cultivate focus. Mediation is said to <a href="http://www.time.com/time/health/article/0,8599,2008914,00.html">help</a>. Try that. But first and foremost &ndash; try to get interested in what you do right now and ignore the rest of the world. Really sink into it. <a href="http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/">Use boredom</a> to lead the way.</p>
 
-<p>Try to get more interesting tasks. This way, having focus might not be so hard. If you&#8217;re a good programmer - chances are you&#8217;ll get to pick tasks and assigments earlier and earlier thusly getting the goodies first. So it spirals upwards - you keep focus and produce more because you get more interesting tasks.</p>
+<p>Try to get more interesting tasks. This way, having focus might not be so hard. If you&rsquo;re a good programmer &ndash; chances are you&rsquo;ll get to pick tasks and assigments earlier and earlier thusly getting the goodies first. So it spirals upwards &ndash; you keep focus and produce more because you get more interesting tasks.</p>
 
-<p>Cultivate fearlessness and pragmatism. Try something. Didn&#8217;t work? Good, now you know. Now try something else (i e iterate faster - get more experience on the problem, the domain and your tools).</p>
+<p>Cultivate fearlessness and pragmatism. Try something. Didn&rsquo;t work? Good, now you know. Now try something else (i e iterate faster &ndash; get more experience on the problem, the domain and your tools).</p>
 
-<p>Don&#8217;t confuse sloppiness with being fast. This is the dark side of the force. Don&#8217;t go there&#8230; it will catch up with you.</p>
+<p>Don&rsquo;t confuse sloppiness with being fast. This is the dark side of the force. Don&rsquo;t go there&hellip; it will catch up with you.</p>
 
-<p>As said, this seems to be built-in for most of the fast programmers I&#8217;ve talked to. But that does not mean you should stop trying to emulate that - au contraire! If practiced enough it might become second nature to you too..</p>
+<p>As said, this seems to be built-in for most of the fast programmers I&rsquo;ve talked to. But that does not mean you should stop trying to emulate that &ndash; au contraire! If practiced enough it might become second nature to you too..</p>
 
-<p>And all of this is summarized in the words of my imaginary Picasso: &#8220;Uh, dude.. just grab the keyboard and go&#8221;.</p>
+<p>And all of this is summarized in the words of my imaginary Picasso: &ldquo;Uh, dude.. just grab the keyboard and go&rdquo;.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Bug repellants]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/06/15/bug-repellants/"/>
+    <link href="http://catchmecode.com/blog/2013/06/15/bug-repellants/"/>
     <updated>2013-06-15T22:48:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/06/15/bug-repellants</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve seen this go down a fair amount of times - myself included. I just know why its happening, right. Its this damn line here - there is something with this function call. Change it a bit at random, run a test, see it fail. Why in the name of S is this still failing? Change some more at random - google what I <em>know</em> is the problem - see it fail again. Sounds familiar, right?</p>
+    <id>http://catchmecode.com/blog/2013/06/15/bug-repellants</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve seen this go down a fair amount of times &ndash; myself included. I just know why its happening, right. Its this damn line here &ndash; there is something with this function call. Change it a bit at random, run a test, see it fail. Why in the name of S is this still failing? Change some more at random &ndash; google what I <em>know</em> is the problem &ndash; see it fail again. Sounds familiar, right?</p>
 
-<p>My biases on where the problem was and what caused it has cost me a fair of amount of time wasted. Its also the greatest hurdle to get past (since your ego is involved). About 90% of the time if I don&#8217;t solve the bug in 30 seconds - its not the cause I thought it was. It usually turns out to be something very different. And the way to get from here to there is to let go of whatever cause you had pictured in your head.</p>
+<p>My biases on where the problem was and what caused it has cost me a fair of amount of time wasted. Its also the greatest hurdle to get past (since your ego is involved). About 90% of the time if I don&rsquo;t solve the bug in 30 seconds &ndash; its not the cause I thought it was. It usually turns out to be something very different. And the way to get from here to there is to let go of whatever cause you had pictured in your head.</p>
 
 <h2>Get verifiable data</h2>
 
 <p>The first step is to free yourself from whatever you think of the bug. Its crucial to keep all options open and then narrow down on the causes and fixes. Take a step back (and some fresh coffee), free of your biases and look at the situation. You need some kind of data to work with. Just guessing at random will not help you (has it ever really?).</p>
 
-<p>I&#8217;m fairly reluctant to label the bug too specifically in order to remind myself that it might not be what I&#8217;m looking for. Rattling of a &#8220;oh, its a threading issue&#8221; too soon might cut you off from the real cause. Perhaps its not a threading issue at all - it just looks like it from a distance.</p>
+<p>I&rsquo;m fairly reluctant to label the bug too specifically in order to remind myself that it might not be what I&rsquo;m looking for. Rattling of a &ldquo;oh, its a threading issue&rdquo; too soon might cut you off from the real cause. Perhaps its not a threading issue at all &ndash; it just looks like it from a distance.</p>
 
 <h2>Ground zero</h2>
 
-<p>First step - where does it occur? In some cases such as an exception, its obvious where it occurs. Or is it? What if its an exception caught and rethrown silently? Go to the line and look at it. Make sure you&#8217;re looking at the right line.</p>
+<p>First step &ndash; where does it occur? In some cases such as an exception, its obvious where it occurs. Or is it? What if its an exception caught and rethrown silently? Go to the line and look at it. Make sure you&rsquo;re looking at the right line.</p>
 
 <p>Can you get it to fail each time? Can you set up some scaffolding to get it into the fail-state? Are you sure its only here? Are there any other paths to where it seems to occur? Can you do some auxiliary small tests to verify that its really where you think it is?</p>
 
-<p>You need to make sure you&#8217;re looking at the right neighborhood. If its vague - acknowledge that its vague so you don&#8217;t get the wrong impression of knowing where to look. Avoid labeling it.</p>
+<p>You need to make sure you&rsquo;re looking at the right neighborhood. If its vague &ndash; acknowledge that its vague so you don&rsquo;t get the wrong impression of knowing where to look. Avoid labeling it.</p>
 
 <h2>Breakpoints</h2>
 
-<p>For zeroing in on bugs that you don&#8217;t know where they fail - but you now can reproduce the failure each time - breakpoints is an indispensible tool.</p>
+<p>For zeroing in on bugs that you don&rsquo;t know where they fail &ndash; but you now can reproduce the failure each time &ndash; breakpoints is an indispensible tool.</p>
 
-<p>If your language supports debugging via breakpoints - good for you :) If not, use good &#8216;ol print statements. Put a breakpoint far enough up in the call stack so you don&#8217;t miss it (unless its a very specific error, such as a NullPointer - then you can set a breakpoint on the NullPointer exception itself and work backwards).</p>
+<p>If your language supports debugging via breakpoints &ndash; good for you :) If not, use good &lsquo;ol print statements. Put a breakpoint far enough up in the call stack so you don&rsquo;t miss it (unless its a very specific error, such as a NullPointer &ndash; then you can set a breakpoint on the NullPointer exception itself and work backwards).</p>
 
 <p>What does the state look like when the bug occurs? The stack trace? Can you go up the stack trace to see who called you and what their state looked like? Can someone else in turn affect the one calling you and so on? Can you compare this state with a stable state you know does the right thing?</p>
 
 <h2>Change state</h2>
 
-<p>If your language and tool supports changing values while hanging on a breakpoint - can you change some parameters to get it working? Can you inspect the state of the variables and the stack trace of what got you there? Is there any other way to get here or affect the state you&#8217;re currently looking at? If not, use simple assignments along the way to affect the state.</p>
+<p>If your language and tool supports changing values while hanging on a breakpoint &ndash; can you change some parameters to get it working? Can you inspect the state of the variables and the stack trace of what got you there? Is there any other way to get here or affect the state you&rsquo;re currently looking at? If not, use simple assignments along the way to affect the state.</p>
 
 <p>Input other data than what you normally put in. Does it still fail? Can you alter the code path so it works?</p>
 
 <h2>Last known stable state</h2>
 
-<p>Next step once you have established where it occurs is to have something to compare it with that you know works / is right. Is there one? If so, can you revert to it (you did commit did you not?). Start from there and trace forward to where the bug was introduced. If you use git - <a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git bisect</a> was done for this.</p>
+<p>Next step once you have established where it occurs is to have something to compare it with that you know works / is right. Is there one? If so, can you revert to it (you did commit did you not?). Start from there and trace forward to where the bug was introduced. If you use git &ndash; <a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">git bisect</a> was done for this.</p>
 
 <p>Can you compare some logs, files, state, stacktrace of when it works the way you want it to? Can you do some auxiliary experiments to get a working stable state to compare with?</p>
 
 <h2>Git blame</h2>
 
-<p>Why is it here? What&#8217;s the surroundings of the bug? Can you get some historical facts on why it looks like it does? Has there been much action in this area lately (or things that are related to it?). Does the commit message give you some hints on why?</p>
+<p>Why is it here? What&rsquo;s the surroundings of the bug? Can you get some historical facts on why it looks like it does? Has there been much action in this area lately (or things that are related to it?). Does the commit message give you some hints on why?</p>
 
 <p>Just knowing when it was introduced (around what time) may give you hints as to what else was going on at that time what might have caused it. Another useful thing is that it might be a bug that someone now relies on. So its actually more of intended (incidental) behavior. Check that if you do fix this nothing else breaks.</p>
 
 <h2>Read up</h2>
 
-<p>This comes fairly low on the list because it should be used with caution. Its very easy to get distracted and mislead by seemingly similar problems that others might have. Do check - but take everything you read with a big pinch of salt. Keep in mind that you&#8217;re reading the textual representation of their interpretation of the problem. Maybe they haven&#8217;t gone through the same thorough investigation you just had (you did get verifiable data, right? :).</p>
+<p>This comes fairly low on the list because it should be used with caution. Its very easy to get distracted and mislead by seemingly similar problems that others might have. Do check &ndash; but take everything you read with a big pinch of salt. Keep in mind that you&rsquo;re reading the textual representation of their interpretation of the problem. Maybe they haven&rsquo;t gone through the same thorough investigation you just had (you did get verifiable data, right? :).</p>
 
-<p>When using some someone elses library its more useful - after you&#8217;ve established that the problem is in someone elses library. Has someone else had a similar problem? If so - how did they solve it? If not - how probable is it that you&#8217;re the only one in the world experiencing this? That last part is aimed at stopping the &#8220;its a bug in the OS&#8221; type of answers. If its an OS its very well used and thusly its very probable its an already known bug - and if not it&#8217;s probably in your code. Not theirs.</p>
+<p>When using some someone elses library its more useful &ndash; after you&rsquo;ve established that the problem is in someone elses library. Has someone else had a similar problem? If so &ndash; how did they solve it? If not &ndash; how probable is it that you&rsquo;re the only one in the world experiencing this? That last part is aimed at stopping the &ldquo;its a bug in the OS&rdquo; type of answers. If its an OS its very well used and thusly its very probable its an already known bug &ndash; and if not it&rsquo;s probably in your code. Not theirs.</p>
 
-<p>What does any documentation say? Have you made the right assumptions? Is there any pre-cond you&#8217;re not aware of? Are you using it the way its meant to be used? Can you get the source for whatever you&#8217;re looking at (and start from step #1 again above, this time in their code base?)</p>
+<p>What does any documentation say? Have you made the right assumptions? Is there any pre-cond you&rsquo;re not aware of? Are you using it the way its meant to be used? Can you get the source for whatever you&rsquo;re looking at (and start from step #1 again above, this time in their code base?)</p>
 
 <h2>Questions?</h2>
 
-<p>This post came off more as a huge pack of questions than I originally had planned - but then again, this is usually how (successful) debugging sessions go. A huge amount of questions thrown around to establish where, why and finally how to fix it. Its by no means exhaustive as every bug and every situation is a bit different. These are just the main tools I usually go for when facing an unknown problem.</p>
+<p>This post came off more as a huge pack of questions than I originally had planned &ndash; but then again, this is usually how (successful) debugging sessions go. A huge amount of questions thrown around to establish where, why and finally how to fix it. Its by no means exhaustive as every bug and every situation is a bit different. These are just the main tools I usually go for when facing an unknown problem.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Rotating backups with rsync]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
+    <link href="http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync/"/>
     <updated>2013-06-01T21:36:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/06/01/rotating-backups-with-rsync</id>
-    <content type="html"><![CDATA[<p>First off: its here - <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
+    <id>http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync</id>
+    <content type="html"><![CDATA[<p>First off: its here &ndash; <a href="https://github.com/jonaslu/rsyncrotatingbackup">https://github.com/jonaslu/rsyncrotatingbackup</a>.</p>
 
 <h2>Short description</h2>
 
-<p>Its a script that does rotational backups on your folders of choice. No compression involved - the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
+<p>Its a script that does rotational backups on your folders of choice. No compression involved &ndash; the files are mirrored onto the backup machine and hard links keeps redundancy down between snapshots. Done in perl via ssh and rsync (sshd  needs to be installed on the backup machine, ssh keys are optional but very handy if you automate it with cron / anacron).</p>
 
 <h2>Background</h2>
 
-<p>You know the drill - do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn&#8217;t really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well - it was educational at least to roll your own :).</p>
+<p>You know the drill &ndash; do backups or loose all of your family photos just before the big family reunion. There are plenty of solutions out there so why roll your own? The ones I found didn&rsquo;t really fit the bill (edit: looks like <a href="http://www.rsnapshot.org/">rsnapshot</a> actually might have fitted the bill, oh well &ndash; it was educational at least to roll your own :).</p>
 
 <h2>Requirement spec</h2>
 
-<p>Files should be accessible via ssh or the like from outside - so no compression. And because its on my local network I&#8217;m also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it - for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
+<p>Files should be accessible via ssh or the like from outside &ndash; so no compression. And because its on my local network I&rsquo;m also trusting it with unencrypted content. If you go outside to any other machine, do encrypt it &ndash; for this something like <a href="https://apps.ubuntu.com/cat/applications/deja-dup/">déja dup</a> or <a href="http://duplicity.nongnu.org/">duplicity</a> which it builds on is an excellent fit.</p>
 
-<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore - hard links achieves the same thing - to keep the data amount down over a cycle of backups.</p>
+<p>No incremental backups. One snapshot per backup round. Again, this goes with the requirement above, need to access the full file from outside. Also, incremental backups usually takes some time to restore &ndash; hard links achieves the same thing &ndash; to keep the data amount down over a cycle of backups.</p>
 
-<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) - work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 - files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn&#8217;t that interesting to keep around anyway).</p>
+<p>Rotating backups. There are mostly files that change much or not at all. It they change much, a week of backups are enough (think source code files) &ndash; work from a week ago is usually not that interesting. Plus if you use <a href="http://git-scm.com/">git</a> (and you should) you have all the history in your repo. So via the repo it turns into category 2 &ndash; files that do not change at all. These are photos, books, documents and the likes. If I accidentally delete one file a week or so of backups are more than enough to get it back (if missed and it falls off the edge, it probably wasn&rsquo;t that interesting to keep around anyway).</p>
 
 <p>Keep folder structure. I know where it was on the local machine from where it was backed up from so I can quickly find it on the remote machine.</p>
 
-<p>Data amount fairly high but turnover low - backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
+<p>Data amount fairly high but turnover low &ndash; backups should be fast and only copy the delta from last time, keeping the data on the storage side at a minimum. <a href="http://en.wikipedia.org/wiki/Hard_link">Hard links</a> does this.</p>
 
-<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> - but I&#8217;ve added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
+<p>Its based on the script from David Bourget <a href="http://www.dbourget.com/software/remote-backup.pl">here</a> &ndash; but I&rsquo;ve added that it keeps the directory structure on the mirrored site and fixed the warnings you got when a full cycle had not yet completed.</p>
 
 <h2>Script config</h2>
 
-<p>There are a couple of variables you should change - they&#8217;re marked with a huge # Config part - edit these header at the top of the script.</p>
+<p>There are a couple of variables you should change &ndash; they&rsquo;re marked with a huge # Config part &ndash; edit these header at the top of the script.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -496,7 +496,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Number of backups in a cycle. Will create 7 folders / snapshots - a weeks worth of backups if you run it once every day.</p>
+<p>Number of backups in a cycle. Will create 7 folders / snapshots &ndash; a weeks worth of backups if you run it once every day.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -505,7 +505,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>I&#8217;ve configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
+<p>I&rsquo;ve configured the backups to use the hostname of the backed up machine as the root folder. This way its easy to see where from what machine it came and then navigate from there as if it were on the local machine.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -534,7 +534,7 @@
 
 <h2>Optional config</h2>
 
-<p>You might have to change these, they&#8217;ll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don&#8217;t succeed - feed them the location of the binary:</p>
+<p>You might have to change these, they&rsquo;ll try to find the executable by themselves (via <a href="http://linux.die.net/man/1/which">which</a>) but if they don&rsquo;t succeed &ndash; feed them the location of the binary:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -551,7 +551,7 @@
 
 <p>Running it in the terminal will print the standard rsync messages for each directory. If scheduled via anacron you can capture the logs and check them when the job has finished (see below for scheduling via anacron).</p>
 
-<p>The first time: Depending on the amount of data - this should take some time. All files will be transferred. The second to the nth time: Depending on how much you&#8217;ve changed - this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.</p>
+<p>The first time: Depending on the amount of data &ndash; this should take some time. All files will be transferred. The second to the nth time: Depending on how much you&rsquo;ve changed &ndash; this should be anywhere from fast to instant. Speedups will be some crazy factor if you change a fairly small amount of files.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -562,7 +562,7 @@
 
 <h2>Running it with anacron</h2>
 
-<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can&#8217;t install jobs with your own user (anacron only runs as root) - so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).</p>
+<p>Everything that can should be automated of course. Cron fits if you keep your machine on at all times, but since my laptop goes on about once each day (usually at night) but not always I opted for anacron. Positive side is that it runs after a configurable time when the machine has been switched on, the downside is that you can&rsquo;t install jobs with your own user (anacron only runs as root) &ndash; so it took some shell magic to get it working with my user (for folders, ssh keys and permissions).</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>1    15  client.backup   su user -c <span class="s2">&quot;/usr/bin/perl /home/user/bin/rsync_rotating_backups.pl&quot;</span> &gt; /var/log/rsync_backup.log 2&gt;&amp;1
@@ -584,7 +584,7 @@
 
 <h2>Need more?</h2>
 
-<p>I didn&#8217;t do this, but if you need to keep data longer but don&#8217;t want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won&#8217;t be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
+<p>I didn&rsquo;t do this, but if you need to keep data longer but don&rsquo;t want a high rotational cycle you can schedule a cron job on the backup machine that tars and gzips the backup folder structure once every cycle. This way you keep the data after its rotated out. The job won&rsquo;t be too heavy on your machine since it only runs once every cycle and it might hit a sweet spot between easy access (mirroring folders) and data longevity (having to unzip and find the file if its rotated out into the tars and gzips).</p>
 
 <p>Happy backing upping!</p>
 ]]></content>
@@ -592,42 +592,42 @@
   
   <entry>
     <title type="html"><![CDATA[Phone meetings]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/05/10/phonemeetings/"/>
+    <link href="http://catchmecode.com/blog/2013/05/10/phonemeetings/"/>
     <updated>2013-05-10T21:52:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/05/10/phonemeetings</id>
+    <id>http://catchmecode.com/blog/2013/05/10/phonemeetings</id>
     <content type="html"><![CDATA[<p>This happens often enough to qualify for a post. Phone meetings. The one where you call in to synchronize some process or project. My workplace does a fair amount of integrations (i e sending data from us to them or vice versa) that this is a real problem. As an agile team, no wait, strike that.. as a team who like to get stuff done have to fend ourselves from spending too much time in those.</p>
 
 <p>Lets delve into this a bit, shall we?</p>
 
 <h2>Background</h2>
 
-<p>Let&#8217;s clarify first - I&#8217;m all for keeping close contact (if needed) and synchronizing schedules. This is pivotal to meeting the integration deadline. Its very dissatisfying to really push through an integration only to find out that the other side is not nearly done. Your code will be in a vacuum until they start testing their pieces and you&#8217;ll have to go back and fix all the tings uncovered during their test phase. Nope, it&#8217;s about the medium (phone) and the scheduling (not governed by technical needs).</p>
+<p>Let&rsquo;s clarify first &ndash; I&rsquo;m all for keeping close contact (if needed) and synchronizing schedules. This is pivotal to meeting the integration deadline. Its very dissatisfying to really push through an integration only to find out that the other side is not nearly done. Your code will be in a vacuum until they start testing their pieces and you&rsquo;ll have to go back and fix all the tings uncovered during their test phase. Nope, it&rsquo;s about the medium (phone) and the scheduling (not governed by technical needs).</p>
 
 <h2>4k bandwidth impediment</h2>
 
-<p>Software, data-exchange formats and the likes are no pick nick doing in person. I know that if we have a whiteboard it&#8217;ll take some time to understand each other, and another chunk of time to get a solution in place. Imposing an artificial impediment such as no visual information and only 4k of bandwidth (fixed phone lines) makes little sense coming from a technical perspective.</p>
+<p>Software, data-exchange formats and the likes are no pick nick doing in person. I know that if we have a whiteboard it&rsquo;ll take some time to understand each other, and another chunk of time to get a solution in place. Imposing an artificial impediment such as no visual information and only 4k of bandwidth (fixed phone lines) makes little sense coming from a technical perspective.</p>
 
-<p>I understand that phone is the second best medium for dealing with human relations - but in technical discussions where the objective is to flesh out the details of a transfer format or what webservice port we&#8217;re using its maybe the nth best medium. Way superior is something visual - such as mail and or lo-fi snapshots of whiteboards - details needs to be in writing.</p>
+<p>I understand that phone is the second best medium for dealing with human relations &ndash; but in technical discussions where the objective is to flesh out the details of a transfer format or what webservice port we&rsquo;re using its maybe the nth best medium. Way superior is something visual &ndash; such as mail and or lo-fi snapshots of whiteboards &ndash; details needs to be in writing.</p>
 
 <h2>Imposed scheduling</h2>
 
-<p>A first meeting is ok - preferably a short one where we say &#8220;I&#8217;m Jonas  - a developer. I&#8217;ll be handling the integration from our side. Oh, you&#8217;re using .NET? Ok, good to know for webservice quirks and BOM characters. Now, can we go offline and do the rest via mail? Great, nice talking to you all, we&#8217;ll keep you updated on the progress&#8221;. We are humans after all and a voice and a name goes a long way in better cooperation.</p>
+<p>A first meeting is ok &ndash; preferably a short one where we say &ldquo;I&rsquo;m Jonas  &ndash; a developer. I&rsquo;ll be handling the integration from our side. Oh, you&rsquo;re using .NET? Ok, good to know for webservice quirks and BOM characters. Now, can we go offline and do the rest via mail? Great, nice talking to you all, we&rsquo;ll keep you updated on the progress&rdquo;. We are humans after all and a voice and a name goes a long way in better cooperation.</p>
 
-<p>But really, more than that first startup meeting is rarely a good use of time. Now, this is highly dependent on the project manager on the other side. If we&#8217;re lucky, they are ok with an on a need to know basis - i e when we hit cases not covered by specs. Most of the time though there are meetings scheduled more out of management needs - e g a status meeting 1h each week to follow up on anything that happened last week. I like to think of these meetings <a href="http://simpsonswiki.net/wiki/Everything's_OK_alarm">the everytings ok alarm</a>. Or worse, those weekly meetings plus a new meeting anytime a mail even mentions the words problem, bug, issue or the likes.</p>
+<p>But really, more than that first startup meeting is rarely a good use of time. Now, this is highly dependent on the project manager on the other side. If we&rsquo;re lucky, they are ok with an on a need to know basis &ndash; i e when we hit cases not covered by specs. Most of the time though there are meetings scheduled more out of management needs &ndash; e g a status meeting 1h each week to follow up on anything that happened last week. I like to think of these meetings <a href="http://simpsonswiki.net/wiki/Everything's_OK_alarm">the everytings ok alarm</a>. Or worse, those weekly meetings plus a new meeting anytime a mail even mentions the words problem, bug, issue or the likes.</p>
 
-<p>This gets in the way of producing code - problems rarely align to weekly meetings and weekly meetings are rarely interesting in full to all parties involved.</p>
+<p>This gets in the way of producing code &ndash; problems rarely align to weekly meetings and weekly meetings are rarely interesting in full to all parties involved.</p>
 
 <h2>They are not stupid</h2>
 
-<p>As said from the outset this might seem outlandish to an agile small team - but lets consider context. I&#8217;m guessing it makes very much sense in other organizations to have many and recurring meetings. It may be a large corporation where this is the only way managers can keep up with how the project evolves. Being small and agile largely cuts this out. Also consider that many things that seems stupid now started out as being helpful (TPS reports etc) only to later evolve into something that may not be so helpful now - except that there is no better alternative. Or that none dares to go differently.</p>
+<p>As said from the outset this might seem outlandish to an agile small team &ndash; but lets consider context. I&rsquo;m guessing it makes very much sense in other organizations to have many and recurring meetings. It may be a large corporation where this is the only way managers can keep up with how the project evolves. Being small and agile largely cuts this out. Also consider that many things that seems stupid now started out as being helpful (TPS reports etc) only to later evolve into something that may not be so helpful now &ndash; except that there is no better alternative. Or that none dares to go differently.</p>
 
 <h2>You might be the weird one</h2>
 
-<p>At many places things don&#8217;t happen because someone says so - things happen because there are follow up meetings and agendas. Trying to get out of meetings might signal that you&#8217;re work shy. Explain very thoroughly how you work and what you will deliver at what point in time.</p>
+<p>At many places things don&rsquo;t happen because someone says so &ndash; things happen because there are follow up meetings and agendas. Trying to get out of meetings might signal that you&rsquo;re work shy. Explain very thoroughly how you work and what you will deliver at what point in time.</p>
 
 <h2>You might be a tiny part of it</h2>
 
-<p>Sometimes its hard to gauge the size of the project on the other side. You might be a tiny part in the whole - it&#8217;s just that its not apparent. The file you are sending their way might be processed in 15 different systems and all of them needs to implement this new feature. You&#8217;ll be spending lots of time listening to their issues and scheduling synchronizations. This is not in defense of huge meetings - but its often a reality and might be of some comfort when trying to understand why there are 10 people in this meeting when you are sending 1 file.</p>
+<p>Sometimes its hard to gauge the size of the project on the other side. You might be a tiny part in the whole &ndash; it&rsquo;s just that its not apparent. The file you are sending their way might be processed in 15 different systems and all of them needs to implement this new feature. You&rsquo;ll be spending lots of time listening to their issues and scheduling synchronizations. This is not in defense of huge meetings &ndash; but its often a reality and might be of some comfort when trying to understand why there are 10 people in this meeting when you are sending 1 file.</p>
 
 <h2>Eject early, eject often</h2>
 
@@ -635,25 +635,25 @@
 
 <h2>Inversion of control</h2>
 
-<p>In the initial meeting, try to figure out who&#8217;s the key technical person on the other side. Get their mail (and phone number if needed). If you&#8217;re lucky you can go straight to that person and most things never have to escalate beyond you two (except when it actually is a problem for the whole project). The technician on the other side might be interested in this too - most coders face the same problem with tech specs over phone and meetings gets in the way of producing code.</p>
+<p>In the initial meeting, try to figure out who&rsquo;s the key technical person on the other side. Get their mail (and phone number if needed). If you&rsquo;re lucky you can go straight to that person and most things never have to escalate beyond you two (except when it actually is a problem for the whole project). The technician on the other side might be interested in this too &ndash; most coders face the same problem with tech specs over phone and meetings gets in the way of producing code.</p>
 
-<p>And if no one seems to be the key person - try to see if someone gives you coherent and intelligent answers. Maybe they can point you in the right direction. Mail only the person you think know have the answer, avoid cc:ing lots of people (unless you&#8217;ve promised some project manager to cc your conversation. Include only them in that case). Mail threads tend to accelerate the number of people on the send list fast and if it grows big enough it might trigger a new meeting.</p>
+<p>And if no one seems to be the key person &ndash; try to see if someone gives you coherent and intelligent answers. Maybe they can point you in the right direction. Mail only the person you think know have the answer, avoid cc:ing lots of people (unless you&rsquo;ve promised some project manager to cc your conversation. Include only them in that case). Mail threads tend to accelerate the number of people on the send list fast and if it grows big enough it might trigger a new meeting.</p>
 
 <h2>Get a goal keeper</h2>
 
-<p>This should ideally be your project owner or someone who carries enough weight that if they say &#8220;we&#8217;re doing fine&#8221; - its assumed you&#8217;re actually doing fine. This person participates in any weekly status meetings on your behalf. Send him a status report saying &#8220;we&#8217;re ok&#8221; (if you&#8217;re ok) and ask for condensed information that pertains you (it&#8217;s usually very little). The product owner might be interested in covering for you since its project time spent in meetings that could have been used more wisely.</p>
+<p>This should ideally be your project owner or someone who carries enough weight that if they say &ldquo;we&rsquo;re doing fine&rdquo; &ndash; its assumed you&rsquo;re actually doing fine. This person participates in any weekly status meetings on your behalf. Send him a status report saying &ldquo;we&rsquo;re ok&rdquo; (if you&rsquo;re ok) and ask for condensed information that pertains you (it&rsquo;s usually very little). The product owner might be interested in covering for you since its project time spent in meetings that could have been used more wisely.</p>
 
 <h2>Round robin the role</h2>
 
-<p>If none of the above works - share the burden. You&#8217;re doing a good thing - freeing up the rest of the team to get some work done. They&#8217;ll get a good laugh when you roll your eyes and do the talking hand motion - and they&#8217;ll probably back you up with videos of funny cats and capybaras to ease your pain. And next time you&#8217;re off the hook.</p>
+<p>If none of the above works &ndash; share the burden. You&rsquo;re doing a good thing &ndash; freeing up the rest of the team to get some work done. They&rsquo;ll get a good laugh when you roll your eyes and do the talking hand motion &ndash; and they&rsquo;ll probably back you up with videos of funny cats and capybaras to ease your pain. And next time you&rsquo;re off the hook.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[ctrl click sum gdocs spreadsheet]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/"/>
+    <link href="http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/"/>
     <updated>2013-04-30T21:56:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet</id>
+    <id>http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet</id>
     <content type="html"><![CDATA[<p>Its here: <a href="http://userscripts.org/scripts/show/166316">http://userscripts.org/scripts/show/166316</a>.</p>
 
 <p>Press the install button to use it. There are also instructions on the site for how to get running with greasemonkey and tampermonkey <a href="http://userscripts.org/about/installing">here</a>.</p>
@@ -670,173 +670,173 @@
 
 <h2>Big reset</h2>
 
-<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up - just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
+<p>I does not in any way modifying the real contents or color of your cells so if it does get stuck somewhere and does not clean up &ndash; just refresh the page and the changes to the html will be reset. And let me know what you did so I maybe can fix it someday.</p>
 
 <h2>Tech goals</h2>
 
-<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&#8217;t quite make it. It kept jumping down and sometimes locking up the regular function - so I  gave up, I&#8217;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
+<p>My aim was stability first and an integrated look second. Almost achieved it. I tried to reuse the sum box you get with shift + mark cells, but didn&rsquo;t quite make it. It kept jumping down and sometimes locking up the regular function &ndash; so I  gave up, I&rsquo;m guessing you need to know some of the minified javascript magic to use it full out. Also, that solution was a bit too volatile to conflict with the first goal as it relied quite heavily on using css classes to hijack the sum box element.</p>
 
-<p>In addition, the sum box has other uses (and feelings m&#8217;kay?) too - it can display averages etc and I didn&#8217;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&#8217;t look as integrated as reusing the sum box - but I&#8217;m hoping it will be a more stable solution.</p>
+<p>In addition, the sum box has other uses (and feelings m&#8217;kay?) too &ndash; it can display averages etc and I didn&rsquo;t want to give the impression that this was wholly integrated to it. So in the end I went for inserting just a div under the td class docs-sheet-status-container. It doesn&rsquo;t look as integrated as reusing the sum box &ndash; but I&rsquo;m hoping it will be a more stable solution.</p>
 
 <h2>Highlighting selected cells</h2>
 
-<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&#8217;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays - I wouldn&#8217;t know the size of the cells or overlays. This is a cheaper hack.</p>
+<p>The color highlighting color however was easier to get the integrated look. The background color is really done with opacity and a div overlay. This way too hard to copy, so I&rsquo;m doing a mean calculation of googles overlay color rgb(8,146,247) with opacity one mixed with the original background color of the cell. It looks exactly the same but if you inspect how google does it its via overlays &ndash; I wouldn&rsquo;t know the size of the cells or overlays. This is a cheaper hack.</p>
 
 <h2>Selecting the value to sum</h2>
 
-<p>Finding the selected cell would be hard - it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&#8217;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it - (the click that is). It should however not be a big problem, just aim at the middle and don&#8217;t set your cell size so low you cant hit it.</p>
+<p>Finding the selected cell would be hard &ndash; it would be dependent on whatever way google decides is the selected class. A more reliable way was to simply bind an onclick handler on the entire window and capture whatever clicked element. This has the drawback that if you don&rsquo;t click on the actual cell but on the selected border, or the small dot in the corner (all divs by the way) the div gets it &ndash; (the click that is). It should however not be a big problem, just aim at the middle and don&rsquo;t set your cell size so low you cant hit it.</p>
 
-<p>Anything you click will be tested if it parses as a digit and if it does - its added to the sum.</p>
+<p>Anything you click will be tested if it parses as a digit and if it does &ndash; its added to the sum.</p>
 
 <h2>Keep in touch</h2>
 
-<p>Tested in google chrome so far - please let me know if you test in other browsers if it works or not.</p>
+<p>Tested in google chrome so far &ndash; please let me know if you test in other browsers if it works or not.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[The next big language]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/04/24/the-next-big-language/"/>
+    <link href="http://catchmecode.com/blog/2013/04/24/the-next-big-language/"/>
     <updated>2013-04-24T21:57:00+02:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/04/24/the-next-big-language</id>
-    <content type="html"><![CDATA[<p>This is a hot topic, there&#8217;s no shortage of blog posts already. So all the reason for me to join in and throw my prediction in the pile.</p>
+    <id>http://catchmecode.com/blog/2013/04/24/the-next-big-language</id>
+    <content type="html"><![CDATA[<p>This is a hot topic, there&rsquo;s no shortage of blog posts already. So all the reason for me to join in and throw my prediction in the pile.</p>
 
-<p>But first a trip down memory lane. The first language used in teaching I encountered was <a href="http://en.wikipedia.org/wiki/Pascal_(programming_language%29">Pascal</a>. The more I&#8217;ve thought about it the more it stands that this was for a good reason. Pascal had strictness on form built into the language. Turns out this even had a name wich I didn&#8217;t know about - <a href="http://en.wikipedia.org/wiki/Structured_programming">structured programming</a>.</p>
+<p>But first a trip down memory lane. The first language used in teaching I encountered was <a href="http://en.wikipedia.org/wiki/Pascal_(programming_language%29">Pascal</a>. The more I&rsquo;ve thought about it the more it stands that this was for a good reason. Pascal had strictness on form built into the language. Turns out this even had a name wich I didn&rsquo;t know about &ndash; <a href="http://en.wikipedia.org/wiki/Structured_programming">structured programming</a>.</p>
 
 <h2>Why Pascal was used</h2>
 
-<p>There was more to Pascal besides the actual mechanics of programming - to emphasize structure and form. In the small you were given your first lesson in how to successfully communicate your ideas through code. Most probably this was only to your teacher for passing the assignments or for your future self revisiting the code some months down the line. But it was an important first lesson.</p>
+<p>There was more to Pascal besides the actual mechanics of programming &ndash; to emphasize structure and form. In the small you were given your first lesson in how to successfully communicate your ideas through code. Most probably this was only to your teacher for passing the assignments or for your future self revisiting the code some months down the line. But it was an important first lesson.</p>
 
 <h2>Java/C# is the Pascal of the industry</h2>
 
-<p>The much cursed verbosity of these languages are actually IMHO their reason for making it as an industrial language. They force you to flesh out more on your intent and expose more details (that&#8217;s where the devil hides) of your ideas. More typing for you - but more benefits for the large team or corporation.</p>
+<p>The much cursed verbosity of these languages are actually IMHO their reason for making it as an industrial language. They force you to flesh out more on your intent and expose more details (that&rsquo;s where the devil hides) of your ideas. More typing for you &ndash; but more benefits for the large team or corporation.</p>
 
-<p>I think this is why javascript is having a resurgence and why node.js has been so successful - the introduction of the module pattern and that variables and functions are hoisted to the top of each function. It&#8217;s really a blessing in disguise because you&#8217;re now forced by <a href="http://en.wikipedia.org/wiki/Douglas_Crockford">Crockford</a> via <a href="http://www.jslint.com/">jslint</a> to declare variables in the top of the function. This helps clear up intentions. Same goes with the module pattern. You&#8217;re more bound to one common form and others can more easily spot what you&#8217;re trying to convey.</p>
+<p>I think this is why javascript is having a resurgence and why node.js has been so successful &ndash; the introduction of the module pattern and that variables and functions are hoisted to the top of each function. It&rsquo;s really a blessing in disguise because you&rsquo;re now forced by <a href="http://en.wikipedia.org/wiki/Douglas_Crockford">Crockford</a> via <a href="http://www.jslint.com/">jslint</a> to declare variables in the top of the function. This helps clear up intentions. Same goes with the module pattern. You&rsquo;re more bound to one common form and others can more easily spot what you&rsquo;re trying to convey.</p>
 
-<p>Java has this built in - you&#8217;re forced to follow a pretty strict pattern when writing code. Perl does not and I&#8217;m thinking this is why it hasn&#8217;t been used that much for large projects despite being around for so long. Its good for the one-off scripts that you and a few of you&#8217;re colleagues on the same team will read. But if you scale it up - there&#8217;s <a href="http://perl.plover.com/obfuscated/">too much freedom</a> or rather too much room for personal style. Ideas will be hard to convey unless everyone agrees on a formal standard and what better way to enforce a standard than built into a language?</p>
+<p>Java has this built in &ndash; you&rsquo;re forced to follow a pretty strict pattern when writing code. Perl does not and I&rsquo;m thinking this is why it hasn&rsquo;t been used that much for large projects despite being around for so long. Its good for the one-off scripts that you and a few of you&rsquo;re colleagues on the same team will read. But if you scale it up &ndash; there&rsquo;s <a href="http://perl.plover.com/obfuscated/">too much freedom</a> or rather too much room for personal style. Ideas will be hard to convey unless everyone agrees on a formal standard and what better way to enforce a standard than built into a language?</p>
 
 <h2>The form should help collaboration</h2>
 
-<p>Every new programming language that&#8217;s coming out is touting type less get more done as its main selling point. Its an amicable aim to reduce the amount of code having to be written since bugs tend to correlate with the lines of code. There will be abundant examples of how you can write this or that problem in so few lines of code compared to that language. All good so far, its got to start somewhere and you the programmer is its main target for adoption.</p>
+<p>Every new programming language that&rsquo;s coming out is touting type less get more done as its main selling point. Its an amicable aim to reduce the amount of code having to be written since bugs tend to correlate with the lines of code. There will be abundant examples of how you can write this or that problem in so few lines of code compared to that language. All good so far, its got to start somewhere and you the programmer is its main target for adoption.</p>
 
-<p>But how few lines of code you can write something isn&#8217;t really a good gauge of a new language. How well someone can understand your intent of the code you wrote is much more so. Remember that you&#8217;re seldom writing code for yourself but most of it for others (or your future self that tends to forget what that so compact one liner really meant).</p>
+<p>But how few lines of code you can write something isn&rsquo;t really a good gauge of a new language. How well someone can understand your intent of the code you wrote is much more so. Remember that you&rsquo;re seldom writing code for yourself but most of it for others (or your future self that tends to forget what that so compact one liner really meant).</p>
 
 <p>This has to be if not more important than at least as important as reducing the lines of code. The reduction should only be made if the intent and message is still as clear sans the lines reduced.</p>
 
 <h2>The next big language</h2>
 
-<p>My bet is that it will be strict on form and structure. It maybe will reduce the lines of code somewhat, but not by as much as you&#8217;d hope for - because transparency cannot be sacrificed for terseness. It just won&#8217;t work across larger code bases and teams.</p>
+<p>My bet is that it will be strict on form and structure. It maybe will reduce the lines of code somewhat, but not by as much as you&rsquo;d hope for &ndash; because transparency cannot be sacrificed for terseness. It just won&rsquo;t work across larger code bases and teams.</p>
 
-<p>I think it won&#8217;t be decided by you the programmer as much as it will be decided by teams trying to get stuff done. In true pragmatic fashion lanugages that do not convey the message clearly enough will be thrown out in favour for languages that do. Call it democracy by pragmatism.</p>
+<p>I think it won&rsquo;t be decided by you the programmer as much as it will be decided by teams trying to get stuff done. In true pragmatic fashion lanugages that do not convey the message clearly enough will be thrown out in favour for languages that do. Call it democracy by pragmatism.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[If it weren't for the ... customers]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/"/>
+    <link href="http://catchmecode.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/"/>
     <updated>2013-03-24T21:52:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve had the luxury of being on a team having a dedicated code base to only one target user. Sure, that user has some different groupings within - but on the whole its coherent enough to see it as one customer. We&#8217;re basically free to model the software after this one customer. Its been a hot bed for invention and full speed development (in a good way).</p>
+    <id>http://catchmecode.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve had the luxury of being on a team having a dedicated code base to only one target user. Sure, that user has some different groupings within &ndash; but on the whole its coherent enough to see it as one customer. We&rsquo;re basically free to model the software after this one customer. Its been a hot bed for invention and full speed development (in a good way).</p>
 
-<p>For the sake of taxonomy - here&#8217;s what I mean by a target user: If Bob and Alice both are accountants they might be one target user. It depends on if they have the roughly the same workflow and crunch roughly the same numbers. Then they&#8217;re one target user. In all other situations they&#8217;re  two (specially if Alice is really a welder).</p>
+<p>For the sake of taxonomy &ndash; here&rsquo;s what I mean by a target user: If Bob and Alice both are accountants they might be one target user. It depends on if they have the roughly the same workflow and crunch roughly the same numbers. Then they&rsquo;re one target user. In all other situations they&rsquo;re  two (specially if Alice is really a welder).</p>
 
-<h2>Let&#8217;s share!</h2>
+<h2>Let&rsquo;s share!</h2>
 
-<p>So it came up for discussions with the business side this week that it would be benificial to bring other customers into the fold. I&#8217;m really split on this. I guess I can see the business benefits of it. We can now make an active pitch to a new segment of customers. But the thing is we&#8217;ve come from just that. We took the product from a 30+ different customers in the same code base and branched out. And we&#8217;ve cleaned and thrown out things to make it manageable thusly transforming it into the need of this one customer. Now the product looks different enough from where we started to be marketed to a new group of customers.</p>
+<p>So it came up for discussions with the business side this week that it would be benificial to bring other customers into the fold. I&rsquo;m really split on this. I guess I can see the business benefits of it. We can now make an active pitch to a new segment of customers. But the thing is we&rsquo;ve come from just that. We took the product from a 30+ different customers in the same code base and branched out. And we&rsquo;ve cleaned and thrown out things to make it manageable thusly transforming it into the need of this one customer. Now the product looks different enough from where we started to be marketed to a new group of customers.</p>
 
 <h2>The dilemma of good software</h2>
 
-<p>There&#8217;s some kind of paradox - the best software naturally appeals and serves the most people. It would be rather pointless to put hours of work into something that only a few can use. Its supposed to help folks, preferably lots. But lots of people means lots of compromises and complexity which equals bugs. And buggy software isn&#8217;t good for your sanity or for your customers satisfaction. The only good way to reduce bugs is to reduce complexity (= code), but then it will appeal and help less people.  My take is that the sweet spot lies much farther on the one target user side. Here&#8217;s why:</p>
+<p>There&rsquo;s some kind of paradox &ndash; the best software naturally appeals and serves the most people. It would be rather pointless to put hours of work into something that only a few can use. Its supposed to help folks, preferably lots. But lots of people means lots of compromises and complexity which equals bugs. And buggy software isn&rsquo;t good for your sanity or for your customers satisfaction. The only good way to reduce bugs is to reduce complexity (= code), but then it will appeal and help less people.  My take is that the sweet spot lies much farther on the one target user side. Here&rsquo;s why:</p>
 
 <h2>Limit the scope of target users</h2>
 
-<p>If you have a low target user count you can tailor it to their exact needs. You&#8217;ll help fewer people but in return you can help these fewer people extremely well. And your software will be more stable and malleable into what they need. Code can be cleaned and optimized much harder because its not going to affect someone else.</p>
+<p>If you have a low target user count you can tailor it to their exact needs. You&rsquo;ll help fewer people but in return you can help these fewer people extremely well. And your software will be more stable and malleable into what they need. Code can be cleaned and optimized much harder because its not going to affect someone else.</p>
 
-<p>With several target users in the same code base - things may superficially look the same - but in detail turns out to most often not be. If Bob does income and Alice does asset accounting it might on the surface look like they&#8217;re doing the same things (moving numbers around) but in detail its different numbers moving in different ways. And that is solved by either compromising - both gets less then what they wanted - or you raise the complexity (and bug count) by making it essentially two pieces of software in the same code base.</p>
+<p>With several target users in the same code base &ndash; things may superficially look the same &ndash; but in detail turns out to most often not be. If Bob does income and Alice does asset accounting it might on the surface look like they&rsquo;re doing the same things (moving numbers around) but in detail its different numbers moving in different ways. And that is solved by either compromising &ndash; both gets less then what they wanted &ndash; or you raise the complexity (and bug count) by making it essentially two pieces of software in the same code base.</p>
 
 <h2>But is this practical?</h2>
 
-<p>No. Of course not. You have to accept some compromises and some ifdefs on sections in the code. Even with one target customer its going to happen. But strive to keep it as low as possible. This is of course from a coders standpoint. From a business standpoint I guess more target users in the same code base means you serve more with less effort. You can target groups that are similar saying &#8220;look here, we&#8217;re no 1 in accounting software with all these fine customers already on board. Join us, we&#8217;ll make it fit for you&#8221;. But its a curse in disguise because you also give lip service and raise the bug count for all target users already sharing the code base by making it fit one more.</p>
+<p>No. Of course not. You have to accept some compromises and some ifdefs on sections in the code. Even with one target customer its going to happen. But strive to keep it as low as possible. This is of course from a coders standpoint. From a business standpoint I guess more target users in the same code base means you serve more with less effort. You can target groups that are similar saying &ldquo;look here, we&rsquo;re no 1 in accounting software with all these fine customers already on board. Join us, we&rsquo;ll make it fit for you&rdquo;. But its a curse in disguise because you also give lip service and raise the bug count for all target users already sharing the code base by making it fit one more.</p>
 
-<p>I&#8217;d err more on the great customized and tailored service with less bugs and more shared ideas approach. I also think that shared code base will dampen creativity and exploration of pushing the software in new directions. And that in turn means missed business opportunities in helping your most important customer - the returning kind.</p>
+<p>I&rsquo;d err more on the great customized and tailored service with less bugs and more shared ideas approach. I also think that shared code base will dampen creativity and exploration of pushing the software in new directions. And that in turn means missed business opportunities in helping your most important customer &ndash; the returning kind.</p>
 
-<h2>Let&#8217;s share ideas! Not code (base)</h2>
+<h2>Let&rsquo;s share ideas! Not code (base)</h2>
 
 <p>Ideas are cool in that they are not fixed in form. One idea carries some concept that may or may not apply. But it can be fuzzy on the details which can be filled out to fit the specific situation. And it can spark new ideas that fit better.</p>
 
-<p>Shared code base is fixed in form. More than stake holder is depending on it being the same way. If someone wants to evolve it or break from it, all target users have to agree on this - otherwise you&#8217;re stuck. I&#8217;m not saying don&#8217;t ever share code. Do share code.. as a means to share ideas. But don&#8217;t share code mechanically just by saving a few keystrokes or fixing bugs faster (because on the flip side you&#8217;re probably introducing bugs faster too). Instead at each turn consider branching out a very possible option. Abandon the safe what is for the more exciting what could be.</p>
+<p>Shared code base is fixed in form. More than stake holder is depending on it being the same way. If someone wants to evolve it or break from it, all target users have to agree on this &ndash; otherwise you&rsquo;re stuck. I&rsquo;m not saying don&rsquo;t ever share code. Do share code.. as a means to share ideas. But don&rsquo;t share code mechanically just by saving a few keystrokes or fixing bugs faster (because on the flip side you&rsquo;re probably introducing bugs faster too). Instead at each turn consider branching out a very possible option. Abandon the safe what is for the more exciting what could be.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Boredom the hidden asset]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/03/16/boredom-the-hidden-asset/"/>
+    <link href="http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/"/>
     <updated>2013-03-16T21:50:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/03/16/boredom-the-hidden-asset</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve been fighting boredom and procrastination for as long as I can remember.</p>
+    <id>http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been fighting boredom and procrastination for as long as I can remember.</p>
 
 <h2>Boredom on personal projects</h2>
 
-<p>Ah, new stuff. Fresh, untouched, exciting - and safely without practical use. Boredom and procrastination usually sets in when the first road block is hit. Like actually writing lines of code in that new language. Or using the long researched best web framework. And it results in more research and more looking at new things. Seldom staying long enough with something to make it useful.</p>
+<p>Ah, new stuff. Fresh, untouched, exciting &ndash; and safely without practical use. Boredom and procrastination usually sets in when the first road block is hit. Like actually writing lines of code in that new language. Or using the long researched best web framework. And it results in more research and more looking at new things. Seldom staying long enough with something to make it useful.</p>
 
 <h2>Moving is not a solution</h2>
 
-<p>Same went for my workplace - I&#8217;d be all over it the first few months or even up to a year or two. Then when progression started to slow down - I knew the sites and the layout of the code its shininess faded and - hello boredom again!</p>
+<p>Same went for my workplace &ndash; I&rsquo;d be all over it the first few months or even up to a year or two. Then when progression started to slow down &ndash; I knew the sites and the layout of the code its shininess faded and &ndash; hello boredom again!</p>
 
-<p>Previously working as a consultant this didn&#8217;t turn into a problem since I changed workplaces often enough to keep things new and fresh. But this wasn&#8217;t really a solution on the problem, it was simply running away from it.</p>
+<p>Previously working as a consultant this didn&rsquo;t turn into a problem since I changed workplaces often enough to keep things new and fresh. But this wasn&rsquo;t really a solution on the problem, it was simply running away from it.</p>
 
 <h2>Neither are processes</h2>
 
-<p>So, true to engineer fashion I looked for remedies in the shape of processes and tools. I tried task lists, pomodoro, time boxing to name a few. This usually started out well but when the new effect wore off - about the same or more procrastination. And in the back of my mind I couldn&#8217;t help but think that all of those processes seemed too rigid. It was forcing it.</p>
+<p>So, true to engineer fashion I looked for remedies in the shape of processes and tools. I tried task lists, pomodoro, time boxing to name a few. This usually started out well but when the new effect wore off &ndash; about the same or more procrastination. And in the back of my mind I couldn&rsquo;t help but think that all of those processes seemed too rigid. It was forcing it.</p>
 
 <h2>Blog post to the rescue</h2>
 
-<p><a href="http://99u.com/articles/7188/why-boredom-is-good-for-your-creativity">This hit me like a two ton heavy thing</a> (yes there&#8217;s probably some irony in finding the solution out there in a blog, the siren song of procrastination). To sum it up: It&#8217;s ok to be bored. In fact - if you&#8217;re bored and it&#8217;s the right kind of bore you are on to something big.</p>
+<p><a href="http://99u.com/articles/7188/why-boredom-is-good-for-your-creativity">This hit me like a two ton heavy thing</a> (yes there&rsquo;s probably some irony in finding the solution out there in a blog, the siren song of procrastination). To sum it up: It&rsquo;s ok to be bored. In fact &ndash; if you&rsquo;re bored and it&rsquo;s the right kind of bore you are on to something big.</p>
 
 <h2>Preparing to climb</h2>
 
 <p>So I decided to work it. To leverage boredom instead of trying to suppress it.</p>
 
-<p>The setup was this: close all the usual suspects. No mail notification icons, no rss feeds, no open  applications except for the minimal amount really needed to get the work done. Don&#8217;t minimize the windows. Close them. Deinstall what you can. You need to implement it the hard way and really maximize the potential for boredom.</p>
+<p>The setup was this: close all the usual suspects. No mail notification icons, no rss feeds, no open  applications except for the minimal amount really needed to get the work done. Don&rsquo;t minimize the windows. Close them. Deinstall what you can. You need to implement it the hard way and really maximize the potential for boredom.</p>
 
-<p>Now sit there and let the boredom set in. Look at the code, stare at it. Don&#8217;t leave your workplace for anything less than critical. Do not open any mail clients or the likes. Gorge on boredom&#8230; and waaaaiiit for it.</p>
+<p>Now sit there and let the boredom set in. Look at the code, stare at it. Don&rsquo;t leave your workplace for anything less than critical. Do not open any mail clients or the likes. Gorge on boredom&hellip; and waaaaiiit for it.</p>
 
 <h2>Downhill sunny side</h2>
 
-<p>Past this point was a bit like that monkey meeting Jane Goodall. She just stood there and didn&#8217;t run away. What now?</p>
+<p>Past this point was a bit like that monkey meeting Jane Goodall. She just stood there and didn&rsquo;t run away. What now?</p>
 
-<p>Turns out boredom is a hill you&#8217;re meant to climb. The steeper the climb up, the sweeter the ride down. You eventually start to tinker in small pieces. And then in larger pieces, and before you know it you&#8217;re totally emerged in what you wanted to avoid.  Beyond that hill of boredom is the pot of voluntary productiveness.</p>
+<p>Turns out boredom is a hill you&rsquo;re meant to climb. The steeper the climb up, the sweeter the ride down. You eventually start to tinker in small pieces. And then in larger pieces, and before you know it you&rsquo;re totally emerged in what you wanted to avoid.  Beyond that hill of boredom is the pot of voluntary productiveness.</p>
 
-<p>On this side you&#8217;ll be glad you deinstalled all those notifiers and closed all those windows with sweet sugary distraction. You&#8217;re in the productivity zone cruising - but it&#8217;s a fragile zone. Any  distraction will break your concentration and you need to go through the build up phase again.</p>
+<p>On this side you&rsquo;ll be glad you deinstalled all those notifiers and closed all those windows with sweet sugary distraction. You&rsquo;re in the productivity zone cruising &ndash; but it&rsquo;s a fragile zone. Any  distraction will break your concentration and you need to go through the build up phase again.</p>
 
 <h2>Boredom as an innovator</h2>
 
-<p>Here&#8217;s a bonus I didn&#8217;t see coming from this. When hitting boredom full on and closing down the distractions you get annoyed by manual and slow things. You know, the build window where you&#8217;d check your twitter account only to notice the build finished 15 minutes ago. Those hurt much more now because you&#8217;re now in productive mode after being bored you don&#8217;t want to go back - so you automate and innovate to minimize the mundane and time consuming parts.</p>
+<p>Here&rsquo;s a bonus I didn&rsquo;t see coming from this. When hitting boredom full on and closing down the distractions you get annoyed by manual and slow things. You know, the build window where you&rsquo;d check your twitter account only to notice the build finished 15 minutes ago. Those hurt much more now because you&rsquo;re now in productive mode after being bored you don&rsquo;t want to go back &ndash; so you automate and innovate to minimize the mundane and time consuming parts.</p>
 
 <h2>Switched tables</h2>
 
-<p>Wow. How&#8217;s that for a flip side? Turns out boredom is not a liability - it&#8217;s an asset. And a valuable one at that. Its your personal indicator of how much you&#8217;re going to enjoy the task once the resistance subdues.</p>
+<p>Wow. How&rsquo;s that for a flip side? Turns out boredom is not a liability &ndash; it&rsquo;s an asset. And a valuable one at that. Its your personal indicator of how much you&rsquo;re going to enjoy the task once the resistance subdues.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Custom syntax in pygments]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments/"/>
+    <link href="http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/"/>
     <updated>2013-03-02T21:29:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/03/02/custom-syntax-in-pygments</id>
+    <id>http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments</id>
     <content type="html"><![CDATA[<p>Guide to get started with a new syntax or tweaking an existing one in pygments.</p>
 
 <h2>Background</h2>
 
-<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I&#8217;m gonna cover Fantom a wee bit since I really like it. But alas! <del>There is no builtin code highlight for Fantom (yet :) in octopress.</del></p>
+<p>As said in <a href="http://www.catchmecode.com/blog/2013/02/18/fantom-the-language/">this</a> post I&rsquo;m gonna cover Fantom a wee bit since I really like it. But alas! <del>There is no builtin code highlight for Fantom (yet :) in octopress.</del></p>
 
 <p>Edit: Turns out that there actually is support since pygments 1.5 thanks to <a href="https://bitbucket.org/ivan_inozemtsev">Ivan Inozemtsev</a> (one of the folks behind the <a href="http://www.xored.com/products/f4/">f4 IDE</a>), its just not listed in their <a href="http://pygments.org/languages/">list of languages</a> and it resides in the compiled.py file, not the jvm.py file as you might expect. Still this post might serve as a springboard if you want to tweak the syntax of existing languages or introduce new languages.</p>
 
 <h2>Pygments, whaaa?</h2>
 
-<p>Although octopress runs on ruby it&#8217;s using the python library <a href="http://pygments.org/">pygments</a> as its code syntax highlighter. As does <a href="https://github.com/mojombo/jekyll">jekyll</a> the github markdown generator which octopress was born out of. A python in the ruby jungle? Probably because pygments aldready has a huge support for different languages - so its already got momentum.</p>
+<p>Although octopress runs on ruby it&rsquo;s using the python library <a href="http://pygments.org/">pygments</a> as its code syntax highlighter. As does <a href="https://github.com/mojombo/jekyll">jekyll</a> the github markdown generator which octopress was born out of. A python in the ruby jungle? Probably because pygments aldready has a huge support for different languages &ndash; so its already got momentum.</p>
 
-<p>Pygments turns source code to markup (or other formats - lots supported) by parsing the contents into tokens and applying different CSS styles to different tokens. The code becomes more readable and looks more like it would in an IDE. Pygments does this via <a href="http://pygments.org/docs/lexerdevelopment/">lexers</a> - essentially a large regex matched against code that emits different categorizations of the tokens.</p>
+<p>Pygments turns source code to markup (or other formats &ndash; lots supported) by parsing the contents into tokens and applying different CSS styles to different tokens. The code becomes more readable and looks more like it would in an IDE. Pygments does this via <a href="http://pygments.org/docs/lexerdevelopment/">lexers</a> &ndash; essentially a large regex matched against code that emits different categorizations of the tokens.</p>
 
 <h2>Installing pygments</h2>
 
@@ -854,9 +854,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Pygments enables custom plugins via something called <a href="http://pygments.org/docs/plugins/#entrypoints">entrypoints</a> in setuptools. In this post I can swiftly move on to how you enable an entrypoint - but when reading this the first time I was stumped. What? Setuptools.. uhm ok. Entrypoints, right&#8230; pygments docs kind of went dead there assuming some python knowledge on the readers part. It took me quite a while of googling to understand what setuptools was and how you use entrypoints.</p>
+<p>Pygments enables custom plugins via something called <a href="http://pygments.org/docs/plugins/#entrypoints">entrypoints</a> in setuptools. In this post I can swiftly move on to how you enable an entrypoint &ndash; but when reading this the first time I was stumped. What? Setuptools.. uhm ok. Entrypoints, right&hellip; pygments docs kind of went dead there assuming some python knowledge on the readers part. It took me quite a while of googling to understand what setuptools was and how you use entrypoints.</p>
 
-<p>What it sums up to is that setuptools is a build and distribution kit for python which can create a distributable called an egg (I get it, a python lays binary distributable units.. very clever). Entry points are hooks that allow an egg to hook into an existing framework - essentially extending it with functionality later on.</p>
+<p>What it sums up to is that setuptools is a build and distribution kit for python which can create a distributable called an egg (I get it, a python lays binary distributable units.. very clever). Entry points are hooks that allow an egg to hook into an existing framework &ndash; essentially extending it with functionality later on.</p>
 
 <h2>Module structure</h2>
 
@@ -906,11 +906,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>There is that pygments.lexer entry point! It points to the module fantomlexer (directory for the <code>lexer.py</code> file) dot lexer (the source file with the lexer class inside) colon FantomLexer - the acutal lexer class inside the <code>lexer.py</code> file.</p>
+<p>There is that pygments.lexer entry point! It points to the module fantomlexer (directory for the <code>lexer.py</code> file) dot lexer (the source file with the lexer class inside) colon FantomLexer &ndash; the acutal lexer class inside the <code>lexer.py</code> file.</p>
 
 <h2>Installing the entry point module</h2>
 
-<p>Python modules can be either installed as an egg - or simply linked in as a file link. I recommend using the file link style since you can then iterate by simply editing the <code>lexer.py</code> file instead of having remember to run install every time.</p>
+<p>Python modules can be either installed as an egg &ndash; or simply linked in as a file link. I recommend using the file link style since you can then iterate by simply editing the <code>lexer.py</code> file instead of having remember to run install every time.</p>
 
 <p>Open up a terminal in the FantomLexer directory and type:</p>
 
@@ -919,7 +919,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>To verify that its there type <code>easy_install</code> and it&#8217;ll print an error message telling you what folder the eggs are installed on your machine. On mine its in <code>/usr/local/lib/python2.7/dist-packages/</code>. Cd into that folder - there should now be at least two files (and one folder with Pygments egg installed previously) - <code>easy-install.pth</code> and <code>fantomlexer.egg-link</code>. List the content of <code>easy-install.pth</code> and verify that there is an entry pointing to your FantomLexer folder created above.</p>
+<p>To verify that its there type <code>easy_install</code> and it&rsquo;ll print an error message telling you what folder the eggs are installed on your machine. On mine its in <code>/usr/local/lib/python2.7/dist-packages/</code>. Cd into that folder &ndash; there should now be at least two files (and one folder with Pygments egg installed previously) &ndash; <code>easy-install.pth</code> and <code>fantomlexer.egg-link</code>. List the content of <code>easy-install.pth</code> and verify that there is an entry pointing to your FantomLexer folder created above.</p>
 
 <p><code>lexer.py</code> is now ready to parse your code into tokens. A quick start is to copy some already existing lexer close to your language and tweak it. To get a highlighted file with your new syntax type:</p>
 
@@ -936,22 +936,22 @@
 
 <h2>Ubuntu sided disclaimer</h2>
 
-<p>Also, I&#8217;m running ubuntu so this guide will be using ubuntu paths and default setups. I&#8217;m hoping it shouldn&#8217;t be too hard to convert to other distros (or even OS&#8217;es). I&#8217;m assuming python is installed on your box.</p>
+<p>Also, I&rsquo;m running ubuntu so this guide will be using ubuntu paths and default setups. I&rsquo;m hoping it shouldn&rsquo;t be too hard to convert to other distros (or even OS&#8217;es). I&rsquo;m assuming python is installed on your box.</p>
 
-<p>All of the commands above uses sudo as ubuntu apt-get needs sudo - and from there it just cascades, but there is an alternative using <a href="http://www.virtualenv.org/en/1.9.X/#what-it-does">virtualenv</a> (similar to rvm) that you can run with your own user instead of root.</p>
+<p>All of the commands above uses sudo as ubuntu apt-get needs sudo &ndash; and from there it just cascades, but there is an alternative using <a href="http://www.virtualenv.org/en/1.9.X/#what-it-does">virtualenv</a> (similar to rvm) that you can run with your own user instead of root.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Stages of a code review]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/24/stages-of-a-code-review/"/>
+    <link href="http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review/"/>
     <updated>2013-02-24T21:00:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/24/stages-of-a-code-review</id>
-    <content type="html"><![CDATA[<p>My team at work have been doing code reviews for about 2 years now. Its gotten to the point where I&#8217;m actually a bit
-surprised and disappointed if I don&#8217;t get &#8220;I&#8217;d prefer you&#8217;d not submit this&#8221; with some questions or comments.</p>
+    <id>http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review</id>
+    <content type="html"><![CDATA[<p>My team at work have been doing code reviews for about 2 years now. Its gotten to the point where I&rsquo;m actually a bit
+surprised and disappointed if I don&rsquo;t get &ldquo;I&rsquo;d prefer you&rsquo;d not submit this&rdquo; with some questions or comments.</p>
 
 <p>Code reviews are four wishes in one really: quality assurance (this is a no brainier), replicating knowledge throughout the team,
-a great learning tool and educational tool and finally - this is probably the most important one - it&#8217;s a great
+a great learning tool and educational tool and finally &ndash; this is probably the most important one &ndash; it&rsquo;s a great
 synchronizer of product vision and architecture (i e where are we going with this and how does it look when we get there?).</p>
 
 <p>In the acadmic world all teams go through <a href="http://en.wikipedia.org/wiki/Group_development">4 phases</a> when forming:</p>
@@ -964,56 +964,56 @@ synchronizer of product vision and architecture (i e where are we going with thi
 </ul>
 
 
-<p>Introducing code reviews on my team went through roughly the same 4 phases. I&#8217;ll walk you through its incantations - (and yes, the phases have been amped up a bit for dramatic effect).</p>
+<p>Introducing code reviews on my team went through roughly the same 4 phases. I&rsquo;ll walk you through its incantations &ndash; (and yes, the phases have been amped up a bit for dramatic effect).</p>
 
 <h2>The formal phase</h2>
 
-<p>Everyone is nice and lets too much ugly stuff pass (others code of course) but underneath the surface the tension is growing. Flames starts to erupt more and more and we transition into&#8230;</p>
+<p>Everyone is nice and lets too much ugly stuff pass (others code of course) but underneath the surface the tension is growing. Flames starts to erupt more and more and we transition into&hellip;</p>
 
 <h2>The ugly phase</h2>
 
 <p>The guns come out blazing. Knit picking and overly zealous code reviews. Rages through restrained comments.
-The focus is usually myopic - variable prefixes, should all parameters be final, checked vs unchecked exceptions etc with an all or nothing approach. Some will try to quiet this phase by calling for &#8220;review documents&#8221; and &#8220;standards&#8221;. Books are scoured, internets are searched for an acceptable formal definition and ingredients of a code review. Do resist that urge - I&#8217;ll get to why in the end of this post.</p>
+The focus is usually myopic &ndash; variable prefixes, should all parameters be final, checked vs unchecked exceptions etc with an all or nothing approach. Some will try to quiet this phase by calling for &ldquo;review documents&rdquo; and &ldquo;standards&rdquo;. Books are scoured, internets are searched for an acceptable formal definition and ingredients of a code review. Do resist that urge &ndash; I&rsquo;ll get to why in the end of this post.</p>
 
-<p>A word of comfort for the poor souls in this phase - this is good. Stay with it. Your team is feeling concerned for the code, but the concern is a bit misguided at superficial things. Use this
-to focus on the real concern - architecture and the great product you&#8217;re supposed to be building. Use the discussions as a
+<p>A word of comfort for the poor souls in this phase &ndash; this is good. Stay with it. Your team is feeling concerned for the code, but the concern is a bit misguided at superficial things. Use this
+to focus on the real concern &ndash; architecture and the great product you&rsquo;re supposed to be building. Use the discussions as a
 setup for getting to the how and the why on a larger scale.</p>
 
-<p>Let the gloves come off and let them stay off until the discussion gets constructive. It&#8217;ll pay off.</p>
+<p>Let the gloves come off and let them stay off until the discussion gets constructive. It&rsquo;ll pay off.</p>
 
 <h2>The solving phase</h2>
 
-<p>We&#8217;re not out of the woods yet, but we&#8217;re starting to move in the right direction. Egos are starting to subside and the other side is listened to. Its not yet a fully constructive dialogue but at least other arguments besides your own are heard. Use this to move forward.</p>
+<p>We&rsquo;re not out of the woods yet, but we&rsquo;re starting to move in the right direction. Egos are starting to subside and the other side is listened to. Its not yet a fully constructive dialogue but at least other arguments besides your own are heard. Use this to move forward.</p>
 
 <p>Try to get to the root cause of the discussions. Chances are you have technical debt and the code is not where you want it to be. Your vision in the team is not in sync. This will show up in code reviews. Call it
-teamnical debt (clever huh?). Code and approaches are not being discussed enough so everyone has their own view of what you&#8217;re building and how to build it.</p>
+teamnical debt (clever huh?). Code and approaches are not being discussed enough so everyone has their own view of what you&rsquo;re building and how to build it.</p>
 
 <h2>The constructive phase</h2>
 
-<p>How did we get here from the last phase? By getting to the root cause of the discussions I&#8217;m hoping everyone starts noticing that we all want the same end result - the best product ever made by man. Its just diffrent approaches to this. Its no longer about beeing right, its about generating the best approach and&#8230; well, just getting things done really.</p>
+<p>How did we get here from the last phase? By getting to the root cause of the discussions I&rsquo;m hoping everyone starts noticing that we all want the same end result &ndash; the best product ever made by man. Its just diffrent approaches to this. Its no longer about beeing right, its about generating the best approach and&hellip; well, just getting things done really.</p>
 
-<p>You&#8217;ll be very happy that you didn&#8217;t settle on some &#8220;formal review standard&#8221;. Its easy to get caught up in trying
-to control the growing flames but this will also take away from the end result - no document can ever substitute judgement of each particular case. The end result is the ability to discuss architecture and code structure.</p>
+<p>You&rsquo;ll be very happy that you didn&rsquo;t settle on some &ldquo;formal review standard&rdquo;. Its easy to get caught up in trying
+to control the growing flames but this will also take away from the end result &ndash; no document can ever substitute judgement of each particular case. The end result is the ability to discuss architecture and code structure.</p>
 
 <p>This also the most relaxed place. The micro-concern of syntax and formalia are replaced with the macro-concern of building a great product.
 Its more pragmatic and constructive. Quality is everyones concern.</p>
 
 <h2>Y u no fail review?</h2>
 
-<p>So how do you know where your team is on that scale? In my book if reviews are failed more often than they are approved but everyone is still smiling you&#8217;ve nailed it. Its that nice place where you appreciate someone elses comments and look forward to getting them to improve your code - make it more readable, fix some bugs when they&#8217;re still cheap to fix or align your vision of the perfect product.</p>
+<p>So how do you know where your team is on that scale? In my book if reviews are failed more often than they are approved but everyone is still smiling you&rsquo;ve nailed it. Its that nice place where you appreciate someone elses comments and look forward to getting them to improve your code &ndash; make it more readable, fix some bugs when they&rsquo;re still cheap to fix or align your vision of the perfect product.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Fantom the language]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/18/fantom-the-language/"/>
+    <link href="http://catchmecode.com/blog/2013/02/18/fantom-the-language/"/>
     <updated>2013-02-18T21:22:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/18/fantom-the-language</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve been working on the JVM for about 4 years now. Its been a pleasant ride so far but lately I&#8217;ve started to outgrow Java. The JVM platform is brilliant in itself. The speed is almost on par with native code, its easy to install and get an app running - there&#8217;s plenty of tooling and performance monitors for it. Its stable and mature, has a large user base and it runs on many platforms (really the top reason for staying with it).</p>
+    <id>http://catchmecode.com/blog/2013/02/18/fantom-the-language</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been working on the JVM for about 4 years now. Its been a pleasant ride so far but lately I&rsquo;ve started to outgrow Java. The JVM platform is brilliant in itself. The speed is almost on par with native code, its easy to install and get an app running &ndash; there&rsquo;s plenty of tooling and performance monitors for it. Its stable and mature, has a large user base and it runs on many platforms (really the top reason for staying with it).</p>
 
-<p>But Java the language feels a bit dated. Or rather, once you start looking at more current languages with a functional edge and other goodies - it&#8217;s hard to go back and doing that stuff manually. Granted, Java 8 seems to be getting some of these features like closures and lambda expressions. But there still will be plenty of things to miss given its rather verbose syntax and constructs.</p>
+<p>But Java the language feels a bit dated. Or rather, once you start looking at more current languages with a functional edge and other goodies &ndash; it&rsquo;s hard to go back and doing that stuff manually. Granted, Java 8 seems to be getting some of these features like closures and lambda expressions. But there still will be plenty of things to miss given its rather verbose syntax and constructs.</p>
 
-<p>There is a current upsurge of languages building on the JVM - with Scala and Clojure getting the most love. I&#8217;ve tried Scala but eventually had to abandon and move on - the hunt was on for a new language.</p>
+<p>There is a current upsurge of languages building on the JVM &ndash; with Scala and Clojure getting the most love. I&rsquo;ve tried Scala but eventually had to abandon and move on &ndash; the hunt was on for a new language.</p>
 
 <h2>Enter Fantom</h2>
 
@@ -1027,37 +1027,37 @@ Its more pragmatic and constructive. Quality is everyones concern.</p>
 
 <p>Multiline strings and string interpolation. Probably my #2 reason. The whole templating deal in Java is largely a solution to this problem. There is going to creep in  HTML in the code, and it might as well align and read nicely.</p>
 
-<p>Built in make- system complete with versioning of dependent libs. I&#8217;ve spent too much time on several languages at the setting up a project phase. Breaking backwards compatibility is tends generate a chicken race where everyone waits for someone else to upgrade to the latest and greatest. In such languages using external libs quickly becomes a trial and error of what versions you can run against what language version (and usually the make tool also is versioned against those libs and the language). In fantom you clearly state in your pod (think of it as a versioned lib) what libraries and what versions of those libraries you depend on. The make tool is built in so its compatible with the release you&#8217;re running. You&#8217;ll even get a compile error if you try to use a class in a pod which you have not declared as a dependency.</p>
+<p>Built in make- system complete with versioning of dependent libs. I&rsquo;ve spent too much time on several languages at the setting up a project phase. Breaking backwards compatibility is tends generate a chicken race where everyone waits for someone else to upgrade to the latest and greatest. In such languages using external libs quickly becomes a trial and error of what versions you can run against what language version (and usually the make tool also is versioned against those libs and the language). In fantom you clearly state in your pod (think of it as a versioned lib) what libraries and what versions of those libraries you depend on. The make tool is built in so its compatible with the release you&rsquo;re running. You&rsquo;ll even get a compile error if you try to use a class in a pod which you have not declared as a dependency.</p>
 
-<p>Type system built for reflection. I tend to stay away from reflection in Java because it introduces too much magic in the code. Refactoring code always feels a bit uneasy because you don&#8217;t know if someone reflectively invokes that method or class you just removed. It&#8217;ll show up in production at the worst time of course. In fantom you&#8217;ll get a compile time error if your reflective type is missing.</p>
+<p>Type system built for reflection. I tend to stay away from reflection in Java because it introduces too much magic in the code. Refactoring code always feels a bit uneasy because you don&rsquo;t know if someone reflectively invokes that method or class you just removed. It&rsquo;ll show up in production at the worst time of course. In fantom you&rsquo;ll get a compile time error if your reflective type is missing.</p>
 
-<p>There&#8217;s plenty of dogfooding. One concern many seem to have is that its relatively unknown and unused. Skyfoundry was based on their own language so its being used in production by its own authors. The authors are betting their own company on this language - so its actually backed by a corporation already. There are some replies in <a href="http://fantom.org/sidewalk/topic/1978">this thread</a> to that concern.</p>
+<p>There&rsquo;s plenty of dogfooding. One concern many seem to have is that its relatively unknown and unused. Skyfoundry was based on their own language so its being used in production by its own authors. The authors are betting their own company on this language &ndash; so its actually backed by a corporation already. There are some replies in <a href="http://fantom.org/sidewalk/topic/1978">this thread</a> to that concern.</p>
 
 <h2>The cons</h2>
 
-<p>IDEs support. This is not a bash on the editors out there (f4, netbeans plugin and some text editors) - its just that being on the JVM you&#8217;re gonna get compared to eclipse or netbeans. And compared to these they are still lacking - again lots of hard work has been put into these editors so its not a fault of their respective authors. Its just a little hard getting used to after such stellar IDEs in Java.</p>
+<p>IDEs support. This is not a bash on the editors out there (f4, netbeans plugin and some text editors) &ndash; its just that being on the JVM you&rsquo;re gonna get compared to eclipse or netbeans. And compared to these they are still lacking &ndash; again lots of hard work has been put into these editors so its not a fault of their respective authors. Its just a little hard getting used to after such stellar IDEs in Java.</p>
 
-<p>Its a bit quiet. The community is great and helpful but its still moving rather slow for such a mature (and great) language. I&#8217;m hoping more converts show up and make the community a bit more vibrant.</p>
+<p>Its a bit quiet. The community is great and helpful but its still moving rather slow for such a mature (and great) language. I&rsquo;m hoping more converts show up and make the community a bit more vibrant.</p>
 
 <p>Not that many libraries. Goes hand in hand with the quiet community. There is a CPAN / gem / maven central style repo tool build into the language. But the default address in <a href="http://fantom.org/doc/fanr/index.html">fanr</a> still goes nowhere. <a href="http://wiki.colar.net/">Thibaut Colar</a> has been kind enough to host a repo in the meantime (found <a href="http://repo.status302.com/">here</a> including instructions on how to use it). Also not all frameworks are in that repo. They are scattered across bitbucket and github with no real way of finding them, save for searching the forum, bitbucket and github. Again, more converts means more libs so its a matter of bootstrapping both the community and the libs.</p>
 
-<p>Examples and snippets of how you do things. The documentation is quite very detailed - but as soon as you hit the code there is all those small cases that are not covered. In the begining you will probably write java code with fantom syntax. There are a lot of gems and small shortcuts that make more idiomatic, buts its much a trial and error way there. The distribution does ship with the entire source and its a great source for idiomatic code - but its a heavy digest if you&#8217;re not into compiler construction.</p>
+<p>Examples and snippets of how you do things. The documentation is quite very detailed &ndash; but as soon as you hit the code there is all those small cases that are not covered. In the begining you will probably write java code with fantom syntax. There are a lot of gems and small shortcuts that make more idiomatic, buts its much a trial and error way there. The distribution does ship with the entire source and its a great source for idiomatic code &ndash; but its a heavy digest if you&rsquo;re not into compiler construction.</p>
 
 <h2>The whys</h2>
 
-<p>I&#8217;m a sucker for good engineering trade-offs. I really like how fantom focuses on getting work out the door. Its shuns the extremes and often takes the &#8220;middle road&#8221;. I love this kind of stuff - it just spells good engineering to me.</p>
+<p>I&rsquo;m a sucker for good engineering trade-offs. I really like how fantom focuses on getting work out the door. Its shuns the extremes and often takes the &ldquo;middle road&rdquo;. I love this kind of stuff &ndash; it just spells good engineering to me.</p>
 
-<p>One thing that&#8217;s been hitting me a lot when doing some code is how often I started out doing something - only to find out that there&#8217;s already method for that. Compact as the API may be this again seems like the authors knowing what will be useful to put into the API. This makes it a gem to code with, much less manual stuff than a quick glance may reveal.</p>
+<p>One thing that&rsquo;s been hitting me a lot when doing some code is how often I started out doing something &ndash; only to find out that there&rsquo;s already method for that. Compact as the API may be this again seems like the authors knowing what will be useful to put into the API. This makes it a gem to code with, much less manual stuff than a quick glance may reveal.</p>
 
-<p><a href="http://fantom.org">Now go! Try it.</a> I&#8217;ll be writing more on it here in coming posts.</p>
+<p><a href="http://fantom.org">Now go! Try it.</a> I&rsquo;ll be writing more on it here in coming posts.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Setup]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/08/setup/"/>
+    <link href="http://catchmecode.com/blog/2013/02/08/setup/"/>
     <updated>2013-02-08T20:55:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/08/setup</id>
+    <id>http://catchmecode.com/blog/2013/02/08/setup</id>
     <content type="html"><![CDATA[<p>Before getting on with writing posts props needs to go to the people and software that made this possible. The background texture was found <a href="http://designmoo.com/16245/technical-drawing-paper-texture/">here</a> by <a href="http://www.peweedesign.com/">pewee design</a>. The header font from <a href="http://www.dafont.com/candy-inc.font">here</a> by <a href="https://www.facebook.com/billyargelfonts">Billy Argel</a>.</p>
 
 <p>This blog runs on the awesome framework <a href="http://octopress.org">octopress</a> and of lots of coffee. The theme is an adaption by me on the defualt theme shipped with octopress.</p>
@@ -1066,20 +1066,20 @@ Its more pragmatic and constructive. Quality is everyones concern.</p>
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://jonaslu.github.com/blog/2013/02/05/hello-world/"/>
+    <link href="http://catchmecode.com/blog/2013/02/05/hello-world/"/>
     <updated>2013-02-05T21:17:00+01:00</updated>
-    <id>http://jonaslu.github.com/blog/2013/02/05/hello-world</id>
+    <id>http://catchmecode.com/blog/2013/02/05/hello-world</id>
     <content type="html"><![CDATA[<p>Phew, just had to get that off my chest. It has been brewing for a couple of years now.</p>
 
 <h2>And who are you then?</h2>
 
-<p>Hacking stuff started at an early age - writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
+<p>Hacking stuff started at an early age &ndash; writing basic on an old 286 (no scoffing! It had an extra math co-processor chip thank you very much). Mostly because I wanted to see what I could make the computer do. Since then some education before now having worked in the software industry for about 7 years now on several different sites. First as a consultant before landing at my current workplace as a  software developer and part time team lead.</p>
 
 <h2>Why write this blog?</h2>
 
-<p>As with any topic, first stage - learning the craft, second stage - actively employing it and third stage - starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
+<p>As with any topic, first stage &ndash; learning the craft, second stage &ndash; actively employing it and third stage &ndash; starting to contribute and setting out to bring the field forward. This is one of those outlets, where hopefully I can contribute in some small way to the advancement of the craft.</p>
 
-<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I&#8217;ve been continually amazed at what people can come up with - its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
+<p>Nothing evolves in vacuum. The greatest ideas are usually juxtapositions of other great ideas. I&rsquo;ve been continually amazed at what people can come up with &ndash; its never just the sum of the parts. So hopefully this will go the same way, ideas bouncing off each other building something greater than the individual parts.</p>
 
 <p>So the bar is set aptly high, all needed now is just producing content.</p>
 ]]></content>

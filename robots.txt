@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://jonaslu.github.com/sitemap.xml 
+Sitemap: http://catchmecode.com/sitemap.xml 

@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Setup - Catch me code</title>
+  <title>Estimates: the +100h joke - Catch me code</title>
   <meta name="author" content="Jonas Lundberg">
 
   
-  <meta name="description" content="Setup of catch me code and software used">
-  
+  <meta name="description" content="Why +16h estimates needs to be chunked">
+  <meta name="keywords" content="software estimates, why estimates fail">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://catchmecode.com/blog/2013/02/08/setup/">
+  <link rel="canonical" href="http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Setup</h1>
+      <h1 class="entry-title">Estimates: The +100h Joke</h1>
     
     
       <p class="meta">
@@ -96,16 +96,39 @@
   
 
 
-<time datetime="2013-02-08T20:55:00+01:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time>
+<time datetime="2013-09-27T21:33:00+02:00" pubdate data-updated="true">Sep 27<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Before getting on with writing posts props needs to go to the people and software that made this possible. The background texture was found <a href="http://designmoo.com/16245/technical-drawing-paper-texture/">here</a> by <a href="http://www.peweedesign.com/">pewee design</a>. The header font from <a href="http://www.dafont.com/candy-inc.font">here</a> by <a href="https://www.facebook.com/billyargelfonts">Billy Argel</a>.</p>
+<div class="entry-content"><p>We have a saying in my team, that we &ldquo;pull a number out of our ass&rdquo; if an estimate on the spot is larger than 100h hours. As with any joke, there&rsquo;s a core of truth to this. Here&rsquo;s why: You don&rsquo;t have a feel for how long a task spanning 40h of work is (never mind above 100h). 8h is tangible, 16h might be tangible, 40h is not tangible and 100h is funny.</p>
 
-<p>This blog runs on the awesome framework <a href="http://octopress.org">octopress</a> and of lots of coffee. The theme is an adaption by me on the defualt theme shipped with octopress.</p>
+<p>The time estimate is then multiplied by the usual offset factor based on historical estimates. But, it has happened that if we make too many jokes about the number being random the time estimate is raised one notch more because those jokes shows that we still really don&rsquo;t know.</p>
+
+<h2>Is it tangible?</h2>
+
+<p>What usually happens with an estimate above 16h:
+You start out with grand plans, you make things extra nice. Refactor this, change that, there&rsquo;s still plenty of time left, right? Time looms on, and you wake up. Half the time is gone, you have still 75% of the work left, never mind the testing. And the estimate goes out the window.</p>
+
+<p>At 40h this is prolonged by the fact that 40h just feels so much more. But work wise its just as much as 5*8h. When the 20th hour rolls by, you should be as done as you are on the 4th hour of an 8h estimate.</p>
+
+<h2>What can you do</h2>
+
+<p>Break it down. If any of your chunked points are above say 25h, chunk it again. The goal it to get it as close to tangible (aim for 8h) chunks as possible. At the end of each chunk you know what should be ready. Look at it like many small 8h tasks that just happen to be connected to a bigger task.</p>
+
+<p>Be aware of that having done 8h chunks may give you a false security of having all the bits in place. Even with nice sequential 8h chunks on a larger estimate &ndash; the larger the estimate, the more off we are. This is because missing stuff hides on the edges of those 8h chunks. The interplay between those chunks takes more time, but are hard to factor in.</p>
+
+<p>Also be aware of any gray areas or stuff you don&rsquo;t know that well. Here is the other mistake we often do. We oversimplify things. If you are any bit unsure, go look at the code, think about the edits you&rsquo;d make. Touch it, smell it, get some feel for it. Write down the line-numbers and files you&rsquo;d change in the estimate.</p>
+
+<h2>Log time spent</h2>
+
+<p>Unfortunately work does not always align sequentially with the 8h chunks. You often have to skip between chunks. Try to keep some percentage of time / work left on each chunk. At regular intervals, stop and look at where you are, where you should be and if you&rsquo;re off. The earlier you know you&rsquo;re off the earlier you can start thinking about how to prioritize the time you have left before shipping date.</p>
+
+<h2>Its just an estimate</h2>
+
+<p>When you get to it, don&rsquo;t forget that its just that: an <strong>estimate</strong> &ndash; that will keep changing until you&rsquo;re done. Replan, re-proritize, even re-estimate if you notice (and you will notice if its above 16h) that you&rsquo;re off.</p>
 </div>
 
 
@@ -128,15 +151,21 @@
   
 
 
-<time datetime="2013-02-08T20:55:00+01:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time>
+<time datetime="2013-09-27T21:33:00+02:00" pubdate data-updated="true">Sep 27<span>th</span>, 2013</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/software-estimates/'>software estimates</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/02/08/setup/" data-via="" data-counturl="http://catchmecode.com/blog/2013/02/08/setup/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/" data-via="" data-counturl="http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -149,10 +178,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/05/hello-world/" title="Previous Post: Hello World!">&laquo; Hello World!</a>
+        <a class="basic-alignment left" href="/blog/2013/09/11/is-learning-vim-worth-it/" title="Previous Post: Is learning vim worth it">&laquo; Is learning vim worth it</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/18/fantom-the-language/" title="Next Post: Fantom the language">Fantom the language &raquo;</a>
       
     </p>
   </footer>
@@ -188,8 +215,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://catchmecode.com/blog/2013/02/08/setup/';
-        var disqus_url = 'http://catchmecode.com/blog/2013/02/08/setup/';
+        var disqus_identifier = 'http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/';
+        var disqus_url = 'http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/';
         var disqus_script = 'embed.js';
       
     (function () {

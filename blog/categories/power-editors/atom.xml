@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: power editors | Catch me code]]></title>
+  <link href="http://catchmecode.com/blog/categories/power-editors/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-10-05T22:34:40+02:00</updated>
+  <id>http://catchmecode.com/</id>
+  <author>
+    <name><![CDATA[Jonas Lundberg]]></name>
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Power editors (vim revisited)]]></title>
+    <link href="http://catchmecode.com/blog/2013/10/05/power-editor-vim-revisited/"/>
+    <updated>2013-10-05T22:04:00+02:00</updated>
+    <id>http://catchmecode.com/blog/2013/10/05/power-editor-vim-revisited</id>
+    <content type="html"><![CDATA[<p>This is in part a follow up post to the <a href="/blog/2013/09/11/is-learning-vim-worth-it/">is learning vim worth it post</a>. I think I went about it the wrong way evaluating vim.</p>
+
+<p>I&rsquo;ve been trying out <a href="http://www.jetbrains.com/idea/">intellij</a> as a replacement for eclipse on my day to day work. Intellijs design is to be <a href="http://www.jetbrains.com/idea/webhelp/keyboard-shortcuts-you-cannot-miss.html">keyboard centric</a>. Having tried out vim and intellij as keyboard centric editors made me rethink the whole post.</p>
+
+<h2>Go shortcuts, go!</h2>
+
+<p>Shortcuts really are the future of programming. This might be pseudo-psychological, but the mouse is a highly passive device (when it comes to code). Reaching for the mouse when programming isn&rsquo;t really as much about the time lost or gained.</p>
+
+<p>Its about the mental context switch going from typing to passively clicking. The mouse stops this flow &ndash; not for long, but a fraction. And that fraction drains on your flow. I did underestimate this flow-disruption until having tried to not use the mouse full out.</p>
+
+<h2>Vim and flow</h2>
+
+<p>Vims genius is in using regular keys for most of its movements and editing. The [a-zA-Z0-9] keys will always be there. All other keys are optional and can&rsquo;t be counted on being there or working. I&rsquo;m convinced that that&rsquo;s why vim is on every device &ndash; most of its keys will be present on any input device.</p>
+
+<p>The genius is in using the same keys for both insert and editing actions. Because they are smack in the middle of the keyboard you save disruptions and flow. Again a micro fraction of your flow will be disrupted when reaching for ctrl + alt + shift f7 combo.</p>
+
+<h2>What is this power editor you speak of?</h2>
+
+<p>So, before revisiting the original question: let&rsquo;s first define what a power editor is:</p>
+
+<ul>
+<li>Should support your workflow with ample shortcuts</li>
+<li>Should minimize the keystrokes (and have low to zero mouse clicks in that workflow)</li>
+<li>Should fairly reusable and language independent (i e not too specialized)</li>
+</ul>
+
+
+<p>Or summarized in one phrase: minimize the mental context switches and flow disruptions from thought to fresh smelling code.</p>
+
+<h2>Is two modes ok with you?</h2>
+
+<p>So &ndash; is vim worth learning? Vim is definitely a power editor so I&rsquo;m going to rephrase the question: Can you get your head around using two different modes for editing?</p>
+
+<p>If this feels natural for you &ndash; then do learn vim. I think its alleged learning curve is really a reflection of that question. Many (including me) are not used to the same keys bearing different meanings when being in different modes. That&rsquo;s why its &ldquo;hard&rdquo; to learn.</p>
+
+<p>Any power editor with editing capabilities at the granularity of vim is going to take time to learn. The amount of key-combos will be roughly the same, its just how you input them to the editor.</p>
+
+<h2>Conclusion</h2>
+
+<p>Should you be fluent in at least one power editor? Definitely. You&rsquo;ll recoup the learning period plenty by having <a href="/blog/2013/07/15/fast-programmers">the fastest way to test-drive things</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

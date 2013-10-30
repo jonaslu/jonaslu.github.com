@@ -79,8 +79,12 @@
         <lastmod>2013-10-20T22:39:47+02:00</lastmod>
     </url>
     <url>
+        <loc>http://catchmecode.com/blog/2013/10/30/java-is-verbose-hurray/</loc>
+        <lastmod>2013-10-30T21:33:41+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://catchmecode.com/</loc>
-        <lastmod>2013-10-20T22:39:47+02:00</lastmod>
+        <lastmod>2013-10-30T21:33:41+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/robots.txt</loc>
@@ -88,6 +92,6 @@
     </url>
     <url>
         <loc>http://catchmecode.com/about/</loc>
-        <lastmod>2013-10-19T23:04:03+02:00</lastmod>
+        <lastmod>2013-10-30T21:43:05+01:00</lastmod>
     </url>
 </urlset>

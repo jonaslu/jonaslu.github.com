@@ -4,7 +4,7 @@
   <title><![CDATA[Category: google docs | Catch me code]]></title>
   <link href="http://catchmecode.com/blog/categories/google-docs/atom.xml" rel="self"/>
   <link href="http://catchmecode.com/"/>
-  <updated>2013-10-30T21:55:53+01:00</updated>
+  <updated>2013-11-16T21:30:40+01:00</updated>
   <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -26,7 +26,7 @@
 
 <p>Press ctrl and hold it while you click cells that contain contents that can be parsed to a number. The cells can be non-adjacent (the reason why this was made). The sum will be shown in the lower left corner. Click the selected element again to deselect it and remove it from the sum.</p>
 
-<p>In use it will look like this: <img src="images/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/ctrl_click_sum.jpg" alt="image of the awesomeness that is ctrl click sum" /></p>
+<p>In use it will look like this: <img src="/images/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/ctrl_click_sum.jpg" alt="image of the awesomeness that is ctrl click sum" /></p>
 
 <h2>Background</h2>
 

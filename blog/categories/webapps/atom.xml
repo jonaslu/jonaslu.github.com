@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: webapps | Catch me code]]></title>
+  <link href="http://catchmecode.com/blog/categories/webapps/atom.xml" rel="self"/>
+  <link href="http://catchmecode.com/"/>
+  <updated>2013-11-16T21:30:40+01:00</updated>
+  <id>http://catchmecode.com/</id>
+  <author>
+    <name><![CDATA[Jonas Lundberg]]></name>
+    <email><![CDATA[jonasl@catchmecode.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Surviving vistitor spikes]]></title>
+    <link href="http://catchmecode.com/blog/2013/11/16/surviving-vistitor-spikes/"/>
+    <updated>2013-11-16T22:08:00+01:00</updated>
+    <id>http://catchmecode.com/blog/2013/11/16/surviving-vistitor-spikes</id>
+    <content type="html"><![CDATA[<p>A big tech vendor whos logo resembles an Apple recently released their latest phone. One thing they do know is how to drum up hype around a release. Release parties with dj:s and high fives abound &ndash; pressure also mounts on webapps vending their new product.</p>
+
+<p>The expected load was about 2M visitors on that day, whereas around 40-50k concurrent visitors the first couple of minutes. We normally serve about 2-3k users (per day) so needless to say this was something out of the ordinary.</p>
+
+<p>How do you go about handling that kind of load? it&rsquo;s like a towering storm at the horizon and all you&rsquo;ve got is cardboard for shelter.</p>
+
+<h2>Initial shortcuts</h2>
+
+<p>Throwing more hardware at this situation is a tempting shortcut. Beef up with a couple of more cores on the CPU and double, no wait, triple the memory. This is a good strategy if you know that hardware is the problem.</p>
+
+<p>But to be able to throw more hardware at the problem you still need to see what happens when you max out the number of users. Hardware might not be your problem at all and only by knowing that hardware is the limitation can you solve it by adding more hardware.</p>
+
+<p>Another tempting solution (with more geek flair) was to tune the parameters of all applications involved. The black box kind of thing &ndash; tune up the number of idle and max threads. Scratch your head a bit, go hmmm&hellip; the connections close to early, better tune up the SO linger param. Those things that polish your ego a bit because man, this is not science &ndash; <strong>this is art!</strong></p>
+
+<h2>No shortcuts</h2>
+
+<p>However, it soon became apparent that none of these solutions were the right way to go. These are fine solutions, if they are your bottleneck for scaling out. But they weren&rsquo;t.</p>
+
+<p>Just like when debugging we fell for the ol' <a href="/blog/2013/06/15/bug-repellants/">problem origin bias</a>. These weren&rsquo;t the origin of our inability to scale.</p>
+
+<h2>Get your data!</h2>
+
+<p>You need to max out your application. Not only because it&rsquo;s fun (and it is) but because you need to see what&rsquo;s happening when it&rsquo;s happening. And you need to let go of any pre-baked solution however cool and or easy it might have been. You need verifiable data on what the bottleneck is.</p>
+
+<p>To do this &ndash; try to get some numbers on expected load. You want to know the peak concurrent users and numbers from similar launches are a good starting point. If you get users per hour (common measurement when using some analytics tool) &ndash; you can use some <a href="http://www.webperformance.com/library/tutorials/CalculateNumberOfLoadtestUsers/">online counter</a>.</p>
+
+<p>But be careful, do <a href="http://blog.xceptance.com/2013/07/26/concurrent-users-the-art-of-calculation/">read up</a> on what concurrent users really mean, both in the load tool you&rsquo;re using and compare it to what you actually expect. If you have an estimated page load of 80 / hour &ndash; think carefully about how the curve of the load looks like.</p>
+
+<p>If its a real spike, most of the 80k page views per hour will come at t0. If you survive this, the downside of the curve is easy peasy.</p>
+
+<h2>Minimize impacted pages</h2>
+
+<p>Also, try to get info on all access paths through your webapp that the users will take during the spike. See if you can limit the number of paths &ndash; ideally limit it to one path &ndash; starting with one page. The fewer paths you have that the users can take, the more time you have to optimize these pages.</p>
+
+<p>If you spread the users throughout many pages there is a high risk that one of these pages (and it will be the page you didn&rsquo;t check) do something suboptimal and brings the server down. Since this is a short period user flow, we need to focus on the landing page(s) first and most. If it does not load fast enough, users will start pressing refresh thusly increasing the load even more.</p>
+
+<p>Past the first page, there will be a slowdown. Some will hesitate or look around so the number of requests for the second page will drop significantly. If your users gets the first page that is. So focus intently on load testing the first page(s), or the pages until there is a natural pause.</p>
+
+<h2>Monitoring tools</h2>
+
+<p>I&rsquo;ll assume for simplicity that the webapp consists of a webserver and a database part. For monitoring on windows good tools are:</p>
+
+<ul>
+<li><a href="http://www.nirsoft.net/utils/cports.html">Currports</a> for checking open connections</li>
+<li><a href="http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx">Process explorer</a> for cpu, disk and network IO</li>
+</ul>
+
+
+<p>And for linux:</p>
+
+<ul>
+<li><a href="http://linux.die.net/man/8/lsof">lsof</a> / <a href="http://linux.die.net/man/8/netstat">netstat</a> for open connections</li>
+<li><a href="http://linux.die.net/man/8/iftop">iftop</a> for network IO</li>
+<li><a href="http://linux.die.net/man/1/atop">atop</a> for cpu, memory and disk IO</li>
+</ul>
+
+
+<p>For the database itself there is usually some built in tool for checking active connections and running queries (such as <a href="http://linux.die.net/man/1/innotop">innotop</a> for mysql).</p>
+
+<p>Also enable logging of slow queries. Enable all exceptions and debug messages in the webapp to get more diagnostics.</p>
+
+<h2>Load test tools</h2>
+
+<p>The default of test tools is usually to hammer the server constantly at full load. To simulate normal usage this is not such a good strategy as this represents the worst case. If you&rsquo;re constantly expecting this load, you need to simulate users more carefully.</p>
+
+<p>But during spikes the hammering test-tools are good enough since users actually will be hammering your server for the same page. So this is ok &ndash; you want the worst case.</p>
+
+<p>We used <a href="http://www.joedog.org/siege-home/">siege</a> because it was easy to install (<code>sudo apt-get install siege</code>) and did the job of hammering well. Siege takes a parameter for concurrent users: <code>siege -c &lt;no_of_concurrent_users&gt; &lt;page&gt;</code></p>
+
+<p>Siege can be configured via its .siegerc. Run <code>siege.config</code> to generate the rc file in your home folder. Make sure you turn on expire-session in the .siegerc file so you simulate new users accessing your pages.</p>
+
+<h2>Fire in the hole</h2>
+
+<p>Now you&rsquo;re all set. Fire up siege and watch all the gauges on the monitoring tools. Your app will hit a wall at some point. Siege will spit errors on connection refused and shut down the test. Hopefully one of your gauges on the monitoring tools will max out. Repeat this with siege and less (or more) concurrent visitors until your app just barely survives.</p>
+
+<p>This is your baseline, and this is what you need to raise to the expected level of users. The gauge maxed out in the monitoring tools is your bottleneck. In our case it was the database as its disk IO maxed out during tests. It also showed up as connection timed out because of locks on rows and tables in the database.</p>
+
+<h2>Raising the bottleneck</h2>
+
+<p>Remember that your only mission, Jim, is to survive the tidal wave. It might only last a few minutes or hours. During this time anythings fair game to increase page serving.</p>
+
+<p>Anything that can be deferred, made static, cached or simply removed is a good candidate. Be as lazy as you possibly can and do only the minimal work fulfill the path visitors will take. Put most of your work on the landing page so it serves really fast. Avoid users pressing refresh because your site is taking too long to respond.</p>
+
+<h2>Procrastinate</h2>
+
+<p>Shut everything non-critical down. Any type of background jobs, backups (but do remember to enable them again when the spike is over) indexings, mailers, system updates and what have you. Timed jobs that might run during the spike and will eat up precious resources.</p>
+
+<p>Anything that is calculated again and again even though it returns the same result &ndash; insert a cache. Such as heavy computations or large database reads. Just make sure that what you cache does not change or that the cache is invalidated when the underlying content do change.</p>
+
+<p>Another one of my favorite optimizations &ndash; defer doing things until the latest possible time. Anything that makes a round trip to the database (and especially things that write to disk such as inserts, deletes and updates) costs much. Do them only when you really have to (and be grumpy about it when you do).</p>
+
+<p>This was your particular life saver. We were creating a bunch of rows upon user login causing the disk IO to max out. Of course coupled with long running transactions making sure that when we hit the wall &ndash; everyone was locked out because of table and row locks.</p>
+
+<h2>Go static</h2>
+
+<p>Static webpages serves almost instantly. Parts of your page that is generated dynamically might be made static for the duration of the spike. Find those spots where its not critical that everything is updated and make it static. Or better yet &ndash; my favorite optimization &ndash; remove it completely.</p>
+
+<h2>Self goals</h2>
+
+<p>Check for long running transactions. They increase the chances of something locking in the database when a write is performed somewhere inside of them. They also have the nasty effect of cascading &ndash; that once a transaction starts locking too much, all others will timeout. It&rsquo;s almost like a mutex section through the database.</p>
+
+<p>Check for ajax-calls on your pages. These will multiply each page load with the number of calls (and possibly database calls in turn). Can you defer some of these? Can you cache them &ndash; or make them static? Or remove them entirely for the short time being?</p>
+
+<h2>Disposable webapp</h2>
+
+<p>Armed with all of this &ndash; if you have to &ndash; make a one-time version of your webapp with any found optimizations above. You can revert to your standard version as soon as the spike has ended.</p>
+
+<p>If you take this to the extreme (and this is probably what we would like to have done if we had more time) is to build an as static version of the site as possible. Take the old site offline and put up a new static frontend with only forms to collect data.</p>
+
+<p>You could then write out files with collected data and read those files into your regular site &ndash; not disrupting the normal workflow that still needs to be served. Think about what actually needs to be dynamic during the peak hour. Your only target is to survive the massive first wave.</p>
+
+<h2>Conclusion</h2>
+
+<p>Our initial reaction of throwing more hardware coupled with tuning parameters on the webserver and the database server was way off! The parameter tuning turned out to be almost useless. The hardware would not have helped because disk IO was the bottleneck, and swapping out the disks for SSD:s were not feasible. Another good reminder to get verifiable data on the problem first so you solve the right problem.</p>
+]]></content>
+  </entry>
+  
+</feed>

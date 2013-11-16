@@ -2,11 +2,11 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://catchmecode.com/blog/2013/02/05/hello-world/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T20:58:56+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/02/08/setup/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:00:13+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/02/18/fantom-the-language/</loc>
@@ -14,7 +14,7 @@
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/02/24/stages-of-a-code-review/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:02:53+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/03/02/custom-syntax-in-pygments/</loc>
@@ -22,37 +22,37 @@
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:06:34+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://catchmecode.com/blog/2013/03/24/if-it-werent-for-the-dot-dot-dot-customers/
         </loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:08:07+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/04/24/the-next-big-language/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:11:14+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/04/30/ctrl-click-sum-gdocs-spreadsheet/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:17:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/05/10/phonemeetings/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:20:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/06/01/rotating-backups-with-rsync/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:21:53+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/06/15/bug-repellants/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T20:55:02+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/07/15/fast-programmers/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T20:54:36+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/08/01/jetty-multiple-instances/</loc>
@@ -64,15 +64,15 @@
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/09/11/is-learning-vim-worth-it/</loc>
-        <lastmod>2013-09-22T21:19:53+02:00</lastmod>
+        <lastmod>2013-11-16T21:23:59+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/09/27/software-estimates-the-plus-100h-joke/</loc>
-        <lastmod>2013-09-27T21:42:02+02:00</lastmod>
+        <lastmod>2013-11-16T21:25:06+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/10/05/power-editor-vim-revisited/</loc>
-        <lastmod>2013-10-05T22:35:50+02:00</lastmod>
+        <lastmod>2013-11-16T21:25:41+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/10/20/estimates-the-95-percent-done-syndrome/</loc>
@@ -80,11 +80,15 @@
     </url>
     <url>
         <loc>http://catchmecode.com/blog/2013/10/30/java-is-verbose-hurray/</loc>
-        <lastmod>2013-10-30T21:33:41+01:00</lastmod>
+        <lastmod>2013-11-16T20:52:36+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://catchmecode.com/blog/2013/11/16/surviving-vistitor-spikes/</loc>
+        <lastmod>2013-11-16T21:26:21+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/</loc>
-        <lastmod>2013-10-30T21:33:41+01:00</lastmod>
+        <lastmod>2013-11-16T21:26:21+01:00</lastmod>
     </url>
     <url>
         <loc>http://catchmecode.com/robots.txt</loc>

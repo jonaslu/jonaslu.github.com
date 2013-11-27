@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jar as a service on windows - Catch me code</title>
+  <meta name="author" content="Jonas Lundberg">
+
+  
+  <meta name="description" content="Tech post on how to get a jar running as a service on windows, using Jetty as the setup example">
+  <meta name="keywords" content="java, jar, service, windows, apache, commons, procrun">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://catchmecode.com/blog/2013/11/27/jar-as-a-services-on-windows/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Catch me code" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Fjalla+One:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38768657-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Catch me code</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:catchmecode.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="https://github.com/jonaslu">Github</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Jar as a Service on Windows</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T22:15:00+01:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When <a href="/blog/2013/08/01/jetty-multiple-instances/">setting up jetty</a> I wanted to start it with the start.jar file &ndash; since this builds some useful stuff like paths etc. I searched some for how to run a jar as a service, but came up mostly empty handed (there were some &ndash; do like this, but none found went into enough detail on what &ldquo;like this&rdquo; actually meant).</p>
+
+<p>There are a couple of <a href="http://stackoverflow.com/questions/1617458/how-to-create-windows-service-from-java-jar">options</a>, but most seemed quite hack-ish. I wanted a way that could easily be reproduced on multiple machines moving from test to production environment.</p>
+
+<h2>Run Procrun, run!</h2>
+
+<p>For this we&rsquo;ll go with what the fine folks over at apache has built: <a href="http://commons.apache.org/proper/commons-daemon/">commons-daemon</a></p>
+
+<p>You&rsquo;ll need the windows version which is not the one you&rsquo;ll find on the main page download. Its found here:
+<a href="http://www.apache.org/dist/commons/daemon/binaries/windows/">http://www.apache.org/dist/commons/daemon/binaries/windows/</a></p>
+
+<p>Extract the .zip to a folder on your disk where you remember it. The important files are the binaries in the unzipped folder &ndash; one prunsrv for managing the services command line, and one prunmgr for editing existing services in a GUI.</p>
+
+<p>This post will show the GUI way, but everything can be converted to a script for easy installing on several machines.</p>
+
+<h2>How many bits?</h2>
+
+<p>Now, before you run off installing services to the left and right, take a moment and note if you&rsquo;re running a 32 or 64-bit version of windows. The prunsrv version found in the root of the commons daemon install is compatible with a 32-bit windows.</p>
+
+<p>So if you&rsquo;re on 64-bit you need to go into the amd64 folder one level down from the root install to find prunsrv compatible with 64-bit. If you use the wrong version to install the service it will not start.</p>
+
+<h2>Installing it</h2>
+
+<p>Using the right version of prunsrv open up a cmd.exe and enter <code>prunsrv //IS//&lt;Service name&gt;</code>. This will install an empty service.</p>
+
+<p>To set up the service in a GUI enter  <code>prunmgr //ES//&lt;Service name&gt;</code>. Heres what you should see (all fields being empty at first):</p>
+
+<h2>General settings</h2>
+
+<p><img src="/images/blog/2013/11/25/commons-daemon/commons_general_settings.png" alt="General tab in commons GUI" /></p>
+
+<p>In the path to executable read only field you can spot what version you used to install the service with. If it points directly to the root install folder its the 32-bit version. If its under an amd64 subfolder to the root install &ndash; it will start the service as a 64-bit version.</p>
+
+<p>The startup type controls the usual windows settings &ndash; how the service is started (manual, automatic or disabled).</p>
+
+<p>The log on tab is pretty self explanatory, its what user the service will run under.</p>
+
+<h2>Logging settings</h2>
+
+<p><img src="/images/blog/2013/11/25/commons-daemon/commons_logging_tab.png" alt="Logging tab in commons GUI" /></p>
+
+<p>The level of logging concerns the actual commons procrun service itself &ndash; it will print stuff like &lsquo;starting service X&rsquo; and &lsquo;stopping service X&rsquo; to the logs. It can come handy if your service restarts without you knowing it and you have to figure out why it happened.</p>
+
+<p>Log prefix controls what the log file will be called. The log file is rotated daily. By setting redirect stderr and stdout to auto the jar application stdout and stderr will also be appended to their own respective logfiles in the same directory. These are also rotated daily.</p>
+
+<p>When running jetty the auto does not add anything extra since jetty logs its own stdout and stderr to configurable files. But any other application that does not will be captured so it doesn&rsquo;t hurt to have them set as auto.</p>
+
+<h2>Java settings</h2>
+
+<p><img src="/images/blog/2013/11/25/commons-daemon/commons_java_tab.png" alt="Java tab in commons GUI" /></p>
+
+<p>I didn&rsquo;t have any luck using the &ldquo;Use default&rdquo; setting for the JVM. I had to point out the exact dll &ndash; maybe you don&rsquo;t. But If you do: you&rsquo;ll need the bin\client\jvm.dll (or the server equivalent if you&rsquo;re on 64 bit) as your virtual machine.</p>
+
+<p>In the java classpath, point out the jar you want to run as a service &ndash; in this case the start.jar from jetty.</p>
+
+<p>In the Java options you can send parameters to the jvm process itself. <strong>All of these must be separated with newline</strong>. Small gotcha that took a while to figure out.</p>
+
+<h2>Startup settings</h2>
+
+<p><img src="/images/blog/2013/11/25/commons-daemon/commons_startup_tab.png" alt="Startup tab in commons GUI" /></p>
+
+<p>Here you point out in what class the start method resides and what its called.</p>
+
+<p>The arguments are passed to your main method, note that you also need to separate these with newline here.</p>
+
+<h2>Shutdown settings</h2>
+
+<p><img src="/images/blog/2013/11/25/commons-daemon/commons_shutdown_tab.png" alt="Shutdown tab in commons GUI" /></p>
+
+<p>Same here, what class and method to call when shutting down the service. Jetty uses the same with a command line parameter &mdash;stop to shut down the service.</p>
+
+<p>An optional timeout in seconds can be set before the service is killed hard.</p>
+
+<p>As said on the outset, all of these settings can also be inputted as command line parameters to the prunsrv.</p>
+
+<h2>Reverting</h2>
+
+<p>If you do something wrong or just get tired of running services &ndash; its deleted with <code>prunsrv //DS//&lt;Service name</code></p>
+
+<h2>Troubleshooting</h2>
+
+<p>If everything goes as expected there will be some bumps before its smooth sailing.</p>
+
+<p>The logs can be of help, also useful for getting more error messages on why it did not start is running it first via the console <code>prunsrv //TS//&lt;ServiceName&gt;</code> &ndash; it will hopefully output something you can google on.</p>
+
+<h2>Didn&rsquo;t happen!</h2>
+
+<p>What&rsquo;s remarkable is how hard it is to write a large post on windows and not even once mention that I pity for you being stuck on Windows! I&rsquo;m maturing!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jonas Lundberg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T22:15:00+01:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jar/'>jar</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jetty/'>jetty</a>, <a class='category' href='/blog/categories/windows/'>windows</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/11/27/jar-as-a-services-on-windows/" data-via="" data-counturl="http://catchmecode.com/blog/2013/11/27/jar-as-a-services-on-windows/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/16/surviving-vistitor-spikes/" title="Previous Post: Surviving vistitor spikes">&laquo; Surviving vistitor spikes</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jonas Lundberg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'catchmecode';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://catchmecode.com/blog/2013/11/27/jar-as-a-services-on-windows/';
+        var disqus_url = 'http://catchmecode.com/blog/2013/11/27/jar-as-a-services-on-windows/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

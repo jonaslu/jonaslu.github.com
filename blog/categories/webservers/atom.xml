@@ -4,7 +4,7 @@
   <title><![CDATA[Category: webservers | Catch me code]]></title>
   <link href="http://catchmecode.com/blog/categories/webservers/atom.xml" rel="self"/>
   <link href="http://catchmecode.com/"/>
-  <updated>2013-11-16T21:30:40+01:00</updated>
+  <updated>2013-11-27T22:25:33+01:00</updated>
   <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -94,6 +94,8 @@ $&gt; java -jar start.jar --ini==dev/start.d/dev_jetty_config.ini dev/start.d/de
 </code></p>
 
 <p>In the Jetty installation folder and see what happens. Jetty will complain if some xml is malformatted or tags out of place, took some googling to correct the errors but nothing paramount.</p>
+
+<p>If you&rsquo;re on windows there&rsquo;s now a follow up post on how to <a href="/blog/2013/11/27/jar-as-a-services-on-windows/">run the start.jar as a service</a>.</p>
 
 <h2>Troubleshooting config errors</h2>
 

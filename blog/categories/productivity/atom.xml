@@ -4,7 +4,7 @@
   <title><![CDATA[Category: productivity | Catch me code]]></title>
   <link href="http://catchmecode.com/blog/categories/productivity/atom.xml" rel="self"/>
   <link href="http://catchmecode.com/"/>
-  <updated>2013-11-27T22:25:33+01:00</updated>
+  <updated>2013-12-18T22:20:39+01:00</updated>
   <id>http://catchmecode.com/</id>
   <author>
     <name><![CDATA[Jonas Lundberg]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Get it right]]></title>
+    <link href="http://catchmecode.com/blog/2013/12/18/get-it-right/"/>
+    <updated>2013-12-18T21:30:00+01:00</updated>
+    <id>http://catchmecode.com/blog/2013/12/18/get-it-right</id>
+    <content type="html"><![CDATA[<p>How to be faster? Simple, just get it right the first time! Duh.</p>
+
+<p><img src="/images/blog/2013/12/18/getitright/Its_done.jpg" alt="When its done - its done!" /></p>
+
+<p>In an ideal world, you&rsquo;d sit down, start typing and word by word, line by line filling files until you&rsquo;re done. This is the shortest possible time the task could be wrapped up in.</p>
+
+<p>Meanwhile in the real world things don&rsquo;t work out that way. But what if we could aim for it? Or at least try to work our way backwards to see if some ideas can be applied? Lets go for as close to right the first time as possible.</p>
+
+<h2>Time thieves</h2>
+
+<p>Where then is time spent that would not be spent if you did it correctly the first time? Here&rsquo;s my list: renaming things, refactoring things, removing things and experiments that didn&rsquo;t work out.</p>
+
+<h2>Renaming things</h2>
+
+<p>Its been said that naming things are <a href="http://martinfowler.com/bliki/TwoHardThings.html">one of two hard things</a> so there will be some percentage of renaming. But what if you could raise the percentage of correctly named variables from the start?</p>
+
+<p>Now assuming you do not still name your variables test1 and stuff2 when you start out (if you do &ndash; stop. Its going to go overboard when you can&rsquo;t keep everything in your head anymore).</p>
+
+<p>What could be made to improve naming things correctly the first time?</p>
+
+<h2>Prime your mind</h2>
+
+<p>A big factor for me when getting names wrong is not taking in the entire context before starting. Some time spent priming your mind might be a good investment.</p>
+
+<p>Get a quick overview of the problem and try note down some of the keywords. Also look at the vicinity of there the code is going in. Are there any visible naming schemas already in place?</p>
+
+<h2>Be consistent!</h2>
+
+<p>I also tend to fluctuate between files when naming similar things. Staying consistent across files will either be correct from the start &ndash; and you need to change nothing &ndash; or more easily fixed with a grep or similar should you change your mind later.</p>
+
+<p>Also &ndash; start with one schema and stick with it until you&rsquo;re almost done. Then change everything in one fell swoop. If you are consistent but often changing your mind you will also be wasting time renaming and then renaming again. Wait a bit for it and see how it pans out before deciding if it was right or wrong.</p>
+
+<h2>Refactoring</h2>
+
+<p>Your code works and has correct variables but its all over the place. You move things in place and create more classes to spread things out in a way that makes more sense.</p>
+
+<p>But some of these refactorings would maybe not be necessary. This is especially true for small experiments or trying things out.</p>
+
+<p>Often you know much earlier what should be moved and what should not. Don&rsquo;t let your code pick up smells &ndash; these will cost more to fix later on. So lean on splitting things out earlier (even though naming the new things will be taxing).</p>
+
+<h2>Removing things</h2>
+
+<p>This is things like commented out or dead code. Again these tend to crop up during the experimenting phase when you get a feel for the problem.</p>
+
+<p>All of these linger because you decided to keep them there (possibly because they might be used again in the future).</p>
+
+<p>If they are cleaned out the minute they become obsolete there is less cleaning to do in the end.</p>
+
+<p>Use a versioning tool like git if you need to revert or bring something back &ndash; but get it out of your files and your head until you really need it again.</p>
+
+<h2>First as the final version</h2>
+
+<p>All of this is geared towards making your first effort something with the same standard as the end product.</p>
+
+<p>A few minutes on naming schemes, how code grows during development and keeping it clean along the way will pay off big &ndash; with lesser iterations before getting it right.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Get yourself a fast project]]></title>
@@ -238,57 +301,6 @@
 <h2>Round robin the role</h2>
 
 <p>If none of the above works &ndash; share the burden. You&rsquo;re doing a good thing &ndash; freeing up the rest of the team to get some work done. They&rsquo;ll get a good laugh when you roll your eyes and do the talking hand motion &ndash; and they&rsquo;ll probably back you up with videos of funny cats and capybaras to ease your pain. And next time you&rsquo;re off the hook.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Boredom the hidden asset]]></title>
-    <link href="http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset/"/>
-    <updated>2013-03-16T21:50:00+01:00</updated>
-    <id>http://catchmecode.com/blog/2013/03/16/boredom-the-hidden-asset</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been fighting boredom and procrastination for as long as I can remember.</p>
-
-<h2>Boredom on personal projects</h2>
-
-<p>Ah, new stuff. Fresh, untouched, exciting &ndash; and safely without practical use. Boredom and procrastination usually sets in when the first road block is hit. Like actually writing lines of code in that new language. Or using the long researched best web framework. And it results in more research and more looking at new things. Seldom staying long enough with something to make it useful.</p>
-
-<h2>Moving is not a solution</h2>
-
-<p>Same went for my workplace &ndash; I&rsquo;d be all over it the first few months or even up to a year or two. Then when progression started to slow down &ndash; I knew the sites and the layout of the code its shininess faded and &ndash; hello boredom again!</p>
-
-<p>Previously working as a consultant this didn&rsquo;t turn into a problem since I changed workplaces often enough to keep things new and fresh. But this wasn&rsquo;t really a solution on the problem, it was simply running away from it.</p>
-
-<h2>Neither are processes</h2>
-
-<p>So, true to engineer fashion I looked for remedies in the shape of processes and tools. I tried task lists, pomodoro, time boxing to name a few. This usually started out well but when the new effect wore off &ndash; about the same or more procrastination. And in the back of my mind I couldn&rsquo;t help but think that all of those processes seemed too rigid. It was forcing it.</p>
-
-<h2>Blog post to the rescue</h2>
-
-<p><a href="http://99u.com/articles/7188/why-boredom-is-good-for-your-creativity">This hit me like a two ton heavy thing</a> (yes there&rsquo;s probably some irony in finding the solution out there in a blog, the siren song of procrastination). To sum it up: It&rsquo;s ok to be bored. In fact &ndash; if you&rsquo;re bored and it&rsquo;s the right kind of bore you are on to something big.</p>
-
-<h2>Preparing to climb</h2>
-
-<p>So I decided to work it. To leverage boredom instead of trying to suppress it.</p>
-
-<p>The setup was this: close all the usual suspects. No mail notification icons, no rss feeds, no open  applications except for the minimal amount really needed to get the work done. Don&rsquo;t minimize the windows. Close them. Deinstall what you can. You need to implement it the hard way and really maximize the potential for boredom.</p>
-
-<p>Now sit there and let the boredom set in. Look at the code, stare at it. Don&rsquo;t leave your workplace for anything less than critical. Do not open any mail clients or the likes. Gorge on boredom&hellip; and waaaaiiit for it.</p>
-
-<h2>Downhill sunny side</h2>
-
-<p>Past this point was a bit like that monkey meeting Jane Goodall. She just stood there and didn&rsquo;t run away. What now?</p>
-
-<p>Turns out boredom is a hill you&rsquo;re meant to climb. The steeper the climb up, the sweeter the ride down. You eventually start to tinker in small pieces. And then in larger pieces, and before you know it you&rsquo;re totally emerged in what you wanted to avoid.  Beyond that hill of boredom is the pot of voluntary productiveness.</p>
-
-<p>On this side you&rsquo;ll be glad you deinstalled all those notifiers and closed all those windows with sweet sugary distraction. You&rsquo;re in the productivity zone cruising &ndash; but it&rsquo;s a fragile zone. Any  distraction will break your concentration and you need to go through the build up phase again.</p>
-
-<h2>Boredom as an innovator</h2>
-
-<p>Here&rsquo;s a bonus I didn&rsquo;t see coming from this. When hitting boredom full on and closing down the distractions you get annoyed by manual and slow things. You know, the build window where you&rsquo;d check your twitter account only to notice the build finished 15 minutes ago. Those hurt much more now because you&rsquo;re now in productive mode after being bored you don&rsquo;t want to go back &ndash; so you automate and innovate to minimize the mundane and time consuming parts.</p>
-
-<h2>Switched tables</h2>
-
-<p>Wow. How&rsquo;s that for a flip side? Turns out boredom is not a liability &ndash; it&rsquo;s an asset. And a valuable one at that. Its your personal indicator of how much you&rsquo;re going to enjoy the task once the resistance subdues.</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Get it right - Catch me code</title>
+  <meta name="author" content="Jonas Lundberg">
+
+  
+  <meta name="description" content="How to be a faster programmer? Get it right the first time! An obvious advice - but maybe something can be learnt from it?">
+  <meta name="keywords" content="faster, programmer, speed, right solution, iterate faster">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://catchmecode.com/blog/2013/12/18/get-it-right/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/tables.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Catch me code" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Fjalla+One:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38768657-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Catch me code</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:catchmecode.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="https://github.com/jonaslu">Github</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Get It Right</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-18T21:30:00+01:00" pubdate data-updated="true">Dec 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>How to be faster? Simple, just get it right the first time! Duh.</p>
+
+<p><img src="/images/blog/2013/12/18/getitright/Its_done.jpg" alt="When its done - its done!" /></p>
+
+<p>In an ideal world, you&rsquo;d sit down, start typing and word by word, line by line filling files until you&rsquo;re done. This is the shortest possible time the task could be wrapped up in.</p>
+
+<p>Meanwhile in the real world things don&rsquo;t work out that way. But what if we could aim for it? Or at least try to work our way backwards to see if some ideas can be applied? Lets go for as close to right the first time as possible.</p>
+
+<h2>Time thieves</h2>
+
+<p>Where then is time spent that would not be spent if you did it correctly the first time? Here&rsquo;s my list: renaming things, refactoring things, removing things and experiments that didn&rsquo;t work out.</p>
+
+<h2>Renaming things</h2>
+
+<p>Its been said that naming things are <a href="http://martinfowler.com/bliki/TwoHardThings.html">one of two hard things</a> so there will be some percentage of renaming. But what if you could raise the percentage of correctly named variables from the start?</p>
+
+<p>Now assuming you do not still name your variables test1 and stuff2 when you start out (if you do &ndash; stop. Its going to go overboard when you can&rsquo;t keep everything in your head anymore).</p>
+
+<p>What could be made to improve naming things correctly the first time?</p>
+
+<h2>Prime your mind</h2>
+
+<p>A big factor for me when getting names wrong is not taking in the entire context before starting. Some time spent priming your mind might be a good investment.</p>
+
+<p>Get a quick overview of the problem and try note down some of the keywords. Also look at the vicinity of there the code is going in. Are there any visible naming schemas already in place?</p>
+
+<h2>Be consistent!</h2>
+
+<p>I also tend to fluctuate between files when naming similar things. Staying consistent across files will either be correct from the start &ndash; and you need to change nothing &ndash; or more easily fixed with a grep or similar should you change your mind later.</p>
+
+<p>Also &ndash; start with one schema and stick with it until you&rsquo;re almost done. Then change everything in one fell swoop. If you are consistent but often changing your mind you will also be wasting time renaming and then renaming again. Wait a bit for it and see how it pans out before deciding if it was right or wrong.</p>
+
+<h2>Refactoring</h2>
+
+<p>Your code works and has correct variables but its all over the place. You move things in place and create more classes to spread things out in a way that makes more sense.</p>
+
+<p>But some of these refactorings would maybe not be necessary. This is especially true for small experiments or trying things out.</p>
+
+<p>Often you know much earlier what should be moved and what should not. Don&rsquo;t let your code pick up smells &ndash; these will cost more to fix later on. So lean on splitting things out earlier (even though naming the new things will be taxing).</p>
+
+<h2>Removing things</h2>
+
+<p>This is things like commented out or dead code. Again these tend to crop up during the experimenting phase when you get a feel for the problem.</p>
+
+<p>All of these linger because you decided to keep them there (possibly because they might be used again in the future).</p>
+
+<p>If they are cleaned out the minute they become obsolete there is less cleaning to do in the end.</p>
+
+<p>Use a versioning tool like git if you need to revert or bring something back &ndash; but get it out of your files and your head until you really need it again.</p>
+
+<h2>First as the final version</h2>
+
+<p>All of this is geared towards making your first effort something with the same standard as the end product.</p>
+
+<p>A few minutes on naming schemes, how code grows during development and keeping it clean along the way will pay off big &ndash; with lesser iterations before getting it right.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jonas Lundberg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-18T21:30:00+01:00" pubdate data-updated="true">Dec 18<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/productivity/'>productivity</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://catchmecode.com/blog/2013/12/18/get-it-right/" data-via="" data-counturl="http://catchmecode.com/blog/2013/12/18/get-it-right/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/27/jar-as-a-services-on-windows/" title="Previous Post: Jar as a service on windows">&laquo; Jar as a service on windows</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jonas Lundberg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'catchmecode';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://catchmecode.com/blog/2013/12/18/get-it-right/';
+        var disqus_url = 'http://catchmecode.com/blog/2013/12/18/get-it-right/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
